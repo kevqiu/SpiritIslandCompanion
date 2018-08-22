@@ -1,6 +1,7 @@
 # Spirit Island Companion
 
 ## Run Instructions
-1. `yarn`
-2. Run Andriod emulator
-3. `yarn android`
+1. `npm install -g react-native-cli`
+2. `yarn`
+3. Run Andriod emulator
+4. `yarn android`
