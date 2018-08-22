@@ -1,4 +1,4 @@
-# SpiritIslandCompanion
+# Spirit Island Companion
 
 ## Run Instructions
 1. `yarn`
