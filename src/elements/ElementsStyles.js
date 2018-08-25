@@ -6,7 +6,8 @@ const ScreenStyles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#FFFBEC'
+        backgroundColor: '#FFFBEC',
+        marginTop: 20
     },
     titleText: {
         color: 'white',
@@ -32,8 +33,8 @@ const ScreenStyles = StyleSheet.create({
 
 const TrackerStyles = StyleSheet.create({
     container: {
-        height: 60,
-        width: 260,
+        flex: 1,
+        width: 280,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center'
@@ -44,8 +45,8 @@ const TrackerStyles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     elementImage: {
-        width: 60,
-        height: 60
+        width: 65,
+        height: 65
     },
     counterContainer: {
         flex: 1,
@@ -58,13 +59,13 @@ const TrackerStyles = StyleSheet.create({
         color: 'black'
     },
     buttonContainer: {
-        width: 80,
+        width: 100,
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
     counterImage: {
-        width: 55,
-        height: 55
+        width: 60,
+        height: 60
     }
 });
 

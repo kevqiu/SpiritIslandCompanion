@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TouchableHighlight, Text, Image, View } from 'react-native';
+import { TouchableOpacity, Text, Image, View } from 'react-native';
 import { TrackerStyles as Styles } from './ElementsStyles';
 
 class ElementTracker extends Component {
@@ -40,7 +40,7 @@ class ElementTracker extends Component {
     }
 
     render() {
-        let { icon, element } = this.props;
+        let { icon } = this.props;
         return (
             <View style={Styles.container}>
                 <View style={Styles.textContainer}>
@@ -50,18 +50,18 @@ class ElementTracker extends Component {
                     </View>
                 </View>
                 <View style={Styles.buttonContainer}>
-                    <TouchableHighlight onPress={this.increment} underlayColor={'rgba(0,0,0,0)'}>
+                    <TouchableOpacity onPress={this.increment} underlayColor={'rgba(0,0,0,0)'}>
                         <Image 
                             style={Styles.counterImage} 
                             source={require('./assets/Plus_1.png')}
                         />
-                    </TouchableHighlight>
-                    <TouchableHighlight onPress={this.decrement} underlayColor={'rgba(0,0,0,0)'}>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={this.decrement} underlayColor={'rgba(0,0,0,0)'}>
                         <Image 
                             style={Styles.counterImage} 
                             source={require('./assets/Minus_1.png')}
                         />
-                    </TouchableHighlight>
+                    </TouchableOpacity>
                 </View>
                 
             </View>
