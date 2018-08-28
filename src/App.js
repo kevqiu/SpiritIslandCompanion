@@ -2,27 +2,28 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { createBottomTabNavigator } from 'react-navigation'
 
-
+import Colors from './constants/colors';
 import HomeScreen from './home/HomeScreen'
 import ElementsScreen from './elements/ElementsScreen'
+import ScoringScreen from './scoring/ScoringScreen'
 import FaqScreen from './faq/FaqScreen';
 
 export default createBottomTabNavigator(
     {
-        Home: {
-            screen: HomeScreen,
-            navigationOptions: {
-                tabBarIcon: ({tintColor}) => (
-                    <Icon name='home' size={30} color={tintColor}></Icon>
-                )
-            }
-        },
         Elements: {
             screen: ElementsScreen,
             navigationOptions: {
                 title: 'Element Tracker',
                 tabBarIcon: ({tintColor}) => (
                     <Icon name='fire' size={30} color={tintColor}></Icon>
+                )
+            }
+        },
+        Scoring: {
+            screen: ScoringScreen,
+            navigationOptions: {
+                tabBarIcon: ({tintColor}) => (
+                    <Icon name='cash-100' size={30} color={tintColor}></Icon>
                 )
             }
         },
@@ -40,15 +41,13 @@ export default createBottomTabNavigator(
         tabBarOptions: {
             labelStyle: {
                 fontFamily: 'ReemKufi',
-                // fontSize: 24,
                 marginTop: 1
             },
             style: {
-                backgroundColor: '#F8F2C4',
-                borderColor: 'transparent',
+                backgroundColor: Colors.darkYellow,
                 height: 52
             },
-            activeTintColor: '#955529',
+            activeTintColor: Colors.darkBrown,
             inactiveTintColor: 'gray',
             showIcon: true    
         }

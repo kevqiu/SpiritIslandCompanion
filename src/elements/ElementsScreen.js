@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import Button from 'react-native-flat-button';
 
+import Colors from '../constants/colors';
 import ElementTracker from './ElementTracker';
 import { ScreenStyles as Styles } from './ElementsStyles';
 
@@ -26,6 +27,7 @@ class ElementsScreen extends Component {
         let { reset } = this.state;
         return (
             <View style={Styles.container}>
+                <Text style={Styles.titleText}>Element Tracker</Text>
                 <ElementTracker reset={reset} icon={require('./assets/SunIcon.png')}></ElementTracker>
                 <ElementTracker reset={reset} icon={require('./assets/MoonIcon.png')}></ElementTracker>
                 <ElementTracker reset={reset} icon={require('./assets/FireIcon.png')}></ElementTracker>
@@ -38,8 +40,8 @@ class ElementsScreen extends Component {
                     <Button 
                         type='custom'
                         onPress={this.resetAll}
-                        backgroundColor={'#AE966C'}
-                        borderColor={'#5E513B'}
+                        backgroundColor={Colors.lightBrown}
+                        borderColor={Colors.lightBrownShadow}
                         borderRadius={4}
                         containerStyle={Styles.buttonContainer}
                         contentStyle={Styles.buttonText}

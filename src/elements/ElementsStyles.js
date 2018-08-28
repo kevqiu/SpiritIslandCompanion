@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import Colors from '../constants/colors';
 
 const ScreenStyles = StyleSheet.create({
     container: {
@@ -6,13 +7,14 @@ const ScreenStyles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#FFFBEC',
-        marginTop: 20
+        backgroundColor: Colors.lightYellow
     },
     titleText: {
-        color: 'white',
-        height: 50,
-        fontSize: 28
+        marginTop: 20,
+        marginBottom: 10,
+        color: 'black',
+        fontSize: 28,
+        fontFamily: 'ReemKufi'
     },
     resetButtonContainer: {
         height: 90,
@@ -34,15 +36,14 @@ const ScreenStyles = StyleSheet.create({
 const TrackerStyles = StyleSheet.create({
     container: {
         flex: 1,
-        width: 280,
+        width: 320,
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'space-evenly',
         alignItems: 'center'
     },
-    textContainer: {
+    elementContainer: {
         flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-between'
+        alignItems: 'center'
     },
     elementImage: {
         width: 65,
@@ -54,18 +55,19 @@ const TrackerStyles = StyleSheet.create({
         alignItems: 'center'
     },
     counterText: {
-        fontSize: 28,
+        fontSize: 36,
         fontFamily: 'ReemKufi',
         color: 'black'
     },
     buttonContainer: {
         width: 100,
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        alignItems: 'flex-end'
     },
     counterImage: {
-        width: 60,
-        height: 60
+        width: 55,
+        height: 55
     }
 });
 

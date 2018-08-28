@@ -43,12 +43,12 @@ class ElementTracker extends Component {
         let { icon } = this.props;
         return (
             <View style={Styles.container}>
-                <View style={Styles.textContainer}>
+                <View style={Styles.elementContainer}>
                     <Image style={Styles.elementImage} source={icon} />
-                    <View style={Styles.counterContainer}>
+                </View>
+                <View style={Styles.counterContainer}>
                         <Text style={Styles.counterText}>{this.state.counter}</Text>
                     </View>
-                </View>
                 <View style={Styles.buttonContainer}>
                     <TouchableOpacity onPress={this.increment} underlayColor={'rgba(0,0,0,0)'}>
                         <Image 
