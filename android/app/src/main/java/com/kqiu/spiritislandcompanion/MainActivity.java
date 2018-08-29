@@ -1,4 +1,4 @@
-package com.spiritislandcompanion;
+package com.kqiu.spiritislandcompanion;
 
 import com.facebook.react.ReactActivity;
 

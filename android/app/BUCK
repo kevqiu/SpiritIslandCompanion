@@ -45,12 +45,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.spiritislandcompanion",
+    package = "com.kqiu.spiritislandcompanion",
 )
 
 android_resource(
     name = "res",
-    package = "com.spiritislandcompanion",
+    package = "com.kqiu.spiritislandcompanion",
     res = "src/main/res",
 )
 
