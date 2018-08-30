@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, WebView, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
+import Header from '../common/Header';
 import { ScreenStyles as Styles } from './FaqStyles'
 
 class FaqScreen extends Component {
@@ -37,23 +38,25 @@ class FaqScreen extends Component {
 
     render() {
         return (
-            <View style={Styles.container}>
-                <View style={Styles.faqButtons}>
-                    <TouchableOpacity style={Styles.faqButton} disabled={!this.state.canGoBack} onPress={this.onBack}>
-                        <Icon color={'black'} style={Styles.faqIcon} name='arrow-left' size={30}></Icon>
-                    </TouchableOpacity>
-                    <Text style={Styles.titleText}>FAQ</Text>
-                    <TouchableOpacity style={Styles.faqButton} disabled={!this.state.canGoForward} onPress={this.onForward}>
-                        <Icon color={'black'} style={Styles.faqIcon} name='arrow-right' size={30}></Icon>
-                    </TouchableOpacity>
-                </View>
-                <WebView
-                    ref={this.webView}
-                    source={{ uri: 'https://querki.net/u/darker/spirit-island-faq/' }}
-                    startInLoadingState={true}
-                    onNavigationStateChange={this.onNavigationStateChange}
-                />
+            <View style={{ flex: 1 }}>
+                <Header title={'FAQ'} navigation={this.props.navigation} />
+                <View style={Styles.container}>
+                    <WebView
+                        ref={this.webView}
+                        source={{ uri: 'https://querki.net/u/darker/spirit-island-faq/' }}
+                        startInLoadingState={true}
+                        onNavigationStateChange={this.onNavigationStateChange}
+                    />
+                    <View style={Styles.faqButtons}>
+                        <TouchableOpacity style={Styles.faqButton} disabled={!this.state.canGoBack} onPress={this.onBack}>
+                            <Icon color={'black'} style={Styles.faqIcon} name='arrow-left' size={30}></Icon>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={Styles.faqButton} disabled={!this.state.canGoForward} onPress={this.onForward}>
+                            <Icon color={'black'} style={Styles.faqIcon} name='arrow-right' size={30}></Icon>
+                        </TouchableOpacity>
+                    </View>
 
+                </View>
             </View>
         );
     }

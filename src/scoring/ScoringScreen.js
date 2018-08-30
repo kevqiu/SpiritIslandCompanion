@@ -5,6 +5,7 @@ import SwitchSelector from 'react-native-switch-selector';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
+import Header from '../common/Header';
 import Colors from '../constants/colors';
 import { ScoringStyles as Styles } from './ScoringStyles';
 
@@ -103,187 +104,188 @@ class ScoringScreen extends Component {
     render() {
         let { victory, thematic, expansion, players, scenario, adversary, adversaryLevel, dahanRemaining, blightOnIsland, scored, score, invaderError, dahanError, blightError } = this.state;
         return (
-            <View style={Styles.container}>
-                <Text style={Styles.titleText}>Scoring</Text>
-                <KeyboardAwareScrollView
-                    ref={ref => this.scroll = ref}
-                    scrollEnabled={false}
-                    resetScrollToCoords={{ x: 0, y: 0 }}
-                    contentContainerStyle={Styles.scrollContainer}
-                >
-                    <View style={Styles.selectorContainer}>
-                        <SwitchSelector
-                            style={Styles.slider}
-                            height={35}
-                            textColor='gray'
-                            options={[
-                                { label: 'Victory', value: true },
-                                { label: 'Defeat', value: false }
-                            ]}
-                            initial={0}
-                            buttonColor={Colors.darkBrown}
-                            onPress={value => this.setState({ victory: value })}
-                        />
-                    </View>
+            <View style={{ flex: 1 }}>
+                <Header title={'Scoring'} navigation={this.props.navigation} />
 
-                    <View style={Styles.selectorContainer}>
-                        <SwitchSelector
-                            style={Styles.slider}
+                <View style={Styles.container}>
+                    <KeyboardAwareScrollView
+                        ref={ref => this.scroll = ref}
+                        scrollEnabled={false}
+                        resetScrollToCoords={{ x: 0, y: 0 }}
+                        contentContainerStyle={Styles.scrollContainer}
+                    >
+                        <View style={Styles.selectorContainer}>
+                            <SwitchSelector
+                                style={Styles.slider}
+                                height={35}
+                                textColor='gray'
+                                options={[
+                                    { label: 'Victory', value: true },
+                                    { label: 'Defeat', value: false }
+                                ]}
+                                initial={0}
+                                buttonColor={Colors.darkBrown}
+                                onPress={value => this.setState({ victory: value })}
+                            />
+                        </View>
 
-                            height={35}
-                            textColor='gray'
-                            options={[
-                                { label: 'Standard Board', value: false },
-                                { label: 'Thematic Board', value: true }
-                            ]}
-                            initial={0}
-                            buttonColor={Colors.darkBrown}
-                            onPress={value => this.setState({ thematic: value })}
-                        />
-                    </View>
+                        <View style={Styles.selectorContainer}>
+                            <SwitchSelector
+                                style={Styles.slider}
 
-                    <View style={Styles.selectorContainer}>
-                        <SwitchSelector
-                            style={Styles.slider}
-                            height={35}
-                            textColor='gray'
-                            options={[
-                                { label: 'Base Game', value: false },
-                                { label: 'Branch & Claw', value: true }
-                            ]}
-                            initial={0}
-                            buttonColor={Colors.darkBrown}
-                            onPress={value => this.setState({ expansion: value })}
-                        />
-                    </View>
+                                height={35}
+                                textColor='gray'
+                                options={[
+                                    { label: 'Standard Board', value: false },
+                                    { label: 'Thematic Board', value: true }
+                                ]}
+                                initial={0}
+                                buttonColor={Colors.darkBrown}
+                                onPress={value => this.setState({ thematic: value })}
+                            />
+                        </View>
 
-                    <View style={Styles.optionContainer}>
-                        <Text style={Styles.text}>Number of Players: </Text>
-                        <Picker
-                            selectedValue={players}
-                            prompt='Players'
-                            style={Styles.pickerSmall}
-                            mode='dropdown'
-                            onValueChange={(value) => this.setState({ players: value })}>
-                            <Picker.Item label='1' value={1} />
-                            <Picker.Item label='2' value={2} />
-                            <Picker.Item label='3' value={3} />
-                            <Picker.Item label='4' value={4} />
-                        </Picker>
-                    </View>
+                        <View style={Styles.selectorContainer}>
+                            <SwitchSelector
+                                style={Styles.slider}
+                                height={35}
+                                textColor='gray'
+                                options={[
+                                    { label: 'Base Game', value: false },
+                                    { label: 'Branch & Claw', value: true }
+                                ]}
+                                initial={0}
+                                buttonColor={Colors.darkBrown}
+                                onPress={value => this.setState({ expansion: value })}
+                            />
+                        </View>
 
-                    <View style={Styles.optionContainer}>
-                        <Text style={Styles.text}>Scenario: </Text>
-                        <Picker
-                            selectedValue={scenario}
-                            mode='dropdown'
-                            style={Styles.pickerLarge}
-                            itemStyle={Styles.pickerText}
-                            onValueChange={(value) => this.setState({ scenario: value })}>
-                            <Picker.Item label='None' value='none' />
-                            <Picker.Item label='Blitz' value='blitz' />
-                            <Picker.Item label='Dahan Insurrection' value='dahan' />
-                            <Picker.Item label={'Guard the Isle\'s Heart'} value='guard' />
-                            <Picker.Item label='Powers Long Forgotten' value='powers' />
-                            <Picker.Item label='Rituals of the Destroying Flame' value='ritualsFlame' />
-                            <Picker.Item label='Rituals of Terror' value='ritualsTerror' />
-                            <Picker.Item label='Second Wave' value='second' />
-                            <Picker.Item label='Ward the Shores' value='ward' />
-                        </Picker>
-                    </View>
-
-                    <View style={Styles.optionContainer}>
-                        <Text style={Styles.text}>Adversary: </Text>
-                        <Picker
-                            selectedValue={adversary}
-                            mode='dropdown'
-                            style={Styles.pickerLarge}
-                            itemStyle={Styles.pickerText}
-                            onValueChange={(value) => this.setState({ adversary: value })}>
-                            <Picker.Item label='None' value='none' />
-                            <Picker.Item label='Kingdom of Brandenburg-Prussia' value='brandenburg' />
-                            <Picker.Item label='Kingdom of England' value='england' />
-                            <Picker.Item label='Kingdom of Sweden' value='sweden' />
-                            <Picker.Item label='Kingdom of France' value='france' />
-                        </Picker>
-                    </View>
-
-                    {adversary !== 'none' &&
                         <View style={Styles.optionContainer}>
-                            <Text style={Styles.text}>Adversary Level: </Text>
+                            <Text style={Styles.text}>Number of Players: </Text>
                             <Picker
-                                selectedValue={adversaryLevel}
+                                selectedValue={players}
+                                prompt='Players'
                                 style={Styles.pickerSmall}
                                 mode='dropdown'
-                                onValueChange={(value) => this.setState({ adversaryLevel: value })}>
-                                <Picker.Item label='0' value={0} />
+                                onValueChange={(value) => this.setState({ players: value })}>
                                 <Picker.Item label='1' value={1} />
                                 <Picker.Item label='2' value={2} />
                                 <Picker.Item label='3' value={3} />
                                 <Picker.Item label='4' value={4} />
-                                <Picker.Item label='5' value={5} />
-                                <Picker.Item label='6' value={6} />
                             </Picker>
                         </View>
-                    }
 
-                    <View style={Styles.optionContainer}>
-                        <Text style={Styles.text}>Invader Cards {!victory && 'not '}in Deck: </Text>
-                        <TextInput
-                            keyboardType='numeric'
-                            onChangeText={(text) => this.setState({ invaderCards: text })}
-                            onSubmitEditing={() => { this.secondInput.focus(); }}//this.scroll.scrollToFocusedInput(this.secondInput);}}
-                            blurOnSubmit={false}
-                        />
-                        {invaderError && <Icon name='alert-circle' size={20}></Icon>}
-                    </View>
+                        <View style={Styles.optionContainer}>
+                            <Text style={Styles.text}>Scenario: </Text>
+                            <Picker
+                                selectedValue={scenario}
+                                mode='dropdown'
+                                style={Styles.pickerLarge}
+                                itemStyle={Styles.pickerText}
+                                onValueChange={(value) => this.setState({ scenario: value })}>
+                                <Picker.Item label='None' value='none' />
+                                <Picker.Item label='Blitz' value='blitz' />
+                                <Picker.Item label='Dahan Insurrection' value='dahan' />
+                                <Picker.Item label={'Guard the Isle\'s Heart'} value='guard' />
+                                <Picker.Item label='Powers Long Forgotten' value='powers' />
+                                <Picker.Item label='Rituals of the Destroying Flame' value='ritualsFlame' />
+                                <Picker.Item label='Rituals of Terror' value='ritualsTerror' />
+                                <Picker.Item label='Second Wave' value='second' />
+                                <Picker.Item label='Ward the Shores' value='ward' />
+                            </Picker>
+                        </View>
 
-                    <View style={Styles.optionContainer}>
-                        <Text style={Styles.text}>Remaining Dahan: </Text>
-                        <TextInput
-                            ref={(input) => { this.secondInput = input; }}
-                            keyboardType='numeric'
-                            onChangeText={(text) => this.setState({ dahanRemaining: text })}
-                            onSubmitEditing={() => { this.thirdInput.focus(); }}//this.scroll.scrollToFocusedInput(this.thirdInput); }}
-                            blurOnSubmit={false}
-                            onFocus={e => this._scrollToInput(findNodeHandle(e.target))}
-                        />
-                        {dahanError && <Icon name='alert-circle' size={20}></Icon>}
-                    </View>
+                        <View style={Styles.optionContainer}>
+                            <Text style={Styles.text}>Adversary: </Text>
+                            <Picker
+                                selectedValue={adversary}
+                                mode='dropdown'
+                                style={Styles.pickerLarge}
+                                itemStyle={Styles.pickerText}
+                                onValueChange={(value) => this.setState({ adversary: value })}>
+                                <Picker.Item label='None' value='none' />
+                                <Picker.Item label='Kingdom of Brandenburg-Prussia' value='brandenburg' />
+                                <Picker.Item label='Kingdom of England' value='england' />
+                                <Picker.Item label='Kingdom of Sweden' value='sweden' />
+                                <Picker.Item label='Kingdom of France' value='france' />
+                            </Picker>
+                        </View>
 
-                    <View style={Styles.optionContainer}>
-                        <Text style={Styles.text}>Blight On Island: </Text>
-                        <TextInput
-                            ref={(input) => { this.thirdInput = input; }}
-                            keyboardType='numeric'
-                            onChangeText={(text) => this.setState({ blightOnIsland: text })}
-                            onFocus={e => this._scrollToInput(findNodeHandle(e.target))}
-                        />
-                        {blightError && <Icon name='alert-circle' size={20}></Icon>}
-                    </View>
+                        {adversary !== 'none' &&
+                            <View style={Styles.optionContainer}>
+                                <Text style={Styles.text}>Adversary Level: </Text>
+                                <Picker
+                                    selectedValue={adversaryLevel}
+                                    style={Styles.pickerSmall}
+                                    mode='dropdown'
+                                    onValueChange={(value) => this.setState({ adversaryLevel: value })}>
+                                    <Picker.Item label='0' value={0} />
+                                    <Picker.Item label='1' value={1} />
+                                    <Picker.Item label='2' value={2} />
+                                    <Picker.Item label='3' value={3} />
+                                    <Picker.Item label='4' value={4} />
+                                    <Picker.Item label='5' value={5} />
+                                    <Picker.Item label='6' value={6} />
+                                </Picker>
+                            </View>
+                        }
 
-                    <View style={Styles.scoreButtonContainer}>
-                        <Button
-                            type='custom'
-                            onPress={this.tallyScore}
-                            backgroundColor={Colors.lightBrown}
-                            borderColor={Colors.lightBrownShadow}
-                            borderRadius={4}
-                            containerStyle={Styles.buttonContainer}
-                            contentStyle={Styles.buttonText}
-                        >
-                            Score
+                        <View style={Styles.optionContainer}>
+                            <Text style={Styles.text}>Invader Cards {!victory && 'not '}in Deck: </Text>
+                            <TextInput
+                                keyboardType='numeric'
+                                onChangeText={(text) => this.setState({ invaderCards: text })}
+                                onSubmitEditing={() => { this.secondInput.focus(); }}//this.scroll.scrollToFocusedInput(this.secondInput);}}
+                                blurOnSubmit={false}
+                            />
+                            {invaderError && <Icon name='alert-circle' size={20}></Icon>}
+                        </View>
+
+                        <View style={Styles.optionContainer}>
+                            <Text style={Styles.text}>Remaining Dahan: </Text>
+                            <TextInput
+                                ref={(input) => { this.secondInput = input; }}
+                                keyboardType='numeric'
+                                onChangeText={(text) => this.setState({ dahanRemaining: text })}
+                                onSubmitEditing={() => { this.thirdInput.focus(); }}//this.scroll.scrollToFocusedInput(this.thirdInput); }}
+                                blurOnSubmit={false}
+                                onFocus={e => this._scrollToInput(findNodeHandle(e.target))}
+                            />
+                            {dahanError && <Icon name='alert-circle' size={20}></Icon>}
+                        </View>
+
+                        <View style={Styles.optionContainer}>
+                            <Text style={Styles.text}>Blight On Island: </Text>
+                            <TextInput
+                                ref={(input) => { this.thirdInput = input; }}
+                                keyboardType='numeric'
+                                onChangeText={(text) => this.setState({ blightOnIsland: text })}
+                                onFocus={e => this._scrollToInput(findNodeHandle(e.target))}
+                            />
+                            {blightError && <Icon name='alert-circle' size={20}></Icon>}
+                        </View>
+
+                        <View style={Styles.scoreButtonContainer}>
+                            <Button
+                                type='custom'
+                                onPress={this.tallyScore}
+                                backgroundColor={Colors.lightBrown}
+                                borderColor={Colors.lightBrownShadow}
+                                borderRadius={4}
+                                containerStyle={Styles.buttonContainer}
+                                contentStyle={Styles.buttonText}
+                            >
+                                Score
                     </Button>
-                    </View>
+                        </View>
 
-                    <View style={Styles.optionContainer}>
-                        <Text style={Styles.scoreText}>Final Score: </Text>
-                        <Text style={Styles.scoreText}>{scored ? score : '\u2014'} </Text>
-                    </View>
-                    {/* </View> */}
-                </KeyboardAwareScrollView>
+                        <View style={Styles.optionContainer}>
+                            <Text style={Styles.scoreText}>Final Score: </Text>
+                            <Text style={Styles.scoreText}>{scored ? score : '\u2014'} </Text>
+                        </View>
+                    </KeyboardAwareScrollView>
+                </View>
             </View>
-
         );
     }
 }

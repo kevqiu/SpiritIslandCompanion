@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import Button from 'react-native-flat-button';
 
 import Colors from '../constants/colors';
 import ElementTracker from './ElementTracker';
+import Header from '../common/Header';
 import { ScreenStyles as Styles } from './ElementsStyles';
 
 class ElementsScreen extends Component {
@@ -12,7 +13,7 @@ class ElementsScreen extends Component {
 
         this.resetAll = this.resetAll.bind(this);
 
-        this.state = { 
+        this.state = {
             reset: false
         };
     }
@@ -26,28 +27,30 @@ class ElementsScreen extends Component {
     render() {
         let { reset } = this.state;
         return (
-            <View style={Styles.container}>
-                <Text style={Styles.titleText}>Element Tracker</Text>
-                <ElementTracker reset={reset} icon={require('./assets/SunIcon.png')}></ElementTracker>
-                <ElementTracker reset={reset} icon={require('./assets/MoonIcon.png')}></ElementTracker>
-                <ElementTracker reset={reset} icon={require('./assets/FireIcon.png')}></ElementTracker>
-                <ElementTracker reset={reset} icon={require('./assets/AirIcon.png')}></ElementTracker>
-                <ElementTracker reset={reset} icon={require('./assets/WaterIcon.png')}></ElementTracker>
-                <ElementTracker reset={reset} icon={require('./assets/EarthIcon.png')}></ElementTracker>
-                <ElementTracker reset={reset} icon={require('./assets/PlantIcon.png')}></ElementTracker>
-                <ElementTracker reset={reset} icon={require('./assets/AnimalIcon.png')}></ElementTracker>
-                <View style={Styles.resetButtonContainer}>
-                    <Button 
-                        type='custom'
-                        onPress={this.resetAll}
-                        backgroundColor={Colors.lightBrown}
-                        borderColor={Colors.lightBrownShadow}
-                        borderRadius={4}
-                        containerStyle={Styles.buttonContainer}
-                        contentStyle={Styles.buttonText}
-                    >
-                        Reset
+            <View style={{flex:1}}>
+            <Header title={'Element Tracker'} navigation={this.props.navigation} />
+                <View style={Styles.container}>
+                    <ElementTracker reset={reset} icon={require('./assets/SunIcon.png')}></ElementTracker>
+                    <ElementTracker reset={reset} icon={require('./assets/MoonIcon.png')}></ElementTracker>
+                    <ElementTracker reset={reset} icon={require('./assets/FireIcon.png')}></ElementTracker>
+                    <ElementTracker reset={reset} icon={require('./assets/AirIcon.png')}></ElementTracker>
+                    <ElementTracker reset={reset} icon={require('./assets/WaterIcon.png')}></ElementTracker>
+                    <ElementTracker reset={reset} icon={require('./assets/EarthIcon.png')}></ElementTracker>
+                    <ElementTracker reset={reset} icon={require('./assets/PlantIcon.png')}></ElementTracker>
+                    <ElementTracker reset={reset} icon={require('./assets/AnimalIcon.png')}></ElementTracker>
+                    <View style={Styles.resetButtonContainer}>
+                        <Button
+                            type='custom'
+                            onPress={this.resetAll}
+                            backgroundColor={Colors.lightBrown}
+                            borderColor={Colors.lightBrownShadow}
+                            borderRadius={4}
+                            containerStyle={Styles.buttonContainer}
+                            contentStyle={Styles.buttonText}
+                        >
+                            Reset
                     </Button>
+                    </View>
                 </View>
             </View>
         );

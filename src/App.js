@@ -1,29 +1,51 @@
 import React from 'react';
+import { Text, View, Button } from 'react-native';
+
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-import { createBottomTabNavigator } from 'react-navigation'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import { createDrawerNavigator, DrawerItems } from 'react-navigation'
 
 import Colors from './constants/colors';
 import HomeScreen from './home/HomeScreen'
 import ElementsScreen from './elements/ElementsScreen'
 import ScoringScreen from './scoring/ScoringScreen'
+import ScenarioScreen from './scenarios/ScenarioScreen'
+import AdversaryScreen from './adversaries/AdversaryScreen'
 import FaqScreen from './faq/FaqScreen';
+import DrawerHeader from './common/DrawerHeader';
 
-export default createBottomTabNavigator(
+export default createDrawerNavigator(
     {
         Elements: {
             screen: ElementsScreen,
             navigationOptions: {
                 title: 'Element Tracker',
-                tabBarIcon: ({tintColor}) => (
-                    <Icon name='fire' size={30} color={tintColor}></Icon>
+                drawerIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='sun' size={24} color={tintColor} style={{marginLeft:1}}/>
                 )
             }
         },
         Scoring: {
             screen: ScoringScreen,
             navigationOptions: {
-                tabBarIcon: ({tintColor}) => (
-                    <Icon name='cash-100' size={30} color={tintColor}></Icon>
+                drawerIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='trophy' size={20} color={tintColor}/>
+                )
+            }
+        },
+        Scenarios: {
+            screen: ScenarioScreen,
+            navigationOptions: {
+                drawerIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='book' size={22} color={tintColor}/>
+                )
+            }
+        },
+        Adversaries: {
+            screen: AdversaryScreen,
+            navigationOptions: {
+                drawerIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='fort-awesome' size={24} color={tintColor}/>
                 )
             }
         },
@@ -31,25 +53,25 @@ export default createBottomTabNavigator(
             screen: FaqScreen,
             navigationOptions: {
                 title: 'FAQ',
-                tabBarIcon: ({tintColor}) => (
-                    <Icon name='help-circle' size={30} color={tintColor}></Icon>
+                drawerIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='question-circle' size={22} color={tintColor}/>
                 )
             }
         }
     },
     {
-        tabBarOptions: {
+        contentOptions: {
             labelStyle: {
                 fontFamily: 'ReemKufi',
-                marginTop: 1
-            },
-            style: {
-                backgroundColor: Colors.darkYellow,
-                height: 52
             },
             activeTintColor: Colors.darkBrown,
             inactiveTintColor: 'gray',
-            showIcon: true    
-        }
+        },
+        contentComponent: (navigation) => (
+            <View>
+                <DrawerHeader />
+                <DrawerItems {...navigation} />
+            </View>
+        )
     }
 );

@@ -9,13 +9,6 @@ const ScreenStyles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: Colors.lightYellow
     },
-    titleText: {
-        marginTop: 20,
-        marginBottom: 10,
-        color: 'black',
-        fontSize: 28,
-        fontFamily: 'ReemKufi'
-    },
     resetButtonContainer: {
         height: 90,
         justifyContent: 'center'
