@@ -21,7 +21,7 @@ export default createDrawerNavigator(
             navigationOptions: {
                 title: 'Element Tracker',
                 drawerIcon: ({ tintColor }) => (
-                    <FontAwesome5 name='sun' size={24} color={tintColor} style={{marginLeft:1}}/>
+                    <FontAwesome5 name='fire' size={22} color={tintColor} style={{marginLeft:1}}/>
                 )
             }
         },
@@ -29,7 +29,7 @@ export default createDrawerNavigator(
             screen: ScoringScreen,
             navigationOptions: {
                 drawerIcon: ({ tintColor }) => (
-                    <FontAwesome5 name='trophy' size={20} color={tintColor}/>
+                    <FontAwesome5 name='trophy' size={22} color={tintColor}/>
                 )
             }
         },
@@ -45,7 +45,7 @@ export default createDrawerNavigator(
             screen: AdversaryScreen,
             navigationOptions: {
                 drawerIcon: ({ tintColor }) => (
-                    <FontAwesome5 name='fort-awesome' size={24} color={tintColor}/>
+                    <FontAwesome5 name='fort-awesome' size={22} color={tintColor}/>
                 )
             }
         },
@@ -72,6 +72,7 @@ export default createDrawerNavigator(
                 <DrawerHeader />
                 <DrawerItems {...navigation} />
             </View>
-        )
+        ),
+        initialRouteName: 'Scenarios'
     }
 );

@@ -48,7 +48,6 @@ const Styles = StyleSheet.create({
     appImage: {
         height: 70,
         width: 70,
-        
     }
 });
 
