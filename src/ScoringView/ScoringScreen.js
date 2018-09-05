@@ -15,8 +15,8 @@ const scenarioDifficultyDict = {
     'dahan': 4,
     'guard': 0,
     'powers': 1,
-    'ritualsFlame': 3,
-    'ritualsTerror': 3,
+    'flame': 3,
+    'terror': 3,
     'second': 1,
     'ward': 2
 }
@@ -105,7 +105,7 @@ class ScoringScreen extends Component {
         let { victory, thematic, expansion, players, scenario, adversary, adversaryLevel, dahanRemaining, blightOnIsland, scored, score, invaderError, dahanError, blightError } = this.state;
         return (
             <View style={{ flex: 1 }}>
-                <Header title={'Scoring'} navigation={this.props.navigation} />
+                <Header title={'Scoring'} navigation={this.props.navigation} navStyle={'drawer'} />
 
                 <View style={Styles.container}>
                     <KeyboardAwareScrollView
@@ -188,8 +188,8 @@ class ScoringScreen extends Component {
                                 <Picker.Item label='Dahan Insurrection' value='dahan' />
                                 <Picker.Item label={'Guard the Isle\'s Heart'} value='guard' />
                                 <Picker.Item label='Powers Long Forgotten' value='powers' />
-                                <Picker.Item label='Rituals of the Destroying Flame' value='ritualsFlame' />
-                                <Picker.Item label='Rituals of Terror' value='ritualsTerror' />
+                                <Picker.Item label='Rituals of the Destroying Flame' value='flame' />
+                                <Picker.Item label='Rituals of Terror' value='terror' />
                                 <Picker.Item label='Second Wave' value='second' />
                                 <Picker.Item label='Ward the Shores' value='ward' />
                             </Picker>

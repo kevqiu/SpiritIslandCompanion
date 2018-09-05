@@ -37,9 +37,10 @@ class FaqScreen extends Component {
     }
 
     render() {
+        let { navigation } = this.props;
         return (
             <View style={{ flex: 1 }}>
-                <Header title={'FAQ'} navigation={this.props.navigation} />
+                <Header title={'FAQ'} navigation={navigation} navStyle={'drawer'} />
                 <View style={Styles.container}>
                     <WebView
                         ref={this.webView}

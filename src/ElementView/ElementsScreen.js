@@ -28,7 +28,7 @@ class ElementsScreen extends Component {
         let { reset } = this.state;
         return (
             <View style={{flex:1}}>
-            <Header title={'Element Tracker'} navigation={this.props.navigation} />
+            <Header title={'Element Tracker'} navigation={this.props.navigation} navStyle={'drawer'} />
                 <View style={Styles.container}>
                     <ElementTracker reset={reset} icon={require('./assets/SunIcon.png')}></ElementTracker>
                     <ElementTracker reset={reset} icon={require('./assets/MoonIcon.png')}></ElementTracker>

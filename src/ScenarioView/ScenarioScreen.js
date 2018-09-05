@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text, View, FlatList } from 'react-native';
 
 import Header from '../common/Header';
-import { ScenarioStyles as Styles } from './ScenarioStyles';
+import { ScenarioScreenStyles as Styles } from './ScenarioScreenStyles';
 import { ListItem, ListDivider } from '../common/ListItem';
 
 const Scenarios = [
@@ -10,6 +10,7 @@ const Scenarios = [
         key: 'blitz',
         data: {
             name: 'Blitz',
+            screen: 'Blitz',
             difficulty: 0,
             image: require('./assets/blitzIcon.png'),
             isExpansion: false
@@ -20,6 +21,7 @@ const Scenarios = [
         key: 'dahan',
         data: {
             name: 'Dahan Insurrection',
+            screen: 'Dahan',
             difficulty: 4,
             image: require('./assets/dahan.png'),
             isExpansion: false
@@ -29,6 +31,7 @@ const Scenarios = [
         key: 'guard',
         data: {
             name: 'Guard the Isle\'s Heart',
+            screen: 'Guard',
             difficulty: 0,
             image: require('./assets/guard.png'),
             isExpansion: false
@@ -38,26 +41,29 @@ const Scenarios = [
         key: 'powers',
         data: {
             name: 'Powers Long Forgotten',
+            screen: 'Powers',
             difficulty: 1,
             image: require('./assets/powers.png'),
             isExpansion: true
         }
     },
     {
-        key: 'ritualsFlame',
+        key: 'flame',
         data: {
             name: 'Rituals of the Destroying Flame',
+            screen: 'Flame',
             difficulty: 3,
-            image: require('./assets/ritualsFlame.png'),
+            image: require('./assets/flame.png'),
             isExpansion: true
         }
     },
     {
-        key: 'ritualsTerror',
+        key: 'terror',
         data: {
             name: 'Rituals of Terror',
+            screen: 'Terror',
             difficulty: 3,
-            image: require('./assets/ritualsTerror.png'),
+            image: require('./assets/terror.png'),
             isExpansion: false
         }
     },
@@ -65,6 +71,7 @@ const Scenarios = [
         key: 'second',
         data: {
             name: 'Second Wave',
+            screen: 'Wave',
             difficulty: '±1',
             image: require('./assets/second.png'),
             isExpansion: true
@@ -74,6 +81,7 @@ const Scenarios = [
         key: 'ward',
         data: {
             name: 'Ward the Shores',
+            screen: 'Shores',
             difficulty: 2,
             image: require('./assets/ward.png'),
             isExpansion: true
@@ -81,18 +89,18 @@ const Scenarios = [
     }
 ]
 
-
 class ScenarioScreen extends Component {
     render() {
+        let { navigation } = this.props;
         return (
             <View style={{ flex: 1 }}>
-                <Header title={'Scenarios'} navigation={this.props.navigation} />
+                <Header title={'Scenarios'} navigation={navigation} navStyle={'drawer'} />
 
                 <View style={Styles.container}>
                     <FlatList
                         data={Scenarios}
                         renderItem={({ item }) =>
-                            <ListItem data={item.data} />
+                            <ListItem data={item.data} navigation={navigation} />
                         }
                         ItemSeparatorComponent={() => <ListDivider />}
                     />

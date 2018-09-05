@@ -6,15 +6,24 @@ import Colors from '../constants/colors';
 
 class Header extends Component {
     render() {
+        let { navStyle } = this.props;
         return (
             <View style={{ height: 56 }}>
                 <HeaderComponent
                     leftComponent={
-                        {
+                        navStyle === 'drawer' 
+                        ? {
                             icon: 'menu',
                             color: 'black',
                             onPress: () => this.props.navigation.openDrawer()
                         }
+                        : navStyle === 'back' 
+                        ? {
+                            icon: 'arrow-back',
+                            color: 'black',
+                            onPress: () => this.props.navigation.goBack()
+                        }
+                        : null
                     }
                     centerComponent={
                         {

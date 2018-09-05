@@ -6,8 +6,7 @@ class AdversaryScreen extends Component {
     render() {
         return (
             <View style={Styles.container}>
-                <Text style={Styles.welcome}>Welcome to the</Text>
-                <Text style={Styles.welcome}>Spirit Island Companion!</Text>
+                <Text style={Styles.welcome}>WIP</Text>
             </View>
         );
     }

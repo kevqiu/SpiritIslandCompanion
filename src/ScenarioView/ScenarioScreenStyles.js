@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import Colors from '../constants/colors';
 
-const ScenarioStyles = StyleSheet.create({
+const ScenarioScreenStyles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
@@ -10,4 +10,4 @@ const ScenarioStyles = StyleSheet.create({
     }
 });
 
-export { ScenarioStyles };
+export { ScenarioScreenStyles };

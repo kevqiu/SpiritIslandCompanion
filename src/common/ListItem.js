@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { Text, Image, View, StyleSheet } from 'react-native';
+import { Text, Image, View, StyleSheet, TouchableOpacity } from 'react-native';
 
 class ListItem extends Component {
     render() {
-        let { name, difficulty, isExpansion, image } = this.props.data;
+        let { name, screen, difficulty, isExpansion, image } = this.props.data;
+        let { navigate } = this.props.navigation;
         return (
+            <TouchableOpacity onPress={() => navigate(screen, {test: 'test'})}>
+
             <View style={Styles.container}>
                 <View style={Styles.textContainer}>
                     <Text style={Styles.nameText}>{name}</Text>
@@ -15,6 +18,8 @@ class ListItem extends Component {
                 </View>
                 <Image style={Styles.image} source={image} />
             </View>
+            </TouchableOpacity>
+
         )
     }
 }
