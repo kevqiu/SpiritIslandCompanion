@@ -29,6 +29,9 @@ const ScenarioStyles = StyleSheet.create({
     sectionSpacer: {
         marginVertical: 3
     },
+    paragraph: {
+        paddingLeft: 18
+    },
     headerImage: {
         width: '100%'
     }
@@ -66,6 +69,14 @@ const IconStyles = StyleSheet.create({
     Presence: {
         width: 80,
         height: 40
+    },
+    Element: {
+        width: 90,
+        height: 90
+    },
+    Range: {
+        width: 160,
+        height: 115
     }
 });
 

@@ -64,6 +64,7 @@ class DahanScreen extends Component {
                                 <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
                                 {' multiple times, it only does damage in the land where it ends up.)'}
                             </Text>
+                            <View style={Styles.sectionSpacer} />
                             <Text style={Styles.sectionText}>
                                 <Text style={Styles.sectionTextBold}>{'Military Response: '}</Text>
                                 {'Whenever a '}
@@ -80,6 +81,7 @@ class DahanScreen extends Component {
                                 <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
                                 {' (Add the new invaders after fully resolving the Power or effect which destroyed the old one).'}
                             </Text>
+                            <View style={Styles.sectionSpacer} />
                             <Text style={Styles.sectionText}>
                                 <Text style={Styles.sectionTextBold}>{'Coordinated Insurrection: '}</Text>
 
@@ -106,7 +108,7 @@ class DahanScreen extends Component {
                                 {'.'}
                             </Text>
                             <Text style={Styles.sectionText}>
-                                <Text style={Styles.sectionTextBold}>{'Terror 3: '}</Text>
+                                <Text style={Styles.sectionTextBold}>{'Terror 3+: '}</Text>
                                 {'There is fewer than 1 land per player where '}
                                 <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
                                 {' / '}
@@ -115,14 +117,13 @@ class DahanScreen extends Component {
                                 <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
                                 {'.'}
                             </Text>
+                            <View style={Styles.sectionSpacer} />
                             <Text style={Styles.sectionTextBold}>{'ADDITIONAL LOSS CONDITIONS'}</Text>
                             <Text style={Styles.sectionText}>
-                                <Text style={Styles.sectionTextBold}>{'Terror 3: '}</Text>
                                 {'There are fewer than 2 '}
                                 <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
                                 {' per player left alive.'}
                             </Text>
-
                         </CollapsibleSection>
                     </View>
                 </ScrollView>

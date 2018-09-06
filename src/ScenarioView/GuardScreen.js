@@ -40,6 +40,8 @@ class GuardScreen extends Component {
                                     {'\u2022 for Spirits with no Buid prevention or Fast way to destroy '}
                                     <Image resizeMode='cover' style={IconStyles.Explorer} source={require('./assets/icons/ExplorerIcon.png')} />
                                     {' (e.g., Bringer of Dreams and Nightmares)'}
+                                </Text>
+                                <Text style={Styles.sectionText}>
                                     {'\u2022 against Adversaries who act quickly (e.g., Kingdom of Brandenburg-Prussia)'}
                                 </Text>
                             </View>
@@ -66,7 +68,6 @@ class GuardScreen extends Component {
                                 <Text style={Styles.sectionTextBold}>{'4 players: '}</Text>
                             </Text>
                             <Image resizeMode='cover' source={require('./assets/icons/Inner_Lands_4.png')} />
-
                         </CollapsibleSection>
 
                         <CollapsibleSection sectionTitle='Setup Changes' scrollView={this.scrollView}>
@@ -87,9 +88,6 @@ class GuardScreen extends Component {
                                 {' in the nearest legal land on that board.)'}
                             </Text>
                         </CollapsibleSection>
-
-
-
                     </View>
                 </ScrollView>
             </View>

@@ -66,7 +66,8 @@ const Styles = StyleSheet.create({
     textContainer: {
         backgroundColor: 'white',
         marginVertical: 8,
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
+        backgroundColor: Colors.lightYellow
     }
 });
 

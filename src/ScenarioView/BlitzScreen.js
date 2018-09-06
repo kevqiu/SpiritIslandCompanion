@@ -48,6 +48,7 @@ class BlitzScreen extends Component {
                             <Text style={Styles.sectionText}>
                                 {'All powers are '}
                                 <Image resizeMode='cover' style={IconStyles.Fast} source={require('./assets/icons/FastIcon.png')} />
+                                {' .'}                            
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'Powers which were already '}
@@ -59,6 +60,7 @@ class BlitzScreen extends Component {
                             <Text style={Styles.sectionText}>
                                 {'When Exploring, once per board, add an additional  '}
                                 <Image resizeMode='cover' style={IconStyles.Explorer} source={require('./assets/icons/ExplorerIcon.png')} />
+                                {' .'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'If the Island becomes "Blighted", put 1 less '}
