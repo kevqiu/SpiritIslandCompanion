@@ -1,11 +1,19 @@
 import { StyleSheet } from 'react-native';
+import Colors from '../constants/colors';
 
 const ScenarioStyles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: Colors.lightYellow,
+        flexDirection: 'column'
+    },
+    contentContainer: {
+        flex: 1,
         flexDirection: 'column',
-        alignItems: 'center',
-        backgroundColor: '#FFFBEC'
+        alignItems: 'center'
+    },
+    scrollContainer: {
+        flex: 1
     },
     sectionText: {
         fontSize: 16,
@@ -26,4 +34,23 @@ const ScenarioStyles = StyleSheet.create({
     }
 });
 
-export { ScenarioStyles };
+const IconStyles = StyleSheet.create({
+    Slow: {
+        width: 97,
+        height: 75
+    },
+    Fast: {
+        width: 97,
+        height: 75
+    },
+    Blight: {
+        width: 76,
+        height: 80
+    },
+    Explorer: {
+        width: 45,
+        height: 80
+    }
+});
+
+export { ScenarioStyles, IconStyles };

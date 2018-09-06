@@ -235,7 +235,7 @@ class ScoringScreen extends Component {
                             <TextInput
                                 keyboardType='numeric'
                                 onChangeText={(text) => this.setState({ invaderCards: text })}
-                                onSubmitEditing={() => { this.secondInput.focus(); }}//this.scroll.scrollToFocusedInput(this.secondInput);}}
+                                onSubmitEditing={() => { this.secondInput.focus(); }}
                                 blurOnSubmit={false}
                             />
                             {invaderError && <Icon name='alert-circle' size={20}></Icon>}
@@ -247,7 +247,7 @@ class ScoringScreen extends Component {
                                 ref={(input) => { this.secondInput = input; }}
                                 keyboardType='numeric'
                                 onChangeText={(text) => this.setState({ dahanRemaining: text })}
-                                onSubmitEditing={() => { this.thirdInput.focus(); }}//this.scroll.scrollToFocusedInput(this.thirdInput); }}
+                                onSubmitEditing={() => { this.thirdInput.focus(); }}
                                 blurOnSubmit={false}
                                 onFocus={e => this._scrollToInput(findNodeHandle(e.target))}
                             />
@@ -276,7 +276,7 @@ class ScoringScreen extends Component {
                                 contentStyle={Styles.buttonText}
                             >
                                 Score
-                    </Button>
+                            </Button>
                         </View>
 
                         <View style={Styles.optionContainer}>

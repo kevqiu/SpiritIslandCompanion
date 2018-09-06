@@ -17,12 +17,12 @@ class ElementTracker extends Component {
     }
 
     increment() {
-        this.setState({counter: ++this.state.counter});
+        this.setState(state => ({counter: ++state.counter}));
     }
 
     decrement() {
         if (this.state.counter > 0) {
-            this.setState({counter: --this.state.counter});            
+            this.setState(state => ({counter: --state.counter}));
         }
     }
 

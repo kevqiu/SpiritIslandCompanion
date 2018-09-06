@@ -19,9 +19,9 @@ class ElementsScreen extends Component {
     }
 
     resetAll() {
-        this.setState({
-            reset: !this.state.reset
-        });
+        this.setState(state => ({
+            reset: !state.reset
+        }));
     }
 
     render() {

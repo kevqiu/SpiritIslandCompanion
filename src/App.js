@@ -48,7 +48,8 @@ const ScenarioView = StackNavigator(
             },
             header: null
 
-        }
+        },
+        initialRouteName: 'Scenarios'
     }
 );
 
