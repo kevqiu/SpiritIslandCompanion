@@ -11,11 +11,6 @@ class BlitzScreen extends Component {
         super(props);
 
         this.scrollView = React.createRef();
-
-        this.state = {
-            loreCollapsed: false,
-            setupCollapsed: false,
-        };
     }
     render() {
         let { navigation } = this.props;
@@ -49,18 +44,7 @@ class BlitzScreen extends Component {
                             </View>
                         </CollapsibleSection>
 
-                        <CollapsibleSection sectionTitle='Setup'>
-                            <Text style={Styles.sectionText}>
-                                {'Put an additional '}
-                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
-                                {' per player on the Blight Card.'}
-                            </Text>
-                            <Text style={Styles.sectionText}>
-                                {'The invaders get an additional set of actions at the end of Setup. (So they will Explore, then Build and Explore.)'}
-                            </Text>
-                        </CollapsibleSection>
-
-                        <CollapsibleSection sectionTitle='Rules' scrollView={this.scrollView}>
+                        <CollapsibleSection sectionTitle='Rule Changes'>
                             <Text style={Styles.sectionText}>
                                 {'All powers are '}
                                 <Image resizeMode='cover' style={IconStyles.Fast} source={require('./assets/icons/FastIcon.png')} />
@@ -83,6 +67,16 @@ class BlitzScreen extends Component {
                             </Text>
                         </CollapsibleSection>
 
+                        <CollapsibleSection sectionTitle='Setup Changes' scrollView={this.scrollView}>
+                            <Text style={Styles.sectionText}>
+                                {'Put an additional '}
+                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                {' per player on the Blight Card.'}
+                            </Text>
+                            <Text style={Styles.sectionText}>
+                                {'The invaders get an additional set of actions at the end of Setup. (So they will Explore, then Build and Explore.)'}
+                            </Text>
+                        </CollapsibleSection>
                     </View>
                 </ScrollView>
             </View>

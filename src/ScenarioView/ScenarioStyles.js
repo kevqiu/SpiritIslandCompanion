@@ -50,6 +50,22 @@ const IconStyles = StyleSheet.create({
     Explorer: {
         width: 45,
         height: 80
+    },
+    Dahan: {
+        width: 80,
+        height: 77
+    },
+    Town: {
+        width: 80,
+        height: 69
+    },
+    City: {
+        width: 80,
+        height: 69
+    },
+    Presence: {
+        width: 80,
+        height: 40
     }
 });
 

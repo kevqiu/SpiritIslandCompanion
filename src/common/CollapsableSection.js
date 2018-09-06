@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, Button, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 import Colors from '../constants/colors';
 
