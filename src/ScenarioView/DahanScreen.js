@@ -92,7 +92,7 @@ class DahanScreen extends Component {
                             </Text>
                         </CollapsibleSection>
 
-                        <CollapsibleSection sectionTitle='Victory / Loss Conditions' scrollView={this.scrollView}>
+                        <CollapsibleSection sectionTitle='Victory / Loss Conditions'>
                             <Text style={Styles.sectionTextBold}>{'VICTORY'}</Text>
                             <Text style={Styles.sectionText}>
                                 {'The normal Fear-based Victory is not available. Instead: '}

@@ -69,7 +69,7 @@ class BlitzScreen extends Component {
                             </Text>
                         </CollapsibleSection>
 
-                        <CollapsibleSection sectionTitle='Setup Changes' scrollView={this.scrollView}>
+                        <CollapsibleSection sectionTitle='Setup Changes'>
                             <Text style={Styles.sectionText}>
                                 {'Put an additional '}
                                 <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />

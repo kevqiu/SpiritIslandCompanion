@@ -10,10 +10,11 @@ const ScenarioStyles = StyleSheet.create({
     contentContainer: {
         flex: 1,
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingBottom: 20
     },
     scrollContainer: {
-        flex: 1
+        flex: 1,
     },
     sectionText: {
         fontSize: 16,
@@ -77,6 +78,14 @@ const IconStyles = StyleSheet.create({
     Range: {
         width: 160,
         height: 115
+    },
+    Fear: {
+        width: 75,
+        height: 75
+    },
+    SacredSite: {
+        width: 80,
+        height: 65
     }
 });
 

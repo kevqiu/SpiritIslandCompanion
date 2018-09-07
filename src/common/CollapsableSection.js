@@ -16,17 +16,7 @@ class CollapsibleSection extends Component {
     }
 
     toggleCollaspible() {
-        this.setState(state => ({ collapsed: !state.collapsed }),
-            () => {
-                if (this.props.scrollView && !this.state.collapsed) {
-                    // need timeout for Collapsible to fully expand
-                    setTimeout(() =>
-                        this.props.scrollView.current.scrollToEnd({ animated: true }),
-                        350
-                    );
-                }
-            }
-        );
+        this.setState(state => ({ collapsed: !state.collapsed }));
     }
 
     render() {
