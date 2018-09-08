@@ -86,6 +86,18 @@ const IconStyles = StyleSheet.create({
     SacredSite: {
         width: 80,
         height: 65
+    },
+    Beast: {
+        width: 80,
+        height: 77
+    },
+    Wild: {
+        width: 102,
+        height: 82
+    },
+    Disease: {
+        width: 80,
+        height: 80
     }
 });
 

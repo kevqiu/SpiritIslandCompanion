@@ -21,7 +21,7 @@ import PowersScreen from './ScenarioView/PowersScreen';
 import FlameScreen from './ScenarioView/FlameScreen';
 import TerrorScreen from './ScenarioView/TerrorScreen';
 import ShoresScreen from './ScenarioView/ShoresScreen';
-import WaveScreen from './ScenarioView/WaveScreen';
+import WaveScreen from './ScenarioView/SecondScreen';
 
 
 const ScenarioView = StackNavigator(
