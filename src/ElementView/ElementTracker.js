@@ -10,24 +10,24 @@ class ElementTracker extends Component {
         this.decrement = this.decrement.bind(this);
         this.reset = this.reset.bind(this);
 
-        this.state = { 
+        this.state = {
             counter: 0,
             reset: false
         };
     }
 
     increment() {
-        this.setState(state => ({counter: ++state.counter}));
+        this.setState(state => ({ counter: ++state.counter }));
     }
 
     decrement() {
         if (this.state.counter > 0) {
-            this.setState(state => ({counter: --state.counter}));
+            this.setState(state => ({ counter: --state.counter }));
         }
     }
 
     reset() {
-        this.setState({counter: 0});
+        this.setState({ counter: 0 });
     }
 
     componentWillReceiveProps(newProps) {
@@ -47,23 +47,23 @@ class ElementTracker extends Component {
                     <Image style={Styles.elementImage} source={icon} />
                 </View>
                 <View style={Styles.counterContainer}>
-                        <Text style={Styles.counterText}>{this.state.counter}</Text>
-                    </View>
+                    <Text style={Styles.counterText}>{this.state.counter}</Text>
+                </View>
                 <View style={Styles.buttonContainer}>
-                    <TouchableOpacity onPress={this.increment} underlayColor={'rgba(0,0,0,0)'}>
-                        <Image 
-                            style={Styles.counterImage} 
-                            source={require('./assets/Plus_1.png')}
-                        />
-                    </TouchableOpacity>
                     <TouchableOpacity onPress={this.decrement} underlayColor={'rgba(0,0,0,0)'}>
-                        <Image 
-                            style={Styles.counterImage} 
+                        <Image
+                            style={Styles.counterImage}
                             source={require('./assets/Minus_1.png')}
                         />
                     </TouchableOpacity>
+                    <TouchableOpacity onPress={this.increment} underlayColor={'rgba(0,0,0,0)'}>
+                        <Image
+                            style={Styles.counterImage}
+                            source={require('./assets/Plus_1.png')}
+                        />
+                    </TouchableOpacity>
                 </View>
-                
+
             </View>
         );
     }

@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
 import { ScrollView, Text, View, Image } from 'react-native';
+import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 
 import { ScenarioStyles as Styles } from './ScenarioStyles';
 import { IconStyles as IconStyles } from './ScenarioStyles';
 import Header from '../common/Header';
 import { CollapsibleSection } from '../common/CollapsableSection';
+
+const tableHead = ['', 'Wave 3', 'Wave 4', 'Wave 5', 'Wave 6', 'Wave 7'];
+const tableCol = ['Blight', 'Closer to Coast', 'Add town to']
+const tableData = [
+    ['1', '2', '3', '4', '5'],
+    ['a', 'b', 'c', 'd', 'e'],
+    ['1', '2', '3', '456', '123']
+]
 
 class SecondScreen extends Component {
     constructor(props) {
@@ -12,12 +21,13 @@ class SecondScreen extends Component {
 
         this.scrollView = React.createRef();
     }
+
     render() {
         let { navigation } = this.props;
 
         return (
             <View style={Styles.container} >
-                <Header title={'Rituals of Terror'} navigation={navigation} navStyle={'back'} />
+                <Header title={'Second Wave'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
                     <Image resizeMode='cover' style={Styles.headerImage} source={require('./assets/second.png')} />
                     <View style={Styles.contentContainer}>
@@ -153,6 +163,19 @@ class SecondScreen extends Component {
                         </CollapsibleSection>
 
                         <CollapsibleSection sectionTitle='Later Waves'>
+                            <Text style={Styles.sectionText}>
+                                {'If you want to play further waves, most rules from the reverse side remain the same. The only changes are:'}
+                            </Text>
+                            <Table borderStyle={{ borderWidth: 2, borderColor: '#c8e1ff' }}>
+                                <Row data={tableHead} style={Styles.tableHead} textStyle={Styles.text} />
+
+                                <TableWrapper style={Styles.tableWrapper}>
+                                    <Col data={tableCol} style={Styles.tableCol}/>
+
+                                    <Rows data={tableData} style={Styles.tableData} flexArr={[1,1,1,1,1]}/>
+                                </TableWrapper>
+
+                            </Table>
                         </CollapsibleSection>
                     </View>
                 </ScrollView>

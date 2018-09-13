@@ -35,6 +35,18 @@ const ScenarioStyles = StyleSheet.create({
     },
     headerImage: {
         width: '100%'
+    },
+    tableHead: {
+
+    },
+    tableWrapper: {
+        flexDirection: 'row'
+    },
+    tableCol: {
+        flex: 1
+    },
+    tableData: {
+        // height: 28
     }
 });
 
