@@ -8,11 +8,10 @@ import Header from '../common/Header';
 import { CollapsibleSection } from '../common/CollapsableSection';
 
 const tableHead = ['', 'Wave 3', 'Wave 4', 'Wave 5', 'Wave 6', 'Wave 7'];
-const tableCol = ['Blight', 'Closer to Coast', 'Add town to']
 const tableData = [
-    ['1', '2', '3', '4', '5'],
-    ['a', 'b', 'c', 'd', 'e'],
-    ['1', '2', '3', '456', '123']
+    ['Blight Left on Board', '3/player', '4/player', '5/player', '6/player', '7/player'],
+    ['Closer to Coast Shift for Pre-printed Invaders', '-2', '-1', '0', '0', '0'],
+    ['On each board, add a Town to land #\'s', '4,5', '3,4,5', '2,3,4,5', '1,2,3,4,5', '1,2,3,4,5,6']
 ]
 
 class SecondScreen extends Component {
@@ -29,13 +28,13 @@ class SecondScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Second Wave'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <Image resizeMode='cover' style={Styles.headerImage} source={require('./assets/second.png')} />
+                    <Image resizeMode='contain' style={Styles.headerImage} source={require('./assets/second.png')} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>
                                 <Text style={Styles.sectionText}>
-                                    {'The Invaders have been drive off once, but they are not staying away, '}
-                                    {'and the Spirits who first defended the island have grown to powerful '}
+                                    {'The Invaders have been driven off once, but they are not staying away, '}
+                                    {'and the Spirits who first defended the island have grown too powerful '}
                                     {'and slow to react to this second wave of Invaders. '}
                                     {'Can a new set of spirits rise to the occasion and keep the island safe? '}
                                 </Text>
@@ -68,7 +67,6 @@ class SecondScreen extends Component {
                                 {'Each one is discarded after one use (or at the end of the game, if playing further waves).'}
                             </Text>
                             <View style={Styles.sectionSpacer} />
-
 
                             <Text style={Styles.sectionTextBold}>{'After the First Game'}</Text>
                             <Text style={Styles.sectionText}>
@@ -164,17 +162,11 @@ class SecondScreen extends Component {
 
                         <CollapsibleSection sectionTitle='Later Waves'>
                             <Text style={Styles.sectionText}>
-                                {'If you want to play further waves, most rules from the reverse side remain the same. The only changes are:'}
+                                {'If you want to play further waves, most rules from the above remain the same. The only changes are:'}
                             </Text>
-                            <Table borderStyle={{ borderWidth: 2, borderColor: '#c8e1ff' }}>
-                                <Row data={tableHead} style={Styles.tableHead} textStyle={Styles.text} />
-
-                                <TableWrapper style={Styles.tableWrapper}>
-                                    <Col data={tableCol} style={Styles.tableCol}/>
-
-                                    <Rows data={tableData} style={Styles.tableData} flexArr={[1,1,1,1,1]}/>
-                                </TableWrapper>
-
+                            <Table borderStyle={{ borderWidth: 1, borderColor: 'black' }}>
+                                <Row data={tableHead} textStyle={Styles.tableText} />
+                                <Rows data={tableData} textStyle={Styles.tableText} />
                             </Table>
                         </CollapsibleSection>
                     </View>

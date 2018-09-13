@@ -19,7 +19,7 @@ class FlameScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Rituals of the Destroying Flame'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <Image resizeMode='cover' style={Styles.headerImage} source={require('./assets/flame.png')} />
+                    <Image resizeMode='contain' style={Styles.headerImage} source={require('./assets/flame.png')} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>
@@ -46,7 +46,7 @@ class FlameScreen extends Component {
                                 {'Whenever anything would Damage or Destroy Invaders, ignore that Damage/Destruction unless either:'}
                             </Text>
                             <Text style={Styles.sectionText}>
-                                {'\u2022 There is a Flame Marker within. '}
+                                {'\u2022 There is a Flame Marker within '}
                                 <Image resizeMode='cover' style={IconStyles.Range} source={require('./assets/icons/Range_1.png')} />
                             </Text>
                             <Text style={Styles.sectionText}>

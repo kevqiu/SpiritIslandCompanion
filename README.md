@@ -14,4 +14,4 @@
 ## Generating APK
 1. Put `.keystore` file in `/android/app`
 2. Add password to `gradle.properties`
-3. `cd android` and run `./gradlew assembleRelease`
+3. `yarn package:android`

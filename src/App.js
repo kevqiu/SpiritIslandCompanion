@@ -112,6 +112,6 @@ export default createDrawerNavigator(
                 <DrawerItems {...navigation} />
             </View>
         ),
-        initialRouteName: 'Scenarios'
+        initialRouteName: 'Elements'
     }
 );

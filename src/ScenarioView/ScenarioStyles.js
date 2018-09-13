@@ -34,19 +34,14 @@ const ScenarioStyles = StyleSheet.create({
         paddingLeft: 18
     },
     headerImage: {
-        width: '100%'
+        width: '100%',
+        // height: '100%'
     },
-    tableHead: {
-
-    },
-    tableWrapper: {
-        flexDirection: 'row'
-    },
-    tableCol: {
-        flex: 1
-    },
-    tableData: {
-        // height: 28
+    tableText: {
+        fontFamily: 'ReemKufi',
+        color: 'black',
+        textAlign: 'center',
+        margin: 2
     }
 });
 
@@ -57,7 +52,7 @@ const IconStyles = StyleSheet.create({
     },
     Fast: {
         width: 97,
-        height: 75
+        height: 79
     },
     Blight: {
         width: 76,

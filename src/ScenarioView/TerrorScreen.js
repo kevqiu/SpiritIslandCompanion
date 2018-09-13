@@ -19,7 +19,7 @@ class TerrorScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Rituals of Terror'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <Image resizeMode='cover' style={Styles.headerImage} source={require('./assets/terror.png')} />
+                    <Image resizeMode='contain' style={Styles.headerImage} source={require('./assets/terror.png')} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>

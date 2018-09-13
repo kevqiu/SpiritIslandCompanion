@@ -19,7 +19,7 @@ class PowersScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Powers Long Forgotten'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <Image resizeMode='cover' style={Styles.headerImage} source={require('./assets/powers.png')} />
+                    <Image resizeMode='contain' style={Styles.headerImage} source={require('./assets/powers.png')} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>

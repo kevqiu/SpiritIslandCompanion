@@ -19,7 +19,7 @@ class TerrorScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Ward the Shores'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <Image resizeMode='cover' style={Styles.headerImage} source={require('./assets/ward.png')} />
+                    <Image resizeMode='contain' style={Styles.headerImage} source={require('./assets/ward.png')} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>
@@ -84,7 +84,7 @@ class TerrorScreen extends Component {
 
                         <CollapsibleSection sectionTitle='Setup Changes'>
                             <Text style={Styles.sectionText}>
-                                {'The normal Fear Victory is not Available. Instead:'}
+                                {'The normal Fear Victory is not Available. Instead:                                         '}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 <Text style={Styles.sectionTextBold}>{'Terror 2+: '}</Text>
