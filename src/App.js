@@ -1,9 +1,8 @@
 import React from 'react';
 import { Text, View, Button } from 'react-native';
 
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import { createDrawerNavigator, DrawerItems } from 'react-navigation'
+import { createDrawerNavigator, createBottomTabNavigator, DrawerItems } from 'react-navigation'
 import StackNavigator from 'react-navigation/src/navigators/createContainedStackNavigator';
 
 import Colors from './constants/colors';
@@ -53,10 +52,65 @@ const ScenarioView = StackNavigator(
     }
 );
 
+const ElementsView = createBottomTabNavigator(
+    {
+        ElementsOne: {
+            screen: ElementsScreen,
+            navigationOptions: {
+                title: 'Spirit 1',
+                tabBarIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='fire' size={22} color={tintColor} />
+                )
+            }
+        },
+        ElementsTwo: {
+            screen: ElementsScreen,
+            navigationOptions: {
+                title: 'Spirit 2',
+                tabBarIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='tint' size={22} color={tintColor} />
+                )
+            }
+        },
+        ElementsThree: {
+            screen: ElementsScreen,
+            navigationOptions: {
+                title: 'Spirit 3',
+                tabBarIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='sun' size={22} color={tintColor} solid />
+                )
+            }
+        },
+        ElementsFour: {
+            screen: ElementsScreen,
+            navigationOptions: {
+                title: 'Spirit 4',
+                tabBarIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='moon' size={22} color={tintColor} solid />
+                )
+            }
+        },
+    },
+    {
+        tabBarOptions: {
+            labelStyle: {
+                fontFamily: 'ReemKufi',
+            },
+            style: {
+                backgroundColor: Colors.darkYellow,
+                // height: 50
+            },
+            activeTintColor: Colors.darkBrown,
+            inactiveTintColor: 'gray',
+            showIcon: true
+        }
+    }
+);
+
 export default createDrawerNavigator(
     {
         Elements: {
-            screen: ElementsScreen,
+            screen: ElementsView,
             navigationOptions: {
                 title: 'Element Tracker',
                 drawerIcon: ({ tintColor }) => (
