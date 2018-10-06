@@ -3,7 +3,7 @@ import { ScrollView, Text, View, Image } from 'react-native';
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 
 import { ScenarioStyles as Styles } from './ScenarioStyles';
-import { IconStyles as IconStyles } from './ScenarioStyles';
+import { IconStyles } from '../common/IconStyles';
 import Header from '../common/Header';
 import { CollapsibleSection } from '../common/CollapsableSection';
 

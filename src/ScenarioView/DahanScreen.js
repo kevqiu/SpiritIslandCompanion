@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ScrollView, Text, View, Image } from 'react-native';
 
 import { ScenarioStyles as Styles } from './ScenarioStyles';
-import { IconStyles as IconStyles } from './ScenarioStyles';
+import { IconStyles } from '../common/IconStyles';
 import Header from '../common/Header';
 import { CollapsibleSection } from '../common/CollapsableSection';
 

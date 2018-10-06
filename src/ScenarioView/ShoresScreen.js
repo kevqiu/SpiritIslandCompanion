@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ScrollView, Text, View, Image } from 'react-native';
 
 import { ScenarioStyles as Styles } from './ScenarioStyles';
-import { IconStyles as IconStyles } from './ScenarioStyles';
+import { IconStyles } from '../common/IconStyles';
 import Header from '../common/Header';
 import { CollapsibleSection } from '../common/CollapsableSection';
 
@@ -75,7 +75,7 @@ class TerrorScreen extends Component {
                             <Text style={Styles.sectionText}>
                                 <Text style={Styles.sectionTextBold}>{'Stage III Surge: '}</Text>
                                 {'During Stage III, Explore adds 1 '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} /> 
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
                                 {' in addition to the usual 1 '}
                                 <Image resizeMode='cover' style={IconStyles.Explorer} source={require('./assets/icons/ExplorerIcon.png')} />
                                 {' .'}

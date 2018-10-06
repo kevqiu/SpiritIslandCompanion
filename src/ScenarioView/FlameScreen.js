@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ScrollView, Text, View, Image } from 'react-native';
 
 import { ScenarioStyles as Styles } from './ScenarioStyles';
-import { IconStyles as IconStyles } from './ScenarioStyles';
+import { IconStyles } from '../common/IconStyles';
 import Header from '../common/Header';
 import { CollapsibleSection } from '../common/CollapsableSection';
 
@@ -84,25 +84,25 @@ class FlameScreen extends Component {
                                 {' and choses a land where they have '}
                                 <Image resizeMode='cover' style={IconStyles.Presence} source={require('./assets/icons/PresenceIcon.png')} />
                                 {' .'}
-                                </Text>
+                            </Text>
 
-                                <Text style={Styles.sectionText}>
-                                    {'\u2022 Add a Flame Marker and 1 '}
-                                    <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
-                                    {' to that land (This destroys '}
-                                    <Image resizeMode='cover' style={IconStyles.Presence} source={require('./assets/icons/PresenceIcon.png')} />
-                                    {' normally.)'}
-                                </Text>
-                                <Text style={Styles.sectionText}>
-                                    {'\u2022 Gain Energy equal to the current Invader Stage.'}
-                                </Text>
-                                <Text style={Styles.sectionText}>
-                                    {'\u2022 If there are Invaders in that land, do '}
-                                    <Image resizeMode='cover' style={IconStyles.Fear} source={require('./assets/icons/FearIcon.png')} />
-                                    {' equal to the current Invader Stage, and 1 Damage per '}
-                                    <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
-                                    {' present.'}
-                                </Text>
+                            <Text style={Styles.sectionText}>
+                                {'\u2022 Add a Flame Marker and 1 '}
+                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                {' to that land (This destroys '}
+                                <Image resizeMode='cover' style={IconStyles.Presence} source={require('./assets/icons/PresenceIcon.png')} />
+                                {' normally.)'}
+                            </Text>
+                            <Text style={Styles.sectionText}>
+                                {'\u2022 Gain Energy equal to the current Invader Stage.'}
+                            </Text>
+                            <Text style={Styles.sectionText}>
+                                {'\u2022 If there are Invaders in that land, do '}
+                                <Image resizeMode='cover' style={IconStyles.Fear} source={require('./assets/icons/FearIcon.png')} />
+                                {' equal to the current Invader Stage, and 1 Damage per '}
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                {' present.'}
+                            </Text>
                         </CollapsibleSection>
 
                         <CollapsibleSection sectionTitle='Setup Changes'>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ScrollView, Text, View, Image } from 'react-native';
 
 import { ScenarioStyles as Styles } from './ScenarioStyles';
-import { IconStyles as IconStyles } from './ScenarioStyles';
+import { IconStyles } from '../common/IconStyles';
 import Header from '../common/Header';
 import { CollapsibleSection } from '../common/CollapsableSection';
 
@@ -48,7 +48,7 @@ class BlitzScreen extends Component {
                             <Text style={Styles.sectionText}>
                                 {'All powers are '}
                                 <Image resizeMode='cover' style={IconStyles.Fast} source={require('./assets/icons/FastIcon.png')} />
-                                {' .'}                            
+                                {' .'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'Powers which were already '}
