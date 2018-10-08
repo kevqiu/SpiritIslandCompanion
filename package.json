@@ -15,6 +15,7 @@
     "react-native-collapsible": "^0.13.0",
     "react-native-elements": "^0.19.1",
     "react-native-flat-button": "^1.0.6",
+    "react-native-fullwidth-image": "^0.1.2",
     "react-native-keyboard-aware-scroll-view": "^0.7.2",
     "react-native-switch-selector": "^1.1.8",
     "react-native-table-component": "^1.1.8",

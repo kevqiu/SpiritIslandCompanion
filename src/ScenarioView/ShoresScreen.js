@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { ScrollView, Text, View, Image } from 'react-native';
+import FullWidthImage from 'react-native-fullwidth-image'
 
 import { ScenarioStyles as Styles } from './ScenarioStyles';
-import { IconStyles as IconStyles } from './ScenarioStyles';
+import { IconStyles } from '../common/IconStyles';
 import Header from '../common/Header';
 import { CollapsibleSection } from '../common/CollapsableSection';
 
@@ -19,7 +20,7 @@ class TerrorScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Ward the Shores'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <Image resizeMode='contain' style={Styles.headerImage} source={require('./assets/ward.png')} />
+                    <FullWidthImage source={require('./assets/ward.png')} width={600} height={480} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>
@@ -75,7 +76,7 @@ class TerrorScreen extends Component {
                             <Text style={Styles.sectionText}>
                                 <Text style={Styles.sectionTextBold}>{'Stage III Surge: '}</Text>
                                 {'During Stage III, Explore adds 1 '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} /> 
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
                                 {' in addition to the usual 1 '}
                                 <Image resizeMode='cover' style={IconStyles.Explorer} source={require('./assets/icons/ExplorerIcon.png')} />
                                 {' .'}

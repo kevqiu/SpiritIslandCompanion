@@ -1,10 +1,9 @@
 import React from 'react';
 import { Text, View, Button } from 'react-native';
 
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import { createDrawerNavigator, DrawerItems } from 'react-navigation'
-import StackNavigator from 'react-navigation/src/navigators/createContainedStackNavigator';
+import { createDrawerNavigator, createBottomTabNavigator, DrawerItems, StackNavigator } from 'react-navigation';
+import StackViewStyleInterpolator from 'react-navigation/src/views/StackView/StackViewStyleInterpolator';
 
 import Colors from './constants/colors';
 import DrawerHeader from './common/DrawerHeader';
@@ -22,7 +21,10 @@ import FlameScreen from './ScenarioView/FlameScreen';
 import TerrorScreen from './ScenarioView/TerrorScreen';
 import ShoresScreen from './ScenarioView/ShoresScreen';
 import WaveScreen from './ScenarioView/SecondScreen';
-
+import BrandenburgScreen from './AdversaryView/BrandenburgScreen';
+import EnglandScreen from './AdversaryView/EnglandScreen';
+import FranceScreen from './AdversaryView/FranceScreen';
+import SwedenScreen from './AdversaryView/SwedenScreen';
 
 const ScenarioView = StackNavigator(
     {
@@ -47,16 +49,104 @@ const ScenarioView = StackNavigator(
                 backgroundColor: Colors.darkYellow,
             },
             header: null
+        },
+        transitionConfig: () => ({
+            screenInterpolator: sceneProps => {
+                return StackViewStyleInterpolator.forHorizontal(sceneProps);
+            }
+        }),
+        initialRouteName: 'Scenarios'
+    }
+);
+
+const AdversaryView = StackNavigator(
+    {
+        Adversaries: {
+            screen: AdversaryScreen,
+            navigationOptions: {
+                header: null
+            }
+        },
+        Brandenburg: { screen: BrandenburgScreen },
+        England: { screen: EnglandScreen },
+        France: { screen: FranceScreen },
+        Sweden: { screen: SwedenScreen }
+    },
+    {
+        navigationOptions: {
+            headerStyle: {
+                backgroundColor: Colors.darkYellow,
+            },
+            header: null
 
         },
-        initialRouteName: 'Scenarios'
+        transitionConfig: () => ({
+            screenInterpolator: sceneProps => {
+                return StackViewStyleInterpolator.forHorizontal(sceneProps);
+            }
+        }),
+        initialRouteName: 'Adversaries'
+    }
+);
+
+const ElementsView = createBottomTabNavigator(
+    {
+        ElementsOne: {
+            screen: ElementsScreen,
+            navigationOptions: {
+                title: 'Spirit 1',
+                tabBarIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='fire' size={20} color={tintColor} />
+                )
+            }
+        },
+        ElementsTwo: {
+            screen: ElementsScreen,
+            navigationOptions: {
+                title: 'Spirit 2',
+                tabBarIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='tint' size={20} color={tintColor} />
+                )
+            }
+        },
+        ElementsThree: {
+            screen: ElementsScreen,
+            navigationOptions: {
+                title: 'Spirit 3',
+                tabBarIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='sun' size={22} color={tintColor} solid />
+                )
+            }
+        },
+        ElementsFour: {
+            screen: ElementsScreen,
+            navigationOptions: {
+                title: 'Spirit 4',
+                tabBarIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='moon' size={20} color={tintColor} solid />
+                )
+            }
+        },
+    },
+    {
+        tabBarOptions: {
+            labelStyle: {
+                fontFamily: 'ReemKufi',
+            },
+            style: {
+                backgroundColor: Colors.darkYellow
+            },
+            activeTintColor: Colors.darkBrown,
+            inactiveTintColor: 'gray',
+            showIcon: true
+        }
     }
 );
 
 export default createDrawerNavigator(
     {
         Elements: {
-            screen: ElementsScreen,
+            screen: ElementsView,
             navigationOptions: {
                 title: 'Element Tracker',
                 drawerIcon: ({ tintColor }) => (
@@ -80,14 +170,14 @@ export default createDrawerNavigator(
                 )
             }
         },
-        // Adversaries: {
-        //     screen: AdversaryScreen,
-        //     navigationOptions: {
-        //         drawerIcon: ({ tintColor }) => (
-        //             <FontAwesome5 name='fort-awesome' size={22} color={tintColor} />
-        //         )
-        //     }
-        // },
+        Adversaries: {
+            screen: AdversaryView,
+            navigationOptions: {
+                drawerIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='fort-awesome' size={22} color={tintColor} />
+                )
+            }
+        },
         Faq: {
             screen: FaqScreen,
             navigationOptions: {

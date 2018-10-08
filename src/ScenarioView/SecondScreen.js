@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { ScrollView, Text, View, Image } from 'react-native';
-import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+import { Table, Row, Rows } from 'react-native-table-component';
+import FullWidthImage from 'react-native-fullwidth-image'
 
 import { ScenarioStyles as Styles } from './ScenarioStyles';
-import { IconStyles as IconStyles } from './ScenarioStyles';
+import { IconStyles } from '../common/IconStyles';
 import Header from '../common/Header';
 import { CollapsibleSection } from '../common/CollapsableSection';
 
@@ -28,7 +29,7 @@ class SecondScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Second Wave'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <Image resizeMode='contain' style={Styles.headerImage} source={require('./assets/second.png')} />
+                    <FullWidthImage source={require('./assets/second.png')} width={600} height={436} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>

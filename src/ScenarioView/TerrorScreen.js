@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { ScrollView, Text, View, Image } from 'react-native';
+import FullWidthImage from 'react-native-fullwidth-image'
 
 import { ScenarioStyles as Styles } from './ScenarioStyles';
-import { IconStyles as IconStyles } from './ScenarioStyles';
+import { IconStyles } from '../common/IconStyles';
 import Header from '../common/Header';
 import { CollapsibleSection } from '../common/CollapsableSection';
 
@@ -19,7 +20,7 @@ class TerrorScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Rituals of Terror'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <Image resizeMode='contain' style={Styles.headerImage} source={require('./assets/terror.png')} />
+                    <FullWidthImage source={require('./assets/terror.png')} width={600} height={464} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>
@@ -84,7 +85,9 @@ class TerrorScreen extends Component {
                                 {'\u2022 Resolve all earned Fear Cards (at the new Terror Level)'}
                             </Text>
                             <Text style={Styles.sectionText}>
-                                {'\u2022 Push all Dahanicon.png from the land where the RItual was performed, '}
+                                {'\u2022 Push all '}
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                {' from the land where the RItual was performed, '}
                                 {'distributing them as evenly as possible among all adjacent lands. (I.e; send 1 '}
                                 <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
                                 {' to each adjacent land before sending a 2nd to any.)'}

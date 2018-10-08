@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import Colors from '../constants/colors';
 
-const ScenarioScreenStyles = StyleSheet.create({
+const AdversaryScreenStyles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
@@ -10,9 +10,8 @@ const ScenarioScreenStyles = StyleSheet.create({
     },
     imageStyle: {
         width: 85,
-        height: 140,
-        marginTop: -20
+        height: 85
     }
 });
 
-export { ScenarioScreenStyles };
+export { AdversaryScreenStyles };

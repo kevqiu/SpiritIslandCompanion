@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { ScrollView, Text, View, Image } from 'react-native';
+import FullWidthImage from 'react-native-fullwidth-image'
 
 import { ScenarioStyles as Styles } from './ScenarioStyles';
-import { IconStyles as IconStyles } from './ScenarioStyles';
+import { IconStyles } from '../common/IconStyles';
 import Header from '../common/Header';
 import { CollapsibleSection } from '../common/CollapsableSection';
 
@@ -19,7 +20,7 @@ class BlitzScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Blitz'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <Image resizeMode='contain' style={Styles.headerImage} source={require('./assets/blitz.png')} />
+                    <FullWidthImage source={require('./assets/blitz.png')} width={600} height={436} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>
@@ -48,7 +49,7 @@ class BlitzScreen extends Component {
                             <Text style={Styles.sectionText}>
                                 {'All powers are '}
                                 <Image resizeMode='cover' style={IconStyles.Fast} source={require('./assets/icons/FastIcon.png')} />
-                                {' .'}                            
+                                {' .'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'Powers which were already '}

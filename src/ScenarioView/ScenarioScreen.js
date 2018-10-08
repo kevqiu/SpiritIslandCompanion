@@ -15,7 +15,6 @@ const Scenarios = [
             image: require('./assets/blitzIcon.png'),
             isExpansion: false
         }
-
     },
     {
         key: 'dahan',
@@ -95,12 +94,11 @@ class ScenarioScreen extends Component {
         return (
             <View style={{ flex: 1 }}>
                 <Header title={'Scenarios'} navigation={navigation} navStyle={'drawer'} />
-
                 <View style={Styles.container}>
                     <FlatList
                         data={Scenarios}
                         renderItem={({ item }) =>
-                            <ListItem data={item.data} navigation={navigation} />
+                            <ListItem data={item.data} navigation={navigation} imageStyle={Styles.imageStyle} />
                         }
                         ItemSeparatorComponent={() => <ListDivider />}
                     />
