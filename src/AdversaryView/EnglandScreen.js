@@ -110,7 +110,7 @@ class EnglandScreen extends Component {
                                     {'During Setup, add an additional '}
                                     <Image resizeMode='cover' style={IconStyles.Fear} source={require('./assets/icons/FearIcon.png')} />
                                     {' to the Fear Pool per player in the game. During any Invader Phase where you resolve no Fear Cards,'}
-                                    {' preform the Build from High Immigration twice. (This has no effect if no card is on the extra Build slot.)'}
+                                    {' perform the Build from High Immigration twice. (This has no effect if no card is on the extra Build slot.)'}
                                 </Text>
                             }
                             <View style={Styles.sectionSpacer} />
