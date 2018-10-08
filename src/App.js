@@ -2,8 +2,8 @@ import React from 'react';
 import { Text, View, Button } from 'react-native';
 
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import { createDrawerNavigator, createBottomTabNavigator, DrawerItems } from 'react-navigation'
-import StackNavigator from 'react-navigation/src/navigators/createContainedStackNavigator';
+import { createDrawerNavigator, createBottomTabNavigator, DrawerItems, StackNavigator } from 'react-navigation';
+import StackViewStyleInterpolator from 'react-navigation/src/views/StackView/StackViewStyleInterpolator';
 
 import Colors from './constants/colors';
 import DrawerHeader from './common/DrawerHeader';
@@ -50,6 +50,11 @@ const ScenarioView = StackNavigator(
             },
             header: null
         },
+        transitionConfig: () => ({
+            screenInterpolator: sceneProps => {
+                return StackViewStyleInterpolator.forHorizontal(sceneProps);
+            }
+        }),
         initialRouteName: 'Scenarios'
     }
 );
@@ -75,6 +80,11 @@ const AdversaryView = StackNavigator(
             header: null
 
         },
+        transitionConfig: () => ({
+            screenInterpolator: sceneProps => {
+                return StackViewStyleInterpolator.forHorizontal(sceneProps);
+            }
+        }),
         initialRouteName: 'Adversaries'
     }
 );
