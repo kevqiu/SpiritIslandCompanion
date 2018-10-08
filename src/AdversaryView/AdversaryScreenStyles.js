@@ -7,6 +7,10 @@ const AdversaryScreenStyles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         backgroundColor: Colors.lightYellow
+    },
+    imageStyle: {
+        width: 85,
+        height: 85
     }
 });
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ScrollView, Text, View, Image } from 'react-native';
+import FullWidthImage from 'react-native-fullwidth-image'
 
 import { ScenarioStyles as Styles } from './ScenarioStyles';
 import { IconStyles } from '../common/IconStyles';
@@ -19,7 +20,7 @@ class GuardScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Guard the Isle\'s Heart'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <Image resizeMode='contain' style={Styles.headerImage} source={require('./assets/guard.png')} />
+                    <FullWidthImage source={require('./assets/guard.png')} width={600} height={464} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>

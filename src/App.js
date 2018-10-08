@@ -49,7 +49,6 @@ const ScenarioView = StackNavigator(
                 backgroundColor: Colors.darkYellow,
             },
             header: null
-
         },
         initialRouteName: 'Scenarios'
     }

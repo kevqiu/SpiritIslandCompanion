@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ScrollView, Text, View, Image } from 'react-native';
+import FullWidthImage from 'react-native-fullwidth-image'
 
 import { ScenarioStyles as Styles } from './ScenarioStyles';
 import { IconStyles } from '../common/IconStyles';
@@ -19,7 +20,7 @@ class PowersScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Powers Long Forgotten'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <Image resizeMode='contain' style={Styles.headerImage} source={require('./assets/powers.png')} />
+                    <FullWidthImage source={require('./assets/powers.png')} width={600} height={480} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>
@@ -46,14 +47,14 @@ class PowersScreen extends Component {
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 Whenever a land has 2 Invaders or more, the Invaders search it. '}
-                                {'French Plantation Colony, it instead takes 3 Invaders or more to search.'}
+                                {'Exception: If playing against French Plantation Colony, it instead takes 3 Invaders or more to search.'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 When a land is searched, turn its Scenario token face-up. If it does not have a number, discard it. '}
                                 {'If it does have a number, something has been found!'}
                             </Text>
                             <Text style={Styles.sectionText}>
-                                {'\u2022 Consult the reverse side of this card for what it does. '}
+                                {'\u2022 Consult the Powers section for what it does. '}
                                 {'Put the token above the appropriate column to show which side discovered it, '}
                                 {'unless the description indicates it should stay in the land where it was found.'}
                             </Text>

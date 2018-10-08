@@ -59,7 +59,7 @@ class AdversaryScreen extends Component {
                     <FlatList
                         data={Adversaries}
                         renderItem={({ item }) =>
-                            <ListItem data={item.data} navigation={navigation} />
+                            <ListItem data={item.data} navigation={navigation} imageStyle={Styles.imageStyle} />
                         }
                         ItemSeparatorComponent={() => <ListDivider />}
                     />

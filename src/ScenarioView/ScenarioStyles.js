@@ -11,7 +11,8 @@ const ScenarioStyles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         alignItems: 'center',
-        paddingBottom: 20
+        paddingBottom: 20,
+        backgroundColor: Colors.lightYellow
     },
     scrollContainer: {
         flex: 1,
@@ -35,7 +36,9 @@ const ScenarioStyles = StyleSheet.create({
     },
     headerImage: {
         width: '100%',
-        // height: '100%'
+        // height: '100%',
+        // backgroundColor: Colors.lightYellow
+        backgroundColor: 'black'
     },
     tableText: {
         fontFamily: 'ReemKufi',

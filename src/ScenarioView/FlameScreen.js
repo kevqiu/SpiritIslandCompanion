@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ScrollView, Text, View, Image } from 'react-native';
+import FullWidthImage from 'react-native-fullwidth-image'
 
 import { ScenarioStyles as Styles } from './ScenarioStyles';
 import { IconStyles } from '../common/IconStyles';
@@ -19,7 +20,7 @@ class FlameScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Rituals of the Destroying Flame'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <Image resizeMode='contain' style={Styles.headerImage} source={require('./assets/flame.png')} />
+                    <FullWidthImage source={require('./assets/flame.png')} width={600} height={464} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>
@@ -81,7 +82,7 @@ class FlameScreen extends Component {
                                 {' Each turn, after all Growth is done, one or more Spirits may perform the Ritual of the Destroying Flame. '}
                                 {' Each Spirit performing the Ritual Forgets a Power card that grants '}
                                 <Image resizeMode='cover' style={IconStyles.Element} source={require('./assets/icons/FireIcon.png')} />
-                                {' and choses a land where they have '}
+                                {' and chooses a land where they have '}
                                 <Image resizeMode='cover' style={IconStyles.Presence} source={require('./assets/icons/PresenceIcon.png')} />
                                 {' .'}
                             </Text>
@@ -97,7 +98,7 @@ class FlameScreen extends Component {
                                 {'\u2022 Gain Energy equal to the current Invader Stage.'}
                             </Text>
                             <Text style={Styles.sectionText}>
-                                {'\u2022 If there are Invaders in that land, do '}
+                                {'\u2022 If there are Invaders in that land, generate '}
                                 <Image resizeMode='cover' style={IconStyles.Fear} source={require('./assets/icons/FearIcon.png')} />
                                 {' equal to the current Invader Stage, and 1 Damage per '}
                                 <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />

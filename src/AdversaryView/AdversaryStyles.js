@@ -11,7 +11,8 @@ const AdversaryStyles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         alignItems: 'center',
-        paddingBottom: 20
+        paddingBottom: 20,
+        backgroundColor: Colors.lightYellow
     },
     scrollContainer: {
         flex: 1,
@@ -28,21 +29,27 @@ const AdversaryStyles = StyleSheet.create({
         fontWeight: 'bold'
     },
     sectionSpacer: {
-        marginVertical: 3
+        marginVertical: 5
     },
     paragraph: {
         paddingLeft: 18
     },
     headerImage: {
         width: '100%',
-        height: 280,
-        backgroundColor: 'black'
+        backgroundColor: Colors.lightYellow
     },
-    tableText: {
-        fontFamily: 'ReemKufi',
-        color: 'black',
-        textAlign: 'center',
-        margin: 2
+    textContainer: {
+        marginVertical: 8,
+        marginHorizontal: 1,
+        paddingHorizontal: 10,
+        backgroundColor: Colors.lightYellow
+    },
+    selectorContainer: {
+        flex: 1,
+        width: '90%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginVertical: 5
     }
 });
 

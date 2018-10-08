@@ -60,6 +60,10 @@ const IconStyles = StyleSheet.create({
     Disease: {
         width: 80,
         height: 80
+    },
+    Escalation: {
+        width: 50,
+        height: 80
     }
 });
 

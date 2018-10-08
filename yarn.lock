@@ -4313,6 +4313,10 @@ react-native-flat-button@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/react-native-flat-button/-/react-native-flat-button-1.0.6.tgz#97795fea1544b3a6e0964cec4e1c545ecb881eb2"
 
+react-native-fullwidth-image@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-fullwidth-image/-/react-native-fullwidth-image-0.1.2.tgz#3ce5460d614a6b714a7ca3869f0f325ed60a578c"
+
 react-native-iphone-x-helper@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.0.3.tgz#7a2f1e0574e899a0f1d426e6167fd98990083214"
