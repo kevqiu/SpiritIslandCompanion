@@ -35,7 +35,7 @@ class FranceScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'France'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <FullWidthImage source={require('./assets/France_Map.png')} width={600} height={408} />
+                    <FullWidthImage source={require('../Assets/France_Map.png')} width={600} height={408} />
                     <View style={Styles.contentContainer}>
                         <View style={Styles.sectionSpacer} />
                         <Text style={Styles.sectionTextBold}>{'Difficulty'}</Text>
@@ -61,25 +61,25 @@ class FranceScreen extends Component {
                             <Text style={Styles.sectionText}>
                                 <Text style={Styles.sectionTextBold}>{'Sprawling Plantations: '}</Text>
                                 {'Before Setup, return all but 7 '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                 {' per player ot the box. Invaders win if you ever cannot place a '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                 {'.'}
                             </Text>
                             <Text style={Styles.sectionTextBold}>
                                 {'Stage II Escalation '}
-                                <Image resizeMode='cover' style={IconStyles.Escalation} source={require('./assets/icons/Escalation.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Escalation} source={require('../Assets/Icons/Escalation.png')} />
                             </Text>
                             <Text style={Styles.sectionText}>
                                 <Text style={Styles.sectionTextBold}>{'Demand for New Cash Crops: '}</Text>
                                 {'After Exploring, on each board, pick a land of the shown terrain. If it has '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                 {' / '}
-                                <Image resizeMode='cover' style={IconStyles.City} source={require('./assets/icons/CityIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
                                 {' add 1 '}
-                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                 {'. Otherwise, add 1 '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                 {'.'}
                             </Text>
                             <View style={Styles.sectionSpacer} />
@@ -104,11 +104,11 @@ class FranceScreen extends Component {
                                 <Text style={Styles.sectionText}>
                                     <Text style={Styles.sectionTextBold}>{'(3) Early Plantations: '}</Text>
                                     {'During Setup on each board, add 1 '}
-                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                     {' to the highest-numbered land without '}
-                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                     {'. Add 1 '}
-                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                     {' to land #1.'}
                                 </Text>
                             }
@@ -119,11 +119,11 @@ class FranceScreen extends Component {
                                 <Text style={Styles.sectionText}>
                                     <Text style={Styles.sectionTextBold}>{'(1) Frontier Explorers: '}</Text>
                                     {'After Setup, when Invaders successfully Explore into a land without '}
-                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                     {' / '}
-                                    <Image resizeMode='cover' style={IconStyles.City} source={require('./assets/icons/CityIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
                                     {', add another '}
-                                    <Image resizeMode='cover' style={IconStyles.Explorer} source={require('./assets/icons/ExplorerIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Explorer} source={require('../Assets/Icons/ExplorerIcon.png')} />
                                     {'.'}
                                 </Text>
                             }
@@ -132,11 +132,11 @@ class FranceScreen extends Component {
                                 <Text style={Styles.sectionText}>
                                     <Text style={Styles.sectionTextBold}>{'(2) Slave Labor: '}</Text>
                                     {'After Invaders Build in a land with 2 '}
-                                    <Image resizeMode='cover' style={IconStyles.Explorer} source={require('./assets/icons/ExplorerIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Explorer} source={require('../Assets/Icons/ExplorerIcon.png')} />
                                     {' or more, replace all but 1 '}
-                                    <Image resizeMode='cover' style={IconStyles.Explorer} source={require('./assets/icons/ExplorerIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Explorer} source={require('../Assets/Icons/ExplorerIcon.png')} />
                                     {' there with an equal number of '}
-                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                     {'.'}
                                 </Text>
                             }
@@ -145,11 +145,11 @@ class FranceScreen extends Component {
                                 <Text style={Styles.sectionText}>
                                     <Text style={Styles.sectionTextBold}>{'(4) Triangle Trade: '}</Text>
                                     {'Whenever Invaders build a Coastal '}
-                                    <Image resizeMode='cover' style={IconStyles.City} source={require('./assets/icons/CityIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
                                     {', add 1 '}
-                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                     {' to the adjacent land with the fewest '}
-                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                     {'.'}
                                 </Text>
                             }
@@ -158,9 +158,9 @@ class FranceScreen extends Component {
                                 <Text style={Styles.sectionText}>
                                     <Text style={Styles.sectionTextBold}>{'(5) Slow-healing Ecosystem: '}</Text>
                                     {'When you remove '}
-                                    <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                     {' from the board, put it here instead of onto the Blight Card. As soon as you have 3 '}
-                                    <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                     {' per player here, move it all back to the Blight Card.'}
                                 </Text>
                             }
@@ -169,11 +169,11 @@ class FranceScreen extends Component {
                                 <Text style={Styles.sectionText}>
                                     <Text style={Styles.sectionTextBold}>{'(6) Persistent Explorers: '}</Text>
                                     {'After the normal Explore Phase, on each board add 1 '}
-                                    <Image resizeMode='cover' style={IconStyles.Explorer} source={require('./assets/icons/ExplorerIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Explorer} source={require('../Assets/Icons/ExplorerIcon.png')} />
                                     {' to a land without any. Fear Card effects never remove '}
-                                    <Image resizeMode='cover' style={IconStyles.Explorer} source={require('./assets/icons/ExplorerIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Explorer} source={require('../Assets/Icons/ExplorerIcon.png')} />
                                     {'. If one would, you may instead Push that '}
-                                    <Image resizeMode='cover' style={IconStyles.Explorer} source={require('./assets/icons/ExplorerIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Explorer} source={require('../Assets/Icons/ExplorerIcon.png')} />
                                     {'.'}
                                 </Text>
                             }

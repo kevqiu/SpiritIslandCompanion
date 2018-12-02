@@ -53,13 +53,13 @@ class ElementTracker extends Component {
                     <TouchableOpacity onPress={this.decrement} underlayColor={'rgba(0,0,0,0)'}>
                         <Image
                             style={Styles.counterImage}
-                            source={require('./assets/Minus_1.png')}
+                            source={require('../Assets/Icons/Minus_1.png')}
                         />
                     </TouchableOpacity>
                     <TouchableOpacity onPress={this.increment} underlayColor={'rgba(0,0,0,0)'}>
                         <Image
                             style={Styles.counterImage}
-                            source={require('./assets/Plus_1.png')}
+                            source={require('../Assets/Icons/Plus_1.png')}
                         />
                     </TouchableOpacity>
                 </View>

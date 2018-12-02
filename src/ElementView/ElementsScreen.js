@@ -30,14 +30,14 @@ class ElementsScreen extends Component {
             <View style={{flex:1}}>
             <Header title={'Element Tracker'} navigation={this.props.navigation} navStyle={'drawer'} />
                 <View style={Styles.container}>
-                    <ElementTracker reset={reset} icon={require('./assets/SunIcon.png')}></ElementTracker>
-                    <ElementTracker reset={reset} icon={require('./assets/MoonIcon.png')}></ElementTracker>
-                    <ElementTracker reset={reset} icon={require('./assets/FireIcon.png')}></ElementTracker>
-                    <ElementTracker reset={reset} icon={require('./assets/AirIcon.png')}></ElementTracker>
-                    <ElementTracker reset={reset} icon={require('./assets/WaterIcon.png')}></ElementTracker>
-                    <ElementTracker reset={reset} icon={require('./assets/EarthIcon.png')}></ElementTracker>
-                    <ElementTracker reset={reset} icon={require('./assets/PlantIcon.png')}></ElementTracker>
-                    <ElementTracker reset={reset} icon={require('./assets/AnimalIcon.png')}></ElementTracker>
+                    <ElementTracker reset={reset} icon={require('../Assets/Icons/SunIcon.png')}></ElementTracker>
+                    <ElementTracker reset={reset} icon={require('../Assets/Icons/MoonIcon.png')}></ElementTracker>
+                    <ElementTracker reset={reset} icon={require('../Assets/Icons/FireIcon.png')}></ElementTracker>
+                    <ElementTracker reset={reset} icon={require('../Assets/Icons/AirIcon.png')}></ElementTracker>
+                    <ElementTracker reset={reset} icon={require('../Assets/Icons/WaterIcon.png')}></ElementTracker>
+                    <ElementTracker reset={reset} icon={require('../Assets/Icons/EarthIcon.png')}></ElementTracker>
+                    <ElementTracker reset={reset} icon={require('../Assets/Icons/PlantIcon.png')}></ElementTracker>
+                    <ElementTracker reset={reset} icon={require('../Assets/Icons/AnimalIcon.png')}></ElementTracker>
                     <View style={Styles.resetButtonContainer}>
                         <Button
                             type='custom'

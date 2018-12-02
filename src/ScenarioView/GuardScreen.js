@@ -20,7 +20,7 @@ class GuardScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Guard the Isle\'s Heart'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <FullWidthImage source={require('./assets/guard.png')} width={600} height={464} />
+                    <FullWidthImage source={require('../Assets/guard.png')} width={600} height={464} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>
@@ -39,7 +39,7 @@ class GuardScreen extends Component {
                                 <Text style={Styles.sectionTextBold}>{'THIS SCENARIO IS NOTABLY HARDER'}</Text>
                                 <Text style={Styles.sectionText}>
                                     {'\u2022 for Spirits with no Buid prevention or Fast way to destroy '}
-                                    <Image resizeMode='cover' style={IconStyles.Explorer} source={require('./assets/icons/ExplorerIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Explorer} source={require('../Assets/Icons/ExplorerIcon.png')} />
                                     {' (e.g., Bringer of Dreams and Nightmares)'}
                                 </Text>
                                 <Text style={Styles.sectionText}>
@@ -62,13 +62,13 @@ class GuardScreen extends Component {
                                 {'\u2022 '}
                                 <Text style={Styles.sectionTextBold}>{'3 players: '}</Text>
                             </Text>
-                            <Image resizeMode='cover' source={require('./assets/icons/Inner_Lands_3.png')} />
+                            <Image resizeMode='cover' source={require('../Assets/Icons/Inner_Lands_3.png')} />
 
                             <Text style={Styles.sectionText}>
                                 {'\u2022 '}
                                 <Text style={Styles.sectionTextBold}>{'4 players: '}</Text>
                             </Text>
-                            <Image resizeMode='cover' source={require('./assets/icons/Inner_Lands_4.png')} />
+                            <Image resizeMode='cover' source={require('../Assets/Icons/Inner_Lands_4.png')} />
                         </CollapsibleSection>
 
                         <CollapsibleSection sectionTitle='Setup Changes' scrollView={this.scrollView}>
@@ -77,15 +77,15 @@ class GuardScreen extends Component {
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 Remove all '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 In each Inner Land (see Rules Changes) add 1 '}
-                                <Image resizeMode='cover' style={IconStyles.Explorer} source={require('./assets/icons/ExplorerIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Explorer} source={require('../Assets/Icons/ExplorerIcon.png')} />
                                 {' and 1 '}
-                                <Image resizeMode='cover' style={IconStyles.Presence} source={require('./assets/icons/PresenceIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Presence} source={require('../Assets/Icons/PresenceIcon.png')} />
                                 {' from the player starting on that board. (If this is illegal, as for Ocean\'s Hungry Grasp, add the '}
-                                <Image resizeMode='cover' style={IconStyles.Presence} source={require('./assets/icons/PresenceIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Presence} source={require('../Assets/Icons/PresenceIcon.png')} />
                                 {' in the nearest legal land on that board.)'}
                             </Text>
                         </CollapsibleSection>

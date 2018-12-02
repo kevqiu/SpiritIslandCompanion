@@ -35,7 +35,7 @@ class EnglandScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'England'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <FullWidthImage source={require('./assets/England_Map.png')} width={600} height={408} />
+                    <FullWidthImage source={require('../Assets/England_Map.png')} width={600} height={408} />
                     <View style={Styles.contentContainer}>
                         <View style={Styles.sectionSpacer} />
                         <Text style={Styles.sectionTextBold}>{'Difficulty'}</Text>
@@ -61,25 +61,25 @@ class EnglandScreen extends Component {
                             <Text style={Styles.sectionText}>
                                 <Text style={Styles.sectionTextBold}>{'Proud & Mighty Capital: '}</Text>
                                 {'If 7 or more '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                 {' / '}
-                                <Image resizeMode='cover' style={IconStyles.City} source={require('./assets/icons/CityIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
                                 {' are ever in a single land, the Invaders win.'}
                             </Text>
                             <Text style={Styles.sectionTextBold}>
                                 {'Stage II Escalation '}
-                                <Image resizeMode='cover' style={IconStyles.Escalation} source={require('./assets/icons/Escalation.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Escalation} source={require('../Assets/Icons/Escalation.png')} />
                             </Text>
                             <Text style={Styles.sectionText}>
                                 <Text style={Styles.sectionTextBold}>{'Building Boom: '}</Text>
                                 {'On each board with '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                 {' / '}
-                                <Image resizeMode='cover' style={IconStyles.City} source={require('./assets/icons/CityIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
                                 {' , Build in the land with the most '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                 {' / '}
-                                <Image resizeMode='cover' style={IconStyles.City} source={require('./assets/icons/CityIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
                                 {'.'}
                             </Text>
                             <View style={Styles.sectionSpacer} />
@@ -97,9 +97,9 @@ class EnglandScreen extends Component {
                                 <Text style={Styles.sectionText}>
                                     <Text style={Styles.sectionTextBold}>{'(2) Criminals and Malcontents: '}</Text>
                                     {'During Setup, on each board add 1 '}
-                                    <Image resizeMode='cover' style={IconStyles.City} source={require('./assets/icons/CityIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
                                     {' to land #1 and 1 '}
-                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                     {' to land #2.'}
                                 </Text>
                             }
@@ -108,7 +108,7 @@ class EnglandScreen extends Component {
                                 <Text style={Styles.sectionText}>
                                     <Text style={Styles.sectionTextBold}>{'(6) Independent Resolve: '}</Text>
                                     {'During Setup, add an additional '}
-                                    <Image resizeMode='cover' style={IconStyles.Fear} source={require('./assets/icons/FearIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Fear} source={require('../Assets/Icons/FearIcon.png')} />
                                     {' to the Fear Pool per player in the game. During any Invader Phase where you resolve no Fear Cards,'}
                                     {' perform the Build from High Immigration twice. (This has no effect if no card is on the extra Build slot.)'}
                                 </Text>
@@ -120,9 +120,9 @@ class EnglandScreen extends Component {
                                 <Text style={Styles.sectionText}>
                                     <Text style={Styles.sectionTextBold}>{'(1) Indentured Servants Earn Land: '}</Text>
                                     {'Invader Build actions affect lands without Invaders, if they are adjacent to at least 2 '}
-                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                     {' / '}
-                                    <Image resizeMode='cover' style={IconStyles.City} source={require('./assets/icons/CityIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
                                     {' before the Build Action.'}
                                 </Text>
                             }
@@ -147,9 +147,9 @@ class EnglandScreen extends Component {
                                 difficulty >= 5 &&
                                 <Text style={Styles.sectionText}>
                                     <Text style={Styles.sectionTextBold}>{'(5) Local Autonomy: '}</Text>
-                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                     {' / '}
-                                    <Image resizeMode='cover' style={IconStyles.City} source={require('./assets/icons/CityIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
                                     {' have +1 Health.'}
                                 </Text>
                             }

@@ -20,12 +20,15 @@ class FlameScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Rituals of the Destroying Flame'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <FullWidthImage source={require('./assets/flame.png')} width={600} height={464} />
+                    <FullWidthImage source={require('../Assets/flame.png')} width={600} height={464} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>
                                 <Text style={Styles.sectionText}>
-                                    {'Perhaps the Spirits of the Island are not so slow after all. But still, the Invaders are faster.'}
+                                    {'The Invaders carry some strange immunity to harm - is it magic of their own? '}
+                                    {'Their disbelief in the Spirits as anything other than superstition? '}
+                                    {'Or the patronage of some great Spirit, unseen and undetected? '}
+                                    {'The Spirits have found a way to break that immunity - but it comes with a price.'}
                                 </Text>
                                 <View style={Styles.sectionSpacer} />
                                 <Text style={Styles.sectionTextBold}>{'THIS SCENARIO IS NOTABLY EASIER'}</Text>
@@ -48,7 +51,7 @@ class FlameScreen extends Component {
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 There is a Flame Marker within '}
-                                <Image resizeMode='cover' style={IconStyles.Range} source={require('./assets/icons/Range_1.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Range} source={require('../Assets/Icons/Range_1.png')} />
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 The Spirit using the Power or ability pays 2 Energy.'}
@@ -56,11 +59,11 @@ class FlameScreen extends Component {
 
                             <Text style={Styles.sectionText}>
                                 {'For non-Spirit effects (Events, '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                 {' counterattacks, etc) any Spirit may pay the Energy. 2 Energy covers a single '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                 {' counterattack, a single land affected by a main/ '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                 {' /token Event, or a single land affected by a Fear Card.'}
                             </Text>
                             <View style={Styles.sectionSpacer} />
@@ -81,17 +84,17 @@ class FlameScreen extends Component {
                                 <Text style={Styles.sectionTextBold}>{'Ritual of the Destroying Flame: '}</Text>
                                 {' Each turn, after all Growth is done, one or more Spirits may perform the Ritual of the Destroying Flame. '}
                                 {' Each Spirit performing the Ritual Forgets a Power card that grants '}
-                                <Image resizeMode='cover' style={IconStyles.Element} source={require('./assets/icons/FireIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Element} source={require('../Assets/Icons/FireIcon.png')} />
                                 {' and chooses a land where they have '}
-                                <Image resizeMode='cover' style={IconStyles.Presence} source={require('./assets/icons/PresenceIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Presence} source={require('../Assets/Icons/PresenceIcon.png')} />
                                 {' .'}
                             </Text>
 
                             <Text style={Styles.sectionText}>
                                 {'\u2022 Add a Flame Marker and 1 '}
-                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                 {' to that land (This destroys '}
-                                <Image resizeMode='cover' style={IconStyles.Presence} source={require('./assets/icons/PresenceIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Presence} source={require('../Assets/Icons/PresenceIcon.png')} />
                                 {' normally.)'}
                             </Text>
                             <Text style={Styles.sectionText}>
@@ -99,9 +102,9 @@ class FlameScreen extends Component {
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 If there are Invaders in that land, generate '}
-                                <Image resizeMode='cover' style={IconStyles.Fear} source={require('./assets/icons/FearIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Fear} source={require('../Assets/Icons/FearIcon.png')} />
                                 {' equal to the current Invader Stage, and 1 Damage per '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                 {' present.'}
                             </Text>
                         </CollapsibleSection>

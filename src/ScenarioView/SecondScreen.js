@@ -29,7 +29,7 @@ class SecondScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Second Wave'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <FullWidthImage source={require('./assets/second.png')} width={600} height={436} />
+                    <FullWidthImage source={require('../Assets/second.png')} width={600} height={436} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>
@@ -49,7 +49,7 @@ class SecondScreen extends Component {
                                 <Text style={Styles.sectionTextBold}>{'THIS SCENARIO IS NOTABLY HARDER'}</Text>
                                 <Text style={Styles.sectionText}>
                                     {'\u2022 Against French Plantation Colony - due to '}
-                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                     {' limits, later waves will become outright impossible.'}
                                 </Text>
                                 <Text style={Styles.sectionText}>
@@ -73,45 +73,45 @@ class SecondScreen extends Component {
                             <Text style={Styles.sectionText}>
                                 {'Each Spirit sets aside one Power Card to assist with the next game. '}
                                 {'(See "Assistance From the First Spirits above") Remove all '}
-                                <Image resizeMode='cover' style={IconStyles.Presence} source={require('./assets/icons/PresenceIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Presence} source={require('../Assets/Icons/PresenceIcon.png')} />
                                 {' and Invaders. Leave on the island:'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 One of each token-type per player (so in a 2p game: 2 '}
-                                <Image resizeMode='cover' style={IconStyles.Beast} source={require('./assets/icons/BeastIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Beast} source={require('../Assets/Icons/BeastIcon.png')} />
                                 {' , 2 '}
-                                <Image resizeMode='cover' style={IconStyles.Wild} source={require('./assets/icons/WildIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Wild} source={require('../Assets/Icons/WildIcon.png')} />
                                 {' , 2 '}
-                                <Image resizeMode='cover' style={IconStyles.Disease} source={require('./assets/icons/DiseaseIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Disease} source={require('../Assets/Icons/DiseaseIcon.png')} />
                                 {' ).'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 2 '}
-                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                 {'  per player. Return the rest to the Blight card.'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 All '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                 {' In lands with 2 '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                 {' or more, Push 1 '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                 {' to adjacent lands until there are 2 or fewer.'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 Then, on each board with 2-4 '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                 {' , add 1 '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                 {' to the lowest-numbered land with '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 Then, on each board with 9 '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                 {' or more, remove '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                 {' until there are 8 or fewer.'}
                             </Text>
                         </CollapsibleSection>
@@ -123,40 +123,40 @@ class SecondScreen extends Component {
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 If the Blight card is on the Blighted side: Return it to "Healthy". Leave 2 '}
-                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                 {' per player on it, and set the rest next to the card. If it flips to Blighted ignore the amount of '}
-                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                 {' printed on the Blighted side and instead use the '}
-                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                 {' sitting next to the card from the first game. (This will often be less than the printed amount, because some '}
-                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                 {' has been left on the island.)'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 Do not place pre-printed tokens, '}
-                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                 {' or '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 Pre-printed Invaders start closer to the coast: any which would go into land #6 + '}
                                 {'instead go into the land numbered 3 lower. (So a '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                 {' printed on land #7 would instead be put into land #4.)'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 On each board: Add 1 '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                 {' to land #5.'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 Adversary Setup changes: apply normally, but any extra '}
-                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                 {' is added from the Blight Pool.'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 '}
-                                <Image resizeMode='cover' style={IconStyles.Fear} source={require('./assets/icons/FearIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Fear} source={require('../Assets/Icons/FearIcon.png')} />
                                 {' , Events, the Invader Deck, and Spirits are all setup up normally.'}
                             </Text>
                         </CollapsibleSection>

@@ -44,7 +44,7 @@ class BrandenburgScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Brandenburg-Prussia'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <FullWidthImage source={require('./assets/Brandenburg-Prussia_Map.png')} width={600} height={408} />
+                    <FullWidthImage source={require('../Assets/Brandenburg-Prussia_Map.png')} width={600} height={408} />
                     <View style={Styles.contentContainer}>
                         <View style={Styles.sectionSpacer} />
                         <Text style={Styles.sectionTextBold}>{'Difficulty'}</Text>
@@ -72,18 +72,18 @@ class BrandenburgScreen extends Component {
                             </Text>
                             <Text style={Styles.sectionTextBold}>
                                 {'Stage II Escalation '}
-                                <Image resizeMode='cover' style={IconStyles.Escalation} source={require('./assets/icons/Escalation.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Escalation} source={require('../Assets/Icons/Escalation.png')} />
                             </Text>
                             <Text style={Styles.sectionText}>
                                 <Text style={Styles.sectionTextBold}>{'Land Rush: '}</Text>
                                 {'On each board with '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                 {' / '}
-                                <Image resizeMode='cover' style={IconStyles.City} source={require('./assets/icons/CityIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
                                 {' , add 1 '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                 {' to a land without '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                 {'.'}
                             </Text>
                             <View style={Styles.sectionSpacer} />
@@ -98,7 +98,7 @@ class BrandenburgScreen extends Component {
                                 <Text style={Styles.sectionText}>
                                     <Text style={Styles.sectionTextBold}>{'(1) Fast Start: '}</Text>
                                     {'During Setup, on each board add '}
-                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                     {' to land #3.'}
                                 </Text>
                             }

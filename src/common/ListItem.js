@@ -13,7 +13,7 @@ class ListItem extends Component {
                         <Text style={Styles.nameText}>{name}</Text>
                         <View style={Styles.bottomTextContainer}>
                             <Text style={Styles.difficultyText}>Difficulty: {difficulty}</Text>
-                            {isExpansion && <Image style={Styles.expansionIcon} source={require('./assets/Expansion.png')} />}
+                            {isExpansion && <Image style={Styles.expansionIcon} source={require('../Assets/Icons/ExpansionIcon.png')} />}
                         </View>
                     </View>
                     <Image style={imageStyle} source={image} />
