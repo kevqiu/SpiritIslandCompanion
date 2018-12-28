@@ -7,6 +7,7 @@ import { AdversaryStyles as Styles } from './AdversaryStyles';
 import { IconStyles } from '../common/IconStyles';
 import Header from '../common/Header';
 import Colors from '../constants/colors';
+import Divider from '../common/Divider';
 
 const fearCards = {
     1: '10 (3/4/3)',
@@ -66,6 +67,7 @@ class EnglandScreen extends Component {
                                 <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
                                 {' are ever in a single land, the Invaders win.'}
                             </Text>
+                            <Divider />
                             <Text style={Styles.sectionTextBold}>
                                 {'Stage II Escalation '}
                                 <Image resizeMode='cover' style={IconStyles.Escalation} source={require('../Assets/Icons/Escalation.png')} />
@@ -82,12 +84,12 @@ class EnglandScreen extends Component {
                                 <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
                                 {'.'}
                             </Text>
-                            <View style={Styles.sectionSpacer} />
+                            <Divider />
                             <Text style={Styles.sectionText}>
                                 <Text style={Styles.sectionTextBold}>{'Fear Cards: '}</Text>
                                 {fearCards[difficulty]}
                             </Text>
-                            <View style={Styles.sectionSpacer} />
+                            <Divider />
                             <Text style={Styles.sectionTextBold}>{'Setup Changes: '}</Text>
                             {
                                 difficulty == 1 && <Text style={Styles.sectionText}>{'No changes.'}</Text>
@@ -113,7 +115,7 @@ class EnglandScreen extends Component {
                                     {' perform the Build from High Immigration twice. (This has no effect if no card is on the extra Build slot.)'}
                                 </Text>
                             }
-                            <View style={Styles.sectionSpacer} />
+                            <Divider />
                             <Text style={Styles.sectionTextBold}>{'Game Changes: '}</Text>
                             {
                                 difficulty >= 1 &&

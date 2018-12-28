@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import Colors from '../constants/colors';
+import { responsiveFontSize } from 'react-native-responsive-dimensions';
 
 const ScoringStyles = StyleSheet.create({
     container: {
@@ -13,7 +14,7 @@ const ScoringStyles = StyleSheet.create({
         marginTop: 20,
         marginBottom: 10,
         color: 'black',
-        fontSize: 28,
+        fontSize: responsiveFontSize(3.5),
         fontFamily: 'ReemKufi'
     },
     scrollContainer: {
@@ -32,7 +33,7 @@ const ScoringStyles = StyleSheet.create({
         marginTop: 20
     },
     text: {
-        fontSize: 18,
+        fontSize: responsiveFontSize(2.25),
         fontFamily: 'ReemKufi',
         color: 'black'
     },
@@ -71,10 +72,10 @@ const ScoringStyles = StyleSheet.create({
         fontWeight: 'normal',
         marginTop: 5,
         color: 'black',
-        fontSize: 22
+        fontSize: responsiveFontSize(2.4)
     },
     scoreText: {
-        fontSize: 24,
+        fontSize: responsiveFontSize(3),
         fontFamily: 'ReemKufi',
         color: 'black'
     }

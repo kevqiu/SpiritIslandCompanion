@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Text, Image, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { responsiveFontSize } from 'react-native-responsive-dimensions';
 
 class ListItem extends Component {
     render() {
@@ -50,12 +51,12 @@ const Styles = StyleSheet.create({
         justifyContent: 'flex-start',
     },
     nameText: {
-        fontSize: 22,
+        fontSize: responsiveFontSize(2.75),
         fontFamily: 'ReemKufi',
         color: 'black'
     },
     difficultyText: {
-        fontSize: 16,
+        fontSize: responsiveFontSize(2),
         fontFamily: 'ReemKufi'
     },
     image: {

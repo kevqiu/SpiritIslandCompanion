@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import Colors from '../constants/colors';
+import { responsiveFontSize } from 'react-native-responsive-dimensions';
 
 const ScenarioStyles = StyleSheet.create({
     container: {
@@ -18,12 +19,12 @@ const ScenarioStyles = StyleSheet.create({
         flex: 1,
     },
     sectionText: {
-        fontSize: 16,
+        fontSize: responsiveFontSize(2),
         fontFamily: 'ReemKufi',
         color: 'black'
     },
     sectionTextBold: {
-        fontSize: 16,
+        fontSize: responsiveFontSize(2),
         fontFamily: 'ReemKufi',
         color: 'black',
         fontWeight: 'bold'
@@ -36,8 +37,6 @@ const ScenarioStyles = StyleSheet.create({
     },
     headerImage: {
         width: '100%',
-        // height: '100%',
-        // backgroundColor: Colors.lightYellow
         backgroundColor: 'black'
     },
     tableText: {

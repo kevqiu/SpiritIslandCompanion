@@ -7,6 +7,7 @@ import { AdversaryStyles as Styles } from './AdversaryStyles';
 import { IconStyles } from '../common/IconStyles';
 import Header from '../common/Header';
 import Colors from '../constants/colors';
+import Divider from '../common/Divider';
 
 const fearCards = {
     1: '9 (3/3/3)',
@@ -70,6 +71,7 @@ class BrandenburgScreen extends Component {
                             <Text style={Styles.sectionText}>
                                 {'None'}
                             </Text>
+                            <Divider />
                             <Text style={Styles.sectionTextBold}>
                                 {'Stage II Escalation '}
                                 <Image resizeMode='cover' style={IconStyles.Escalation} source={require('../Assets/Icons/Escalation.png')} />
@@ -86,12 +88,12 @@ class BrandenburgScreen extends Component {
                                 <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                 {'.'}
                             </Text>
-                            <View style={Styles.sectionSpacer} />
+                            <Divider />
                             <Text style={Styles.sectionText}>
                                 <Text style={Styles.sectionTextBold}>{'Fear Cards: '}</Text>
                                 {fearCards[difficulty]}
                             </Text>
-                            <View style={Styles.sectionSpacer} />
+                            <Divider />
                             <Text style={Styles.sectionTextBold}>{'Setup Changes: '}</Text>
                             {
                                 difficulty >= 1 &&

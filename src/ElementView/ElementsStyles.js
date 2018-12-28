@@ -1,4 +1,6 @@
 import { StyleSheet } from 'react-native';
+import { responsiveFontSize } from 'react-native-responsive-dimensions';
+
 import Colors from '../constants/colors';
 
 const ScreenStyles = StyleSheet.create({
@@ -22,7 +24,7 @@ const ScreenStyles = StyleSheet.create({
         fontWeight: 'normal',
         marginTop: 5,
         color: 'black',
-        fontSize: 22
+        fontSize: responsiveFontSize(2.4)
     }
 });
 
@@ -48,7 +50,7 @@ const TrackerStyles = StyleSheet.create({
         alignItems: 'center'
     },
     counterText: {
-        fontSize: 36,
+        fontSize: responsiveFontSize(4),
         fontFamily: 'ReemKufi',
         color: 'black'
     },

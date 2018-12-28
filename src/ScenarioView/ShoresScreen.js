@@ -83,7 +83,7 @@ class TerrorScreen extends Component {
                             </Text>
                         </CollapsibleSection>
 
-                        <CollapsibleSection sectionTitle='Setup Changes'>
+                        <CollapsibleSection sectionTitle='Victory'>
                             <Text style={Styles.sectionText}>
                                 {'The normal Fear Victory is not Available. Instead:                                         '}
                             </Text>

@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import Colors from '../constants/colors';
+import { responsiveFontSize } from 'react-native-responsive-dimensions';
 
 const AdversaryStyles = StyleSheet.create({
     container: {
@@ -18,18 +19,15 @@ const AdversaryStyles = StyleSheet.create({
         flex: 1,
     },
     sectionText: {
-        fontSize: 16,
+        fontSize: responsiveFontSize(2),
         fontFamily: 'ReemKufi',
         color: 'black'
     },
     sectionTextBold: {
-        fontSize: 16,
+        fontSize: responsiveFontSize(2),
         fontFamily: 'ReemKufi',
         color: 'black',
         fontWeight: 'bold'
-    },
-    sectionSpacer: {
-        marginVertical: 5
     },
     paragraph: {
         paddingLeft: 18
@@ -42,7 +40,8 @@ const AdversaryStyles = StyleSheet.create({
         marginVertical: 8,
         marginHorizontal: 1,
         paddingHorizontal: 10,
-        backgroundColor: Colors.lightYellow
+        backgroundColor: Colors.lightYellow,
+        width: '100%'
     },
     selectorContainer: {
         flex: 1,
