@@ -25,6 +25,8 @@ import BrandenburgScreen from './AdversaryView/BrandenburgScreen';
 import EnglandScreen from './AdversaryView/EnglandScreen';
 import FranceScreen from './AdversaryView/FranceScreen';
 import SwedenScreen from './AdversaryView/SwedenScreen';
+import RandomSetupScreen from './RandomView/RandomSetupScreen';
+import RandomResultsScreen from './RandomView/RandomResultsScreen';
 
 const ScenarioView = StackNavigator(
     {
@@ -143,6 +145,27 @@ const ElementsView = createBottomTabNavigator(
     }
 );
 
+const RandomView = StackNavigator(
+    {
+        RandomSetup: { screen: RandomSetupScreen },
+        RandomResults: { screen: RandomResultsScreen }
+    },
+    {
+        navigationOptions: {
+            headerStyle: {
+                backgroundColor: Colors.darkYellow,
+            },
+            header: null
+        },
+        transitionConfig: () => ({
+            screenInterpolator: sceneProps => {
+                return StackViewStyleInterpolator.forHorizontal(sceneProps);
+            }
+        }),
+        initialRouteName: 'RandomSetup'
+    }
+);
+
 export default createDrawerNavigator(
     {
         Elements: {
@@ -175,6 +198,15 @@ export default createDrawerNavigator(
             navigationOptions: {
                 drawerIcon: ({ tintColor }) => (
                     <FontAwesome5 name='fort-awesome' size={22} color={tintColor} />
+                )
+            }
+        },
+        Random: {
+            screen: RandomView,
+            navigationOptions: {
+                title: 'Random Game Generator',
+                drawerIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='random' size={22} color={tintColor} />
                 )
             }
         },

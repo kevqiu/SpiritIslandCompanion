@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { Header as HeaderComponent } from 'react-native-elements';
-import { responsiveWidth } from 'react-native-responsive-dimensions';
 
 import Colors from '../constants/colors';
 
@@ -31,7 +30,7 @@ class Header extends Component {
                             text: this.props.title,
                             style: {
                                 color: 'black',
-                                fontSize: responsiveWidth(5.5),
+                                fontSize: 24,
                                 fontFamily: 'ReemKufi',
                                 height: 29
                             }

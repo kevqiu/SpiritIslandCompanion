@@ -40,7 +40,7 @@ const Styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         alignSelf: 'stretch',
-        paddingVertical: 2
+        paddingVertical: 2,
     },
     titleContainer: {
         alignSelf: 'stretch',
@@ -54,7 +54,6 @@ const Styles = StyleSheet.create({
         color: 'black'
     },
     textContainer: {
-        backgroundColor: 'white',
         marginVertical: 8,
         paddingHorizontal: 10,
         backgroundColor: Colors.lightYellow
