@@ -27,6 +27,7 @@ import FranceScreen from './AdversaryView/FranceScreen';
 import SwedenScreen from './AdversaryView/SwedenScreen';
 import RandomSetupScreen from './RandomView/RandomSetupScreen';
 import RandomResultsScreen from './RandomView/RandomResultsScreen';
+import ContactScreen from './ContactView/ContactScreen';
 
 const ScenarioView = StackNavigator(
     {
@@ -216,6 +217,15 @@ export default createDrawerNavigator(
                 title: 'FAQ',
                 drawerIcon: ({ tintColor }) => (
                     <FontAwesome5 name='question-circle' size={22} color={tintColor} />
+                )
+            }
+        },
+        Contact: {
+            screen: ContactScreen,
+            navigationOptions: {
+                title: 'Contact Me!',
+                drawerIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='envelope' size={22} color={tintColor} />
                 )
             }
         }

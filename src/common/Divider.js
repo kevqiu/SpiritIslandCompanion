@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 
 import Colors from '../constants/colors';
+import { responsiveWidth } from 'react-native-responsive-dimensions';
 
 class Divider extends Component {
     render() {
@@ -14,8 +15,8 @@ class Divider extends Component {
 const Styles = StyleSheet.create({
     divider: {
         backgroundColor: Colors.lightBrown,
-        width: '10%',
-        height: 1,
+        width: responsiveWidth(10),
+        height: 2,
         marginVertical: 6
     },
 })

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Text, View, ScrollView, Switch } from 'react-native';
+import { Text, View, ScrollView } from 'react-native';
 import SwitchSelector from 'react-native-switch-selector';
-import CheckBox from 'react-native-check-box'
 import Button from 'react-native-flat-button';
+import CheckBox from 'react-native-check-box';
 
 import { RandomSetupStyles as Styles } from './RandomSetupStyles';
 import Header from '../common/Header';
