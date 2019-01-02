@@ -20,7 +20,7 @@ class TerrorScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Rituals of Terror'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <FullWidthImage source={require('./assets/terror.png')} width={600} height={464} />
+                    <FullWidthImage source={require('../Assets/terror.png')} width={600} height={464} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>
@@ -33,7 +33,7 @@ class TerrorScreen extends Component {
                                 <Text style={Styles.sectionTextBold}>{'THIS SCENARIO IS NOTABLY EASIER'}</Text>
                                 <Text style={Styles.sectionText}>
                                     {'\u2022 for spirits with strong '}
-                                    <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                     {' movement.'}
                                 </Text>
                                 <View style={Styles.sectionSpacer} />
@@ -47,7 +47,7 @@ class TerrorScreen extends Component {
                         <CollapsibleSection sectionTitle='Rule Changes'>
                             <Text style={Styles.sectionText}>
                                 {'Terror Levels are not earned via '}
-                                <Image resizeMode='cover' style={IconStyles.Fear} source={require('./assets/icons/FearIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Fear} source={require('../Assets/Icons/FearIcon.png')} />
                                 {', but by the Ritual of Terror.'}
                             </Text>
                             <View style={Styles.sectionSpacer} />
@@ -60,17 +60,17 @@ class TerrorScreen extends Component {
 
                             <Text style={Styles.sectionText}>
                                 {'\u2022 There is a land with at least 1 '}
-                                <Image resizeMode='cover' style={IconStyles.Presence} source={require('./assets/icons/PresenceIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Presence} source={require('../Assets/Icons/PresenceIcon.png')} />
                                 {' from each Spirit;'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 That land has at least 3 '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                 {' per player.'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 The Spirits collectively spend 3 Energy total and destroy 3 '}
-                                <Image resizeMode='cover' style={IconStyles.Presence} source={require('./assets/icons/PresenceIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Presence} source={require('../Assets/Icons/PresenceIcon.png')} />
                                 {' total in that land.'}
                             </Text>
                             <View style={Styles.sectionSpacer} />
@@ -86,10 +86,10 @@ class TerrorScreen extends Component {
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 Push all '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                 {' from the land where the RItual was performed, '}
                                 {'distributing them as evenly as possible among all adjacent lands. (I.e; send 1 '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                 {' to each adjacent land before sending a 2nd to any.)'}
                             </Text>
                         </CollapsibleSection>

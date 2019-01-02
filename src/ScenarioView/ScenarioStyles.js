@@ -36,8 +36,6 @@ const ScenarioStyles = StyleSheet.create({
     },
     headerImage: {
         width: '100%',
-        // height: '100%',
-        // backgroundColor: Colors.lightYellow
         backgroundColor: 'black'
     },
     tableText: {

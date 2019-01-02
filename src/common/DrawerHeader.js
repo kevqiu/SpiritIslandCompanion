@@ -6,12 +6,12 @@ class DrawerHeader extends Component {
         return (
             <View style={Styles.container}>
                 <Image
-                    style={Styles.appImage} 
-                    source={require('./assets/app-icon.png')}
+                    style={Styles.appImage}
+                    source={require('../Assets/app-icon.png')}
                 />
                 <View style={Styles.titleContainer}>
-                <Text style={Styles.titleTop}>Spirit Island</Text>
-                <Text style={Styles.titleBottom}>Companion</Text>
+                    <Text style={Styles.titleTop}>Spirit Island</Text>
+                    <Text style={Styles.titleBottom}>Companion</Text>
                 </View>
 
             </View>

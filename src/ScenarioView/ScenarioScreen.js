@@ -12,7 +12,7 @@ const Scenarios = [
             name: 'Blitz',
             screen: 'Blitz',
             difficulty: 0,
-            image: require('./assets/blitzIcon.png'),
+            image: require('../Assets//blitzIcon.png'),
             isExpansion: false
         }
     },
@@ -22,7 +22,7 @@ const Scenarios = [
             name: 'Dahan Insurrection',
             screen: 'Dahan',
             difficulty: 4,
-            image: require('./assets/dahan.png'),
+            image: require('../Assets//dahan.png'),
             isExpansion: false
         }
     },
@@ -32,7 +32,7 @@ const Scenarios = [
             name: 'Guard the Isle\'s Heart',
             screen: 'Guard',
             difficulty: 0,
-            image: require('./assets/guard.png'),
+            image: require('../Assets//guard.png'),
             isExpansion: false
         }
     },
@@ -42,7 +42,7 @@ const Scenarios = [
             name: 'Powers Long Forgotten',
             screen: 'Powers',
             difficulty: 1,
-            image: require('./assets/powers.png'),
+            image: require('../Assets//powers.png'),
             isExpansion: true
         }
     },
@@ -52,7 +52,7 @@ const Scenarios = [
             name: 'Rituals of the Destroying Flame',
             screen: 'Flame',
             difficulty: 3,
-            image: require('./assets/flame.png'),
+            image: require('../Assets//flame.png'),
             isExpansion: true
         }
     },
@@ -62,7 +62,7 @@ const Scenarios = [
             name: 'Rituals of Terror',
             screen: 'Terror',
             difficulty: 3,
-            image: require('./assets/terror.png'),
+            image: require('../Assets//terror.png'),
             isExpansion: false
         }
     },
@@ -72,7 +72,7 @@ const Scenarios = [
             name: 'Second Wave',
             screen: 'Wave',
             difficulty: '±1',
-            image: require('./assets/second.png'),
+            image: require('../Assets//second.png'),
             isExpansion: true
         }
     },
@@ -82,7 +82,7 @@ const Scenarios = [
             name: 'Ward the Shores',
             screen: 'Shores',
             difficulty: 2,
-            image: require('./assets/ward.png'),
+            image: require('../Assets//ward.png'),
             isExpansion: true
         }
     }

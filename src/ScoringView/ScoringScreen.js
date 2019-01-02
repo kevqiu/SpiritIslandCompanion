@@ -219,7 +219,6 @@ class ScoringScreen extends Component {
                                     style={Styles.pickerSmall}
                                     mode='dropdown'
                                     onValueChange={(value) => this.setState({ adversaryLevel: value })}>
-                                    <Picker.Item label='0' value={0} />
                                     <Picker.Item label='1' value={1} />
                                     <Picker.Item label='2' value={2} />
                                     <Picker.Item label='3' value={3} />

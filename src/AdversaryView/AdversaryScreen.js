@@ -12,7 +12,7 @@ const Adversaries = [
             name: 'Brandenburg-Prussia',
             screen: 'Brandenburg',
             difficulty: '2 / 4 / 6 / 7 / 9 / 10',
-            image: require('./assets/Brand-Prussia_Flag.png'),
+            image: require('../Assets/Brand-Prussia_Flag.png'),
             isExpansion: false
         }
     },
@@ -22,7 +22,7 @@ const Adversaries = [
             name: 'England',
             screen: 'England',
             difficulty: '3 / 4 / 6 / 7 / 9 / 10',
-            image: require('./assets/England_Flag.png'),
+            image: require('../Assets/England_Flag.png'),
             isExpansion: false
         }
     },
@@ -32,7 +32,7 @@ const Adversaries = [
             name: 'France',
             screen: 'France',
             difficulty: '3 / 5 / 7 / 8 / 9 / 10',
-            image: require('./assets/France_Flag.png'),
+            image: require('../Assets/France_Flag.png'),
             isExpansion: true
         }
     },
@@ -42,7 +42,7 @@ const Adversaries = [
             name: 'Sweden',
             screen: 'Sweden',
             difficulty: '2 / 3 / 5 / 6 / 7 / 8',
-            image: require('./assets/Sweden_Flag.png'),
+            image: require('../Assets/Sweden_Flag.png'),
             isExpansion: false
         }
     }

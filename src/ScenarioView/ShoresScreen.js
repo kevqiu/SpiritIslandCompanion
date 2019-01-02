@@ -20,7 +20,7 @@ class TerrorScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Ward the Shores'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <FullWidthImage source={require('./assets/ward.png')} width={600} height={480} />
+                    <FullWidthImage source={require('../Assets/ward.png')} width={600} height={480} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>
@@ -49,41 +49,41 @@ class TerrorScreen extends Component {
                             </Text>
                             <Text style={Styles.sectionText}>
                                 <Text style={Styles.sectionTextBold}>{'Speed: '}</Text>
-                                <Image resizeMode='cover' style={IconStyles.Slow} source={require('./assets/icons/SlowIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Slow} source={require('../Assets/Icons/SlowIcon.png')} />
                                 <Text style={Styles.sectionTextBold}>{'  |  Range: '}</Text>
-                                <Image resizeMode='cover' style={IconStyles.SacredSite} source={require('./assets/icons/SacredSiteIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.SacredSite} source={require('../Assets/Icons/SacredSiteIcon.png')} />
                                 {' '}
-                                <Image resizeMode='cover' style={IconStyles.Range} source={require('./assets/icons/Range_0.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Range} source={require('../Assets/Icons/Range_0.png')} />
                                 <Text style={Styles.sectionTextBold}>{'   |  Cost: '}</Text>
                                 {'0'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 <Text style={Styles.sectionTextBold}>{'Effect: '}</Text>
                                 {'Pay 2 Energy per '}
-                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                 {' and 2 Energy per '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                 {' / '}
-                                <Image resizeMode='cover' style={IconStyles.City} source={require('./assets/icons/CityIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
                                 {' to add a Warding Pattern. (This uses a card play as normal.)'}
                             </Text>
                             <View style={Styles.sectionSpacer} />
                             <Text style={Styles.sectionText}>
                                 {'Once placed, each Warding Pattern grants Defend 3 in its land. They are destroyed any time '}
-                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                 {' is added to their land.'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 <Text style={Styles.sectionTextBold}>{'Stage III Surge: '}</Text>
                                 {'During Stage III, Explore adds 1 '}
-                                <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                 {' in addition to the usual 1 '}
-                                <Image resizeMode='cover' style={IconStyles.Explorer} source={require('./assets/icons/ExplorerIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Explorer} source={require('../Assets/Icons/ExplorerIcon.png')} />
                                 {' .'}
                             </Text>
                         </CollapsibleSection>
 
-                        <CollapsibleSection sectionTitle='Setup Changes'>
+                        <CollapsibleSection sectionTitle='Victory Conditions'>
                             <Text style={Styles.sectionText}>
                                 {'The normal Fear Victory is not Available. Instead:                                         '}
                             </Text>

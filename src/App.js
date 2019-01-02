@@ -25,6 +25,9 @@ import BrandenburgScreen from './AdversaryView/BrandenburgScreen';
 import EnglandScreen from './AdversaryView/EnglandScreen';
 import FranceScreen from './AdversaryView/FranceScreen';
 import SwedenScreen from './AdversaryView/SwedenScreen';
+import RandomSetupScreen from './RandomView/RandomSetupScreen';
+import RandomResultsScreen from './RandomView/RandomResultsScreen';
+import ContactScreen from './ContactView/ContactScreen';
 
 const ScenarioView = StackNavigator(
     {
@@ -143,6 +146,27 @@ const ElementsView = createBottomTabNavigator(
     }
 );
 
+const RandomView = StackNavigator(
+    {
+        RandomSetup: { screen: RandomSetupScreen },
+        RandomResults: { screen: RandomResultsScreen }
+    },
+    {
+        navigationOptions: {
+            headerStyle: {
+                backgroundColor: Colors.darkYellow,
+            },
+            header: null
+        },
+        transitionConfig: () => ({
+            screenInterpolator: sceneProps => {
+                return StackViewStyleInterpolator.forHorizontal(sceneProps);
+            }
+        }),
+        initialRouteName: 'RandomSetup'
+    }
+);
+
 export default createDrawerNavigator(
     {
         Elements: {
@@ -178,12 +202,30 @@ export default createDrawerNavigator(
                 )
             }
         },
+        Random: {
+            screen: RandomView,
+            navigationOptions: {
+                title: 'Random Game Generator',
+                drawerIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='random' size={22} color={tintColor} />
+                )
+            }
+        },
         Faq: {
             screen: FaqScreen,
             navigationOptions: {
                 title: 'FAQ',
                 drawerIcon: ({ tintColor }) => (
                     <FontAwesome5 name='question-circle' size={22} color={tintColor} />
+                )
+            }
+        },
+        Contact: {
+            screen: ContactScreen,
+            navigationOptions: {
+                title: 'Contact Me!',
+                drawerIcon: ({ tintColor }) => (
+                    <FontAwesome5 name='envelope' size={22} color={tintColor} />
                 )
             }
         }

@@ -20,7 +20,7 @@ class PowersScreen extends Component {
             <View style={Styles.container} >
                 <Header title={'Powers Long Forgotten'} navigation={navigation} navStyle={'back'} />
                 <ScrollView style={Styles.scrollContainer} ref={this.scrollView}>
-                    <FullWidthImage source={require('./assets/powers.png')} width={600} height={480} />
+                    <FullWidthImage source={require('../Assets/powers.png')} width={600} height={480} />
                     <View style={Styles.contentContainer}>
                         <CollapsibleSection sectionTitle='Background'>
                             <View>
@@ -33,7 +33,7 @@ class PowersScreen extends Component {
                                 <Text style={Styles.sectionTextBold}>{'THIS SCENARIO IS NOTABLY EASIER'}</Text>
                                 <Text style={Styles.sectionText}>
                                     {'\u2022 for spirits with good '}
-                                    <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                     {' movement (e.g., Thunderspeaker)'}
                                 </Text>
                             </View>
@@ -42,7 +42,7 @@ class PowersScreen extends Component {
                         <CollapsibleSection sectionTitle='Rule Changes'>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 Whenever a land has 3 '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                 {' or more in it, the players search it.'}
                             </Text>
                             <Text style={Styles.sectionText}>
@@ -74,7 +74,7 @@ class PowersScreen extends Component {
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'\u2022 Shuffle them all together, and put 4 face-down on each board, in lands without '}
-                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                             </Text>
                         </CollapsibleSection>
 
@@ -87,13 +87,13 @@ class PowersScreen extends Component {
                                 <Text style={Styles.sectionTextBold}>{'Invader Benefit'}</Text>
                                 <Text style={Styles.sectionText}>
                                     {'Powers granting '}
-                                    <Image resizeMode='cover' style={IconStyles.Element} source={require('./assets/icons/FireIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Element} source={require('../Assets/Icons/FireIcon.png')} />
                                     {' don\'t Damage/Destroy Invaders unless the Spirit spends an additional Energy. (Per Power)'}
                                 </Text>
                                 <Text style={Styles.sectionTextBold}>{'Spirit Benefit'}</Text>
                                 <Text style={Styles.sectionText}>
                                     {'Damage-dealing Powers granting '}
-                                    <Image resizeMode='cover' style={IconStyles.Element} source={require('./assets/icons/FireIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Element} source={require('../Assets/Icons/FireIcon.png')} />
                                     {' do +1 Damage. (Total bonus per power)'}
                                 </Text>
                             </View>
@@ -111,7 +111,7 @@ class PowersScreen extends Component {
                                 <Text style={Styles.sectionTextBold}>{'Spirit Benefit'}</Text>
                                 <Text style={Styles.sectionText}>
                                     {'Spirits may shift their '}
-                                    <Image resizeMode='cover' style={IconStyles.Presence} source={require('./assets/icons/PresenceIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Presence} source={require('../Assets/Icons/PresenceIcon.png')} />
                                     {' from a Sands to another at any time'}
                                 </Text>
                             </View>
@@ -159,15 +159,15 @@ class PowersScreen extends Component {
                                 <Text style={Styles.sectionTextBold}>{'Invader Benefit'}</Text>
                                 <Text style={Styles.sectionText}>
                                     {'Whenever a '}
-                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                     {' / '}
-                                    <Image resizeMode='cover' style={IconStyles.City} source={require('./assets/icons/CityIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
                                     {' is added to a Jungle or Wetland without '}
-                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                     {' / '}
-                                    <Image resizeMode='cover' style={IconStyles.City} source={require('./assets/icons/CityIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
                                     {' , also add 1 '}
-                                    <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                 </Text>
                                 <Text style={Styles.sectionTextBold}>{'Spirit Benefit'}</Text>
                                 <Text style={Styles.sectionText}>
@@ -188,7 +188,7 @@ class PowersScreen extends Component {
                                 <Text style={Styles.sectionTextBold}>{'Spirit Benefit'}</Text>
                                 <Text style={Styles.sectionText}>
                                     {'All Powers have '}
-                                    <Image resizeMode='cover' style={IconStyles.Range} source={require('./assets/icons/Range_1.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Range} source={require('../Assets/Icons/Range_1.png')} />
                                 </Text>
                             </View>
                             <View style={Styles.sectionSpacer} />
@@ -202,19 +202,19 @@ class PowersScreen extends Component {
                                 <Text style={Styles.sectionText}>
                                     <Text style={Styles.sectionTextBold}>{'Now: '}</Text>
                                     {'On each board, in the land with the most '}
-                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('./assets/icons/TownIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                     {' / '}
-                                    <Image resizeMode='cover' style={IconStyles.City} source={require('./assets/icons/CityIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
                                     {' (minimum 1): Destroy all '}
-                                    <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                     {' and spirit tokens. Add 1 '}
-                                    <Image resizeMode='cover' style={IconStyles.Blight} source={require('./assets/icons/BlightIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                 </Text>
                                 <Text style={Styles.sectionTextBold}>{'Spirit Benefit'}</Text>
                                 <Text style={Styles.sectionText}>
                                     <Text style={Styles.sectionTextBold}>{'Now: '}</Text>
                                     {'Earn 2 Fear Cards. Invaders in 1 Land take 2 Damage per '}
-                                    <Image resizeMode='cover' style={IconStyles.Dahan} source={require('./assets/icons/DahanIcon.png')} />
+                                    <Image resizeMode='cover' style={IconStyles.Dahan} source={require('../Assets/Icons/DahanIcon.png')} />
                                     {' there.'}
                                 </Text>
                             </View>

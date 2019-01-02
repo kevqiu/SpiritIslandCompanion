@@ -28,9 +28,6 @@ const AdversaryStyles = StyleSheet.create({
         color: 'black',
         fontWeight: 'bold'
     },
-    sectionSpacer: {
-        marginVertical: 5
-    },
     paragraph: {
         paddingLeft: 18
     },
