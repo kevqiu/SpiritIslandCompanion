@@ -153,6 +153,7 @@ dependencies {
     compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     compile "com.facebook.react:react-native:+"  // From node_modules
     compile project(':react-native-vector-icons')
+    compile 'com.android.support:multidex:1.0.3'
     implementation project(':@react-native-community_async-storage')
 }
 

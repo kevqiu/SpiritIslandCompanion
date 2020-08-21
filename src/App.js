@@ -4,7 +4,6 @@ import { View } from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { createDrawerNavigator, createBottomTabNavigator, DrawerItems, StackNavigator } from 'react-navigation';
 import StackViewStyleInterpolator from 'react-navigation-stack/dist/views/StackView/StackViewStyleInterpolator';
-// import { AdMobBanner } from 'react-native-admob'
 
 import Colors from './constants/colors';
 import DrawerHeader from './common/DrawerHeader';
@@ -262,12 +261,6 @@ export default createDrawerNavigator(
             <View>
                 <DrawerHeader />
                 <DrawerItems {...navigation} />
-                {/* <AdMobBanner
-                    adSize="fullBanner"
-                    adUnitID="ca-app-pub-2718134854377699/7551199765"
-                    testDevices={[AdMobBanner.simulatorId]}
-                    onAdFailedToLoad={error => console.error(error)}
-                /> */}
             </View>
         ),
         initialRouteName: 'Elements'
