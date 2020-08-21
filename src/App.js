@@ -7,7 +7,6 @@ import StackViewStyleInterpolator from 'react-navigation-stack/dist/views/StackV
 
 import Colors from './constants/colors';
 import DrawerHeader from './common/DrawerHeader';
-import HomeScreen from './HomeView/HomeScreen'
 import ElementsScreen from './ElementView/ElementsScreen'
 import ScoringScreen from './ScoringView/ScoringScreen'
 import FaqScreen from './FaqView/FaqScreen';
