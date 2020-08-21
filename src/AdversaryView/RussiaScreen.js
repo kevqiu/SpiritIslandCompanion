@@ -106,13 +106,7 @@ class RussiaScreen extends Component {
                                     <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                     {' / '}
                                     <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
-                                    {'. During Play, '}
-                                    <Image resizeMode='cover' style={IconStyles.Explorer} source={require('../Assets/Icons/ExplorerIcon.png')} />
-                                    {' do +1 Damage. When Ravage adds '}
-                                    <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
-                                    {' to a land (including cascades), Destroy 1 '}
-                                    <Image resizeMode='cover' style={IconStyles.Beast} source={require('../Assets/Icons/BeastIcon.png')} />
-                                    {' in that land.'}
+                                    {'.'}
                                 </Text>
                             }
                             {
@@ -133,7 +127,19 @@ class RussiaScreen extends Component {
                             <Divider />
                             <Text style={Styles.sectionTextBold}>{'Game Changes: '}</Text>
                             {
-                                difficulty <= 1 && <Text style={Styles.sectionText}>{'No changes.'}</Text>
+                                difficulty === 0 && <Text style={Styles.sectionText}>{'No changes.'}</Text>
+                            }
+                            {
+                                difficulty >= 1 &&
+                                <Text style={Styles.sectionText}>
+                                    <Text style={Styles.sectionTextBold}>{'(1) Hunters Bring Home Shell and Hide: '}</Text>
+                                    <Image resizeMode='cover' style={IconStyles.Explorer} source={require('../Assets/Icons/ExplorerIcon.png')} />
+                                    {' do +1 Damage. When Ravage adds '}
+                                    <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
+                                    {' to a land (including cascades), Destroy 1 '}
+                                    <Image resizeMode='cover' style={IconStyles.Beast} source={require('../Assets/Icons/BeastIcon.png')} />
+                                    {' in that land.'}
+                                </Text>
                             }
                             {
                                 difficulty >= 2 &&
