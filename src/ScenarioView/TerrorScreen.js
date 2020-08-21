@@ -59,6 +59,13 @@ class TerrorScreen extends Component {
                             <View style={Styles.sectionSpacer} />
 
                             <Text style={Styles.sectionText}>
+
+                                {'During either the '}
+                                <Image resizeMode='cover' style={IconStyles.Fast} source={require('../Assets/Icons/FastIcon.png')} />
+                                {' or '}
+                                <Image resizeMode='cover' style={IconStyles.Slow} source={require('../Assets/Icons/SlowIcon.png')} />
+                                {' Phase, the Spirits may perform the Ritual of Terror if:'}
+
                                 {'\u2022 There is a land with at least 1 '}
                                 <Image resizeMode='cover' style={IconStyles.Presence} source={require('../Assets/Icons/PresenceIcon.png')} />
                                 {' from each Spirit;'}

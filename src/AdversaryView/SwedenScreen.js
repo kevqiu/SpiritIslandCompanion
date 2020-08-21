@@ -10,6 +10,7 @@ import Colors from '../constants/colors';
 import Divider from '../common/Divider';
 
 const fearCards = {
+    0: '9 (3/3/3)',
     1: '9 (3/3/3)',
     2: '10 (3/4/3)',
     3: '10 (4/4/3)',
@@ -25,7 +26,7 @@ class SwedenScreen extends Component {
         this.scrollView = React.createRef();
 
         this.state = {
-            difficulty: 1
+            difficulty: 0
         }
     }
     render() {
@@ -45,6 +46,7 @@ class SwedenScreen extends Component {
                                 height={35}
                                 textColor='gray'
                                 options={[
+                                    { label: '0', value: 0 },
                                     { label: '1', value: 1 },
                                     { label: '2', value: 2 },
                                     { label: '3', value: 3 },
@@ -85,7 +87,7 @@ class SwedenScreen extends Component {
                             <Divider />
                             <Text style={Styles.sectionTextBold}>{'Setup Changes: '}</Text>
                             {
-                                difficulty == 1 && <Text style={Styles.sectionText}>{'No changes.'}</Text>
+                                difficulty <= 1 && <Text style={Styles.sectionText}>{'No changes.'}</Text>
                             }
                             {
                                 difficulty >= 2 &&
@@ -123,7 +125,11 @@ class SwedenScreen extends Component {
                                 </Text>
                             }
                             <View style={Styles.sectionSpacer} />
+                            <Divider />
                             <Text style={Styles.sectionTextBold}>{'Game Changes: '}</Text>
+                            {
+                                difficulty === 0 && <Text style={Styles.sectionText}>{'No changes.'}</Text>
+                            }
                             {
                                 difficulty >= 1 &&
                                 <Text style={Styles.sectionText}>

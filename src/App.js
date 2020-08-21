@@ -1,18 +1,19 @@
 import React from 'react';
-import { Text, View, Button } from 'react-native';
+import { View } from 'react-native';
 
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { createDrawerNavigator, createBottomTabNavigator, DrawerItems, StackNavigator } from 'react-navigation';
-import StackViewStyleInterpolator from 'react-navigation/src/views/StackView/StackViewStyleInterpolator';
+import StackViewStyleInterpolator from 'react-navigation-stack/dist/views/StackView/StackViewStyleInterpolator';
+// import { AdMobBanner } from 'react-native-admob'
 
 import Colors from './constants/colors';
 import DrawerHeader from './common/DrawerHeader';
 import HomeScreen from './HomeView/HomeScreen'
 import ElementsScreen from './ElementView/ElementsScreen'
 import ScoringScreen from './ScoringView/ScoringScreen'
-import ScenarioScreen from './ScenarioView/ScenarioScreen'
-import AdversaryScreen from './AdversaryView/AdversaryScreen'
 import FaqScreen from './FaqView/FaqScreen';
+
+import ScenarioScreen from './ScenarioView/ScenarioScreen'
 import BlitzScreen from './ScenarioView/BlitzScreen';
 import DahanScreen from './ScenarioView/DahanScreen';
 import GuardScreen from './ScenarioView/GuardScreen';
@@ -21,10 +22,21 @@ import FlameScreen from './ScenarioView/FlameScreen';
 import TerrorScreen from './ScenarioView/TerrorScreen';
 import ShoresScreen from './ScenarioView/ShoresScreen';
 import WaveScreen from './ScenarioView/SecondScreen';
+import DiversityScreen from './ScenarioView/DiversityScreen';
+import DespicableScreen from './ScenarioView/DespicableScreen';
+import ElementalScreen from './ScenarioView/ElementalScreen';
+import GreatRiverScreen from './ScenarioView/GreatRiverScreen';
+import VariedScreen from './ScenarioView/VariedScreen';
+
+import AdversaryScreen from './AdversaryView/AdversaryScreen'
 import BrandenburgScreen from './AdversaryView/BrandenburgScreen';
 import EnglandScreen from './AdversaryView/EnglandScreen';
 import FranceScreen from './AdversaryView/FranceScreen';
 import SwedenScreen from './AdversaryView/SwedenScreen';
+import HapsburgScreen from './AdversaryView/HapsburgScreen';
+import RussiaScreen from './AdversaryView/RussiaScreen';
+import ScotlandScreen from './AdversaryView/ScotlandScreen';
+
 import RandomSetupScreen from './RandomView/RandomSetupScreen';
 import RandomResultsScreen from './RandomView/RandomResultsScreen';
 import ContactScreen from './ContactView/ContactScreen';
@@ -44,7 +56,12 @@ const ScenarioView = StackNavigator(
         Flame: { screen: FlameScreen },
         Terror: { screen: TerrorScreen },
         Wave: { screen: WaveScreen },
-        Shores: { screen: ShoresScreen }
+        Shores: { screen: ShoresScreen },
+        Diversity: { screen: DiversityScreen },
+        Despicable: { screen: DespicableScreen },
+        Elemental: { screen: ElementalScreen },
+        GreatRiver: { screen: GreatRiverScreen },
+        Varied: { screen: VariedScreen },
     },
     {
         navigationOptions: {
@@ -73,7 +90,10 @@ const AdversaryView = StackNavigator(
         Brandenburg: { screen: BrandenburgScreen },
         England: { screen: EnglandScreen },
         France: { screen: FranceScreen },
-        Sweden: { screen: SwedenScreen }
+        Sweden: { screen: SwedenScreen },
+        Hapsburg: { screen: HapsburgScreen },
+        Russia: { screen: RussiaScreen },
+        Scotland: { screen: ScotlandScreen },
     },
     {
         navigationOptions: {
@@ -242,6 +262,12 @@ export default createDrawerNavigator(
             <View>
                 <DrawerHeader />
                 <DrawerItems {...navigation} />
+                {/* <AdMobBanner
+                    adSize="fullBanner"
+                    adUnitID="ca-app-pub-2718134854377699/7551199765"
+                    testDevices={[AdMobBanner.simulatorId]}
+                    onAdFailedToLoad={error => console.error(error)}
+                /> */}
             </View>
         ),
         initialRouteName: 'Elements'

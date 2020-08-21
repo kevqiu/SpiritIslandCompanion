@@ -10,8 +10,11 @@
     "package:android": "cd android && ./gradlew assembleRelease"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.12.0",
+    "babel-polyfill": "^6.26.0",
     "react": "16.3.1",
     "react-native": "0.55.4",
+    "react-native-check-box": "^2.1.7",
     "react-native-collapsible": "^0.13.0",
     "react-native-elements": "^0.19.1",
     "react-native-email": "^1.0.2",

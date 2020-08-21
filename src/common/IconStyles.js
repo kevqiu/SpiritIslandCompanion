@@ -63,8 +63,20 @@ const IconStyles = StyleSheet.create({
     },
     Escalation: {
         width: 50,
-        height: 80
-    }
+        height: 80,
+    },
+    BranchAndClaw: {
+        width: 50,
+        height: 45,
+    },
+    Promo: {
+        width: 50,
+        height: 50,
+    },
+    JaggedEarth: {
+        width: 50,
+        height: 50,
+    },
 });
 
 export { IconStyles };

@@ -46,15 +46,31 @@ const RandomSetupStyles = StyleSheet.create({
         width: '60%',
         marginTop: 4
     },
+    containerWithIcon: {
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+    },
     checkBox: {
         flex: 1,
         justifyContent: 'center',
-        height: 60
+        height: 60,
     },
     checkBoxText: {
         fontSize: responsiveFontSize(2),
         fontFamily: 'ReemKufi',
         color: 'black',
+    },
+    checkBoxTextWithIcon: {
+        flexShrink: 1,
+        fontSize: responsiveFontSize(2),
+        fontFamily: 'ReemKufi',
+        color: 'black',
+        marginHorizontal: 10
+    },
+    checkBoxPlaceholder: {
+        flex: 1,
+        justifyContent: 'center',
+        height: 60
     },
     buttonContainer: {
         width: '50%',

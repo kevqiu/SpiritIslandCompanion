@@ -10,6 +10,7 @@ import Colors from '../constants/colors';
 import Divider from '../common/Divider';
 
 const fearCards = {
+    0: '9 (3/3/3)',
     1: '9 (3/3/3)',
     2: '9 (3/3/3)',
     3: '10 (3/4/3)',
@@ -19,6 +20,7 @@ const fearCards = {
 }
 
 const deckOrder = {
+    0: '',
     1: '',
     2: '(New Deck Order: 111-3-2222-3333)',
     3: '(New Deck Order: 11-3-2222-3333)',
@@ -34,7 +36,7 @@ class BrandenburgScreen extends Component {
         this.scrollView = React.createRef();
 
         this.state = {
-            difficulty: 1
+            difficulty: 0
         }
     }
     render() {
@@ -54,6 +56,7 @@ class BrandenburgScreen extends Component {
                                 height={35}
                                 textColor='gray'
                                 options={[
+                                    { label: '0', value: 0 },
                                     { label: '1', value: 1 },
                                     { label: '2', value: 2 },
                                     { label: '3', value: 3 },
@@ -95,6 +98,9 @@ class BrandenburgScreen extends Component {
                             </Text>
                             <Divider />
                             <Text style={Styles.sectionTextBold}>{'Setup Changes: '}</Text>
+                            {
+                                difficulty === 0 && <Text style={Styles.sectionText}>{'No changes.'}</Text>
+                            }
                             {
                                 difficulty >= 1 &&
                                 <Text style={Styles.sectionText}>

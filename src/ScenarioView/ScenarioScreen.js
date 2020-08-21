@@ -13,7 +13,6 @@ const Scenarios = [
             screen: 'Blitz',
             difficulty: 0,
             image: require('../Assets//blitzIcon.png'),
-            isExpansion: false
         }
     },
     {
@@ -23,7 +22,6 @@ const Scenarios = [
             screen: 'Dahan',
             difficulty: 4,
             image: require('../Assets//dahan.png'),
-            isExpansion: false
         }
     },
     {
@@ -33,27 +31,6 @@ const Scenarios = [
             screen: 'Guard',
             difficulty: 0,
             image: require('../Assets//guard.png'),
-            isExpansion: false
-        }
-    },
-    {
-        key: 'powers',
-        data: {
-            name: 'Powers Long Forgotten',
-            screen: 'Powers',
-            difficulty: 1,
-            image: require('../Assets//powers.png'),
-            isExpansion: true
-        }
-    },
-    {
-        key: 'flame',
-        data: {
-            name: 'Rituals of the Destroying Flame',
-            screen: 'Flame',
-            difficulty: 3,
-            image: require('../Assets//flame.png'),
-            isExpansion: true
         }
     },
     {
@@ -63,7 +40,26 @@ const Scenarios = [
             screen: 'Terror',
             difficulty: 3,
             image: require('../Assets//terror.png'),
-            isExpansion: false
+        }
+    },
+    {
+        key: 'powers',
+        data: {
+            name: 'Powers Long Forgotten',
+            screen: 'Powers',
+            difficulty: 1,
+            image: require('../Assets//powers.png'),
+            expansion: 'BranchAndClaw'
+        }
+    },
+    {
+        key: 'flame',
+        data: {
+            name: 'Rituals of the Destroying Flame',
+            screen: 'Flame',
+            difficulty: 3,
+            image: require('../Assets//flame.png'),
+            expansion: 'BranchAndClaw'
         }
     },
     {
@@ -73,7 +69,7 @@ const Scenarios = [
             screen: 'Wave',
             difficulty: '±1',
             image: require('../Assets//second.png'),
-            isExpansion: true
+            expansion: 'BranchAndClaw'
         }
     },
     {
@@ -83,9 +79,54 @@ const Scenarios = [
             screen: 'Shores',
             difficulty: 2,
             image: require('../Assets//ward.png'),
-            isExpansion: true
+            expansion: 'BranchAndClaw'
         }
-    }
+    },
+    {
+        key: 'diversity',
+        data: {
+            name: 'A Diversity of Spirits',
+            screen: 'Diversity',
+            difficulty: 0,
+            expansion: 'JaggedEarth'
+        }
+    },
+    {
+        key: 'despicable',
+        data: {
+            name: 'Despicable Theft',
+            screen: 'Despicable',
+            difficulty: '0-3',
+            expansion: 'JaggedEarth'
+        }
+    },
+    {
+        key: 'elemental',
+        data: {
+            name: 'Elemental Invocation',
+            screen: 'Elemental',
+            difficulty: 1,
+            expansion: 'JaggedEarth'
+        }
+    },
+    {
+        key: 'greatRiver',
+        data: {
+            name: 'The Great River',
+            screen: 'GreatRiver',
+            difficulty: 3,
+            expansion: 'JaggedEarth'
+        }
+    },
+    {
+        key: 'varied',
+        data: {
+            name: 'Varied Terrains',
+            screen: 'Varied',
+            difficulty: 2,
+            expansion: 'JaggedEarth'
+        }
+    },
 ]
 
 class ScenarioScreen extends Component {

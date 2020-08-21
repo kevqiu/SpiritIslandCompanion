@@ -11,9 +11,8 @@ const Adversaries = [
         data: {
             name: 'Brandenburg-Prussia',
             screen: 'Brandenburg',
-            difficulty: '2 / 4 / 6 / 7 / 9 / 10',
+            difficulty: '1 / 2 / 4 / 6 / 7 / 9 / 10',
             image: require('../Assets/Brand-Prussia_Flag.png'),
-            isExpansion: false
         }
     },
     {
@@ -21,19 +20,8 @@ const Adversaries = [
         data: {
             name: 'England',
             screen: 'England',
-            difficulty: '3 / 4 / 6 / 7 / 9 / 10',
+            difficulty: '1 / 3 / 4 / 6 / 7 / 9 / 10',
             image: require('../Assets/England_Flag.png'),
-            isExpansion: false
-        }
-    },
-    {
-        key: 'france',
-        data: {
-            name: 'France',
-            screen: 'France',
-            difficulty: '3 / 5 / 7 / 8 / 9 / 10',
-            image: require('../Assets/France_Flag.png'),
-            isExpansion: true
         }
     },
     {
@@ -41,11 +29,47 @@ const Adversaries = [
         data: {
             name: 'Sweden',
             screen: 'Sweden',
-            difficulty: '2 / 3 / 5 / 6 / 7 / 8',
+            difficulty: '1 / 2 / 3 / 5 / 6 / 7 / 8',
             image: require('../Assets/Sweden_Flag.png'),
-            isExpansion: false
         }
-    }
+    },
+    {
+        key: 'france',
+        data: {
+            name: 'France',
+            screen: 'France',
+            difficulty: '2 / 3 / 5 / 7 / 8 / 9 / 10',
+            image: require('../Assets/France_Flag.png'),
+            expansion: 'BranchAndClaw'
+        }
+    },
+    {
+        key: 'hapsburg',
+        data: {
+            name: 'Hapsburg Dynasty',
+            screen: 'Hapsburg',
+            difficulty: '2 / 3 / 5 / 6 / 8 / 9 / 10',
+            expansion: 'JaggedEarth'
+        }
+    },
+    {
+        key: 'russia',
+        data: {
+            name: 'Russia',
+            screen: 'Russia',
+            difficulty: '1 / 3 / 4 / 6 / 7 / 9 / 11',
+            expansion: 'JaggedEarth'
+        }
+    },
+    {
+        key: 'scotland',
+        data: {
+            name: 'Scotland',
+            screen: 'Scotland',
+            difficulty: '1 / 3 / 4 / 6 / 7 / 8 / 10',
+            expansion: 'JaggedEarth'
+        }
+    },
 ]
 
 class AdversaryScreen extends Component {
