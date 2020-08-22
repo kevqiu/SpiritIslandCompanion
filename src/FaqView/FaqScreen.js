@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, WebView, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
+import { WebView } from 'react-native-webview';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import Header from '../common/Header';
@@ -29,7 +30,6 @@ class FaqScreen extends Component {
     }
 
     onNavigationStateChange(navState) {
-        console.log(navState);
         this.setState({
             canGoBack: navState.canGoBack,
             canGoForward: navState.canGoForward

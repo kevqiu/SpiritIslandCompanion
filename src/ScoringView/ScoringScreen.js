@@ -289,6 +289,8 @@ class ScoringScreen extends Component {
                                 onChangeText={(text) => this.setState({ invaderCards: text })}
                                 onSubmitEditing={() => { this.secondInput.focus(); }}
                                 blurOnSubmit={false}
+                                underlineColorAndroid='black'
+                                style={{ height: 40 }}
                             />
                             {invaderError && <Icon name='alert-circle' size={20}></Icon>}
                         </View>
@@ -302,6 +304,8 @@ class ScoringScreen extends Component {
                                 onSubmitEditing={() => { this.thirdInput.focus(); }}
                                 blurOnSubmit={false}
                                 onFocus={e => this._scrollToInput(findNodeHandle(e.target))}
+                                underlineColorAndroid='black'
+                                style={{ height: 40 }}
                             />
                             {dahanError && <Icon name='alert-circle' size={20}></Icon>}
                         </View>
@@ -313,6 +317,8 @@ class ScoringScreen extends Component {
                                 keyboardType='numeric'
                                 onChangeText={(text) => this.setState({ blightOnIsland: text })}
                                 onFocus={e => this._scrollToInput(findNodeHandle(e.target))}
+                                underlineColorAndroid='black'
+                                style={{ height: 40 }}
                             />
                             {blightError && <Icon name='alert-circle' size={20}></Icon>}
                         </View>
