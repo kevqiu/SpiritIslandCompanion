@@ -10,7 +10,7 @@ import Header from '../common/Header';
 class ContactScreen extends Component {
     handleEmail() {
         email('kevinqiu96@gmail.com', {
-            subject: 'Spirit Island Companion - <CONTEXT HERE>'
+            subject: 'Spirit Island Companion - (subject)'
         })
             .catch();
     }

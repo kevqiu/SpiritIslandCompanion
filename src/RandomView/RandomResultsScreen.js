@@ -16,11 +16,8 @@ class RandomResultsScreen extends Component {
     }
 
     render() {
-        const { navigation } = this.props;
-        let players = navigation.getParam('players', 1);
-        let spirits = navigation.getParam('spirits', []);
-        let adversaries = navigation.getParam('adversaries', []);
-        let scenarios = navigation.getParam('scenarios', []);
+        const { route, navigation } = this.props;
+        let { players, spirits, adversaries, scenarios } = route.params
 
         const selectedSpirits = this.selectN(spirits, players);
         const selectedAdversary = adversaries[Math.floor(Math.random() * adversaries.length)];
@@ -45,8 +42,21 @@ class RandomResultsScreen extends Component {
             boards.push(require('../Assets/4_Boards_B.png'));
             boards.push(require('../Assets/4_Boards_C.png'));
         }
+        else if (players === 5) {
+            boards.push(require('../Assets/5_Boards_A.png'));
+            boards.push(require('../Assets/5_Boards_B.png'));
+            boards.push(require('../Assets/5_Boards_C.png'));
+            boards.push(require('../Assets/5_Boards_D.png'));
+        }
+        else if (players === 6) {
+            boards.push(require('../Assets/6_Boards_A.png'));
+            boards.push(require('../Assets/6_Boards_B.png'));
+            boards.push(require('../Assets/6_Boards_C.png'));
+            boards.push(require('../Assets/6_Boards_D.png'));
+        }
+
         const randomBoard = boards[Math.floor(Math.random() * boards.length)];
-        const boardLetters = this.selectN(['A', 'B', 'C', 'D'], players).sort().join(', ');
+        const boardLetters = this.selectN(['A', 'B', 'C', 'D', 'E', 'F'], players).sort().join(', ');
 
         return (
             <View style={{ flex: 1 }}>

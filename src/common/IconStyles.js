@@ -2,69 +2,81 @@ import { StyleSheet } from 'react-native';
 
 const IconStyles = StyleSheet.create({
     Slow: {
-        width: 97,
-        height: 75
+        width: 30,
+        height: 22,
     },
     Fast: {
-        width: 97,
-        height: 79
+        width: 24,
+        height: 20
     },
     Blight: {
-        width: 76,
-        height: 80
+        width: 20,
+        height: 23
     },
     Explorer: {
-        width: 45,
-        height: 80
+        width: 12,
+        height: 24
     },
     Dahan: {
-        width: 80,
-        height: 77
+        width: 24,
+        height: 20
     },
     Town: {
-        width: 80,
-        height: 69
+        width: 24,
+        height: 20
     },
     City: {
-        width: 80,
-        height: 69
+        width: 24,
+        height: 20
     },
     Presence: {
-        width: 80,
-        height: 40
+        width: 24,
+        height: 12
     },
     Element: {
-        width: 90,
-        height: 90
+        width: 25,
+        height: 25
     },
     Range: {
-        width: 160,
-        height: 115
+        width: 40,
+        height: 28
     },
     Fear: {
-        width: 75,
-        height: 75
+        width: 24,
+        height: 24
     },
     SacredSite: {
-        width: 80,
-        height: 65
+        width: 27,
+        height: 22
     },
     Beast: {
-        width: 80,
-        height: 77
+        width: 24,
+        height: 22
     },
     Wild: {
-        width: 102,
-        height: 82
+        width: 28,
+        height: 22
     },
     Disease: {
-        width: 80,
-        height: 80
+        width: 24,
+        height: 24
     },
     Escalation: {
-        width: 50,
-        height: 80
-    }
+        width: 22,
+        height: 25,
+    },
+    BranchAndClaw: {
+        width: 17,
+        height: 15,
+    },
+    Promo: {
+        width: 15,
+        height: 15,
+    },
+    JaggedEarth: {
+        width: 15,
+        height: 15,
+    },
 });
 
 export { IconStyles };

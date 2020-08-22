@@ -42,6 +42,14 @@ const ScoringStyles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center'
     },
+    selectorWithTextContainer: {
+        flex: 1,
+        width: 300,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 10
+    },
     selectorText: {
         fontFamily: 'ReemKufi',
         fontSize: 24

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Text, View, Picker, TextInput, findNodeHandle } from 'react-native';
+import { Text, View, TextInput, findNodeHandle } from 'react-native';
+import { Picker } from '@react-native-community/picker';
 import Button from 'react-native-flat-button';
 import SwitchSelector from 'react-native-switch-selector';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -18,15 +19,23 @@ const scenarioDifficultyDict = {
     'flame': 3,
     'terror': 3,
     'second': 1,
-    'ward': 2
+    'ward': 2,
+    'diversity': 0,
+    'despicable': 2,
+    'elemental': 1,
+    'greatRiver': 3,
+    'varied': 2,
 }
 
 const adversaryDifficultyDict = {
-    'none': [0, 0, 0, 0, 0, 0],
+    'none': [0, 0, 0, 0, 0, 0, 0],
     'brandenburg': [1, 2, 4, 6, 7, 9, 10],
     'england': [1, 3, 4, 6, 7, 9, 10],
     'sweden': [1, 3, 5, 6, 7, 8],
-    'france': [2, 3, 5, 7, 8, 9, 10]
+    'france': [2, 3, 5, 7, 8, 9, 10],
+    'hapsburg': [2, 3, 5, 6, 8, 9, 10],
+    'russia': [1, 3, 4, 6, 7, 9, 11],
+    'scotland': [1, 3, 4, 6, 7, 8, 10],
 }
 
 class ScoringScreen extends Component {
@@ -41,9 +50,10 @@ class ScoringScreen extends Component {
             thematic: false,
             expansion: false,
             players: 1,
+            boards: 1,
             scenario: 'none',
             adversary: 'none',
-            adversaryLevel: 1,
+            adversaryLevel: 0,
             invaderCards: 0,
             dahanRemaining: 0,
             blightOnIsland: 0,
@@ -60,7 +70,19 @@ class ScoringScreen extends Component {
     }
 
     tallyScore() {
-        let { victory, thematic, expansion, players, scenario, adversary, adversaryLevel, invaderCards, dahanRemaining, blightOnIsland, scored, score } = this.state;
+        let {
+            victory,
+            thematic,
+            expansion,
+            players,
+            boards,
+            scenario,
+            adversary,
+            adversaryLevel,
+            invaderCards,
+            dahanRemaining,
+            blightOnIsland
+        } = this.state;
 
         this.setState({ invaderError: false, dahanError: false, blightError: false });
 
@@ -84,7 +106,9 @@ class ScoringScreen extends Component {
 
         let victoryScore = victory ? 10 : 0;
         let thematicDifficulty = thematic && expansion ? 1 : thematic ? 3 : 0;
-        let thematicScore = victory ? thematicDifficulty * 5 : thematicDifficulty * 2
+        let boardOverflow = boards > players ? (boards - players) * 2.5 : 0;
+        let boardOverflowScore = victory ? boardOverflow * 5 : boardOverflow * 2;
+        let thematicScore = victory ? thematicDifficulty * boardOverflowScore * 5 : thematicDifficulty * boardOverflowScore * 2;
         let scenarioDifficulty = scenarioDifficultyDict[scenario];
         let scenarioScore = victory ? scenarioDifficulty * 5 : scenarioDifficulty * 2;
         let adversaryDifficulty = adversaryDifficultyDict[adversary][adversaryLevel];
@@ -94,7 +118,7 @@ class ScoringScreen extends Component {
         let dahanScore = parseInt(dahanRemaining) / players;
         let blightScore = parseInt(blightOnIsland) / players;
 
-        let finalScore = victoryScore + thematicScore + scenarioScore + adversaryScore + invaderScore + dahanScore - blightScore;
+        let finalScore = victoryScore + boardOverflowScore + thematicScore + scenarioScore + adversaryScore + invaderScore + dahanScore - blightScore;
         this.setState({
             scored: true,
             score: finalScore.toString().match(/(\d+\.\d{1,2}|^\d+$)/)[0]
@@ -102,7 +126,7 @@ class ScoringScreen extends Component {
     }
 
     render() {
-        let { victory, thematic, expansion, players, scenario, adversary, adversaryLevel, dahanRemaining, blightOnIsland, scored, score, invaderError, dahanError, blightError } = this.state;
+        let { victory, players, boards, scenario, adversary, adversaryLevel, scored, score, invaderError, dahanError, blightError } = this.state;
         return (
             <View style={{ flex: 1 }}>
                 <Header title={'Scoring'} navigation={this.props.navigation} navStyle={'drawer'} />
@@ -132,7 +156,6 @@ class ScoringScreen extends Component {
                         <View style={Styles.selectorContainer}>
                             <SwitchSelector
                                 style={Styles.slider}
-
                                 height={35}
                                 textColor='gray'
                                 options={[
@@ -145,14 +168,15 @@ class ScoringScreen extends Component {
                             />
                         </View>
 
-                        <View style={Styles.selectorContainer}>
+                        <View style={Styles.selectorWithTextContainer}>
+                            <Text style={Styles.text}>Branch and Claw:   </Text>
                             <SwitchSelector
-                                style={Styles.slider}
+                                style={Styles.pickerSmall}
                                 height={35}
                                 textColor='gray'
                                 options={[
-                                    { label: 'Base Game', value: false },
-                                    { label: 'Branch & Claw', value: true }
+                                    { label: 'Y', value: true },
+                                    { label: 'N', value: false }
                                 ]}
                                 initial={0}
                                 buttonColor={Colors.darkBrown}
@@ -172,6 +196,25 @@ class ScoringScreen extends Component {
                                 <Picker.Item label='2' value={2} />
                                 <Picker.Item label='3' value={3} />
                                 <Picker.Item label='4' value={4} />
+                                <Picker.Item label='5' value={5} />
+                                <Picker.Item label='6' value={6} />
+                            </Picker>
+                        </View>
+
+                        <View style={Styles.optionContainer}>
+                            <Text style={Styles.text}>Number of Boards: </Text>
+                            <Picker
+                                selectedValue={boards}
+                                prompt='Boards'
+                                style={Styles.pickerSmall}
+                                mode='dropdown'
+                                onValueChange={(value) => this.setState({ boards: value })}>
+                                <Picker.Item label='1' value={1} />
+                                <Picker.Item label='2' value={2} />
+                                <Picker.Item label='3' value={3} />
+                                <Picker.Item label='4' value={4} />
+                                <Picker.Item label='5' value={5} />
+                                <Picker.Item label='6' value={6} />
                             </Picker>
                         </View>
 
@@ -184,13 +227,18 @@ class ScoringScreen extends Component {
                                 itemStyle={Styles.pickerText}
                                 onValueChange={(value) => this.setState({ scenario: value })}>
                                 <Picker.Item label='None' value='none' />
+                                <Picker.Item label='A Diversity of Spirits' value='diversity' />
                                 <Picker.Item label='Blitz' value='blitz' />
                                 <Picker.Item label='Dahan Insurrection' value='dahan' />
+                                <Picker.Item label='Despicable Theft' value='despicable' />
+                                <Picker.Item label='Elemental Invocation' value='elemental' />
                                 <Picker.Item label={'Guard the Isle\'s Heart'} value='guard' />
                                 <Picker.Item label='Powers Long Forgotten' value='powers' />
                                 <Picker.Item label='Rituals of the Destroying Flame' value='flame' />
                                 <Picker.Item label='Rituals of Terror' value='terror' />
                                 <Picker.Item label='Second Wave' value='second' />
+                                <Picker.Item label='The Great River' value='greatRiver' />
+                                <Picker.Item label='Varied Terrains' value='varied' />
                                 <Picker.Item label='Ward the Shores' value='ward' />
                             </Picker>
                         </View>
@@ -204,10 +252,14 @@ class ScoringScreen extends Component {
                                 itemStyle={Styles.pickerText}
                                 onValueChange={(value) => this.setState({ adversary: value })}>
                                 <Picker.Item label='None' value='none' />
-                                <Picker.Item label='Kingdom of Brandenburg-Prussia' value='brandenburg' />
-                                <Picker.Item label='Kingdom of England' value='england' />
-                                <Picker.Item label='Kingdom of Sweden' value='sweden' />
-                                <Picker.Item label='Kingdom of France' value='france' />
+                                <Picker.Item label='Brandenburg-Prussia' value='brandenburg' />
+                                <Picker.Item label='England' value='england' />
+                                <Picker.Item label='Sweden' value='sweden' />
+                                <Picker.Item label='France' value='france' />
+                                <Picker.Item label='Hapsburg Dynasty' value='hapsburg' />
+                                <Picker.Item label='Russia' value='russia' />
+                                <Picker.Item label='Scotland' value='scotland' />
+                                <Picker.Item label='Sweden' value='sweden' />
                             </Picker>
                         </View>
 
@@ -219,6 +271,7 @@ class ScoringScreen extends Component {
                                     style={Styles.pickerSmall}
                                     mode='dropdown'
                                     onValueChange={(value) => this.setState({ adversaryLevel: value })}>
+                                    <Picker.Item label='0' value={0} />
                                     <Picker.Item label='1' value={1} />
                                     <Picker.Item label='2' value={2} />
                                     <Picker.Item label='3' value={3} />
@@ -236,6 +289,8 @@ class ScoringScreen extends Component {
                                 onChangeText={(text) => this.setState({ invaderCards: text })}
                                 onSubmitEditing={() => { this.secondInput.focus(); }}
                                 blurOnSubmit={false}
+                                underlineColorAndroid='black'
+                                style={{ height: 40 }}
                             />
                             {invaderError && <Icon name='alert-circle' size={20}></Icon>}
                         </View>
@@ -249,6 +304,8 @@ class ScoringScreen extends Component {
                                 onSubmitEditing={() => { this.thirdInput.focus(); }}
                                 blurOnSubmit={false}
                                 onFocus={e => this._scrollToInput(findNodeHandle(e.target))}
+                                underlineColorAndroid='black'
+                                style={{ height: 40 }}
                             />
                             {dahanError && <Icon name='alert-circle' size={20}></Icon>}
                         </View>
@@ -260,6 +317,8 @@ class ScoringScreen extends Component {
                                 keyboardType='numeric'
                                 onChangeText={(text) => this.setState({ blightOnIsland: text })}
                                 onFocus={e => this._scrollToInput(findNodeHandle(e.target))}
+                                underlineColorAndroid='black'
+                                style={{ height: 40 }}
                             />
                             {blightError && <Icon name='alert-circle' size={20}></Icon>}
                         </View>

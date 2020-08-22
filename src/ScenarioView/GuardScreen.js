@@ -88,6 +88,19 @@ class GuardScreen extends Component {
                                 <Image resizeMode='cover' style={IconStyles.Presence} source={require('../Assets/Icons/PresenceIcon.png')} />
                                 {' in the nearest legal land on that board.)'}
                             </Text>
+                            <Text style={Styles.sectionText}>
+                                {'\u2022 Each Spirit starts with 2 additional Power Cards, by drawing a single card from each of the 2 Power Decks. '}
+                            </Text>
+                        </CollapsibleSection>
+
+                        <CollapsibleSection sectionTitle='Additional Loss Condition' scrollView={this.scrollView}>
+                            <Text style={Styles.sectionText}>
+                                {'Anytime after Turn 1: There is a '}
+                                <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
+                                {' / '}
+                                <Image resizeMode='cover' style={IconStyles.City} source={require('../Assets/Icons/CityIcon.png')} />
+                                {' in an Inner Land.                                             '}
+                            </Text>
                         </CollapsibleSection>
                     </View>
                 </ScrollView>
