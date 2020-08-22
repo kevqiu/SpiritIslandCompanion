@@ -39,7 +39,7 @@ class BlitzScreen extends Component {
                                 <Text style={Styles.sectionText}>
                                     {'This Scenario can be fun for anyone to try, but is particularly meant for players who find '}
                                     {'they prefer a more play-and-resolve style of game to the planning ahead required by Spirits '}
-                                    <Image resizeMode='cover' style={IconStyles.Slow} source={require('../Assets//Icons/SlowIcon.png')} />
+                                    <Image resizeMode="cover" style={IconStyles.Slow} source={require('../Assets/Icons/SlowIcon.png')} />
                                     {' Powers.'}
                                 </Text>
                             </View>
@@ -48,24 +48,24 @@ class BlitzScreen extends Component {
                         <CollapsibleSection sectionTitle='Rule Changes'>
                             <Text style={Styles.sectionText}>
                                 {'All powers are '}
-                                <Image resizeMode='cover' style={IconStyles.Fast} source={require('../Assets//Icons/FastIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Fast} source={require('../Assets/Icons/FastIcon.png')} />
                                 {' .'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'Powers which were already '}
-                                <Image resizeMode='cover' style={IconStyles.Fast} source={require('../Assets//Icons/FastIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Fast} source={require('../Assets/Icons/FastIcon.png')} />
                                 {' (or made '}
-                                <Image resizeMode='cover' style={IconStyles.Fast} source={require('../Assets//Icons/FastIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Fast} source={require('../Assets/Icons/FastIcon.png')} />
                                 {' ) cost 1 less Energy. (For Innate Powers and Power Cards cost 0, instead gain 1 Energy.) '}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'When Exploring, once per board, add an additional  '}
-                                <Image resizeMode='cover' style={IconStyles.Explorer} source={require('../Assets//Icons/ExplorerIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Explorer} source={require('../Assets/Icons/ExplorerIcon.png')} />
                                 {' .'}
                             </Text>
                             <Text style={Styles.sectionText}>
                                 {'If the Island becomes "Blighted", put 1 less '}
-                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets//Icons/BlightIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                 {' per player on the Blight Card.'}
                             </Text>
                         </CollapsibleSection>
@@ -73,7 +73,7 @@ class BlitzScreen extends Component {
                         <CollapsibleSection sectionTitle='Setup Changes'>
                             <Text style={Styles.sectionText}>
                                 {'Put an additional '}
-                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets//Icons/BlightIcon.png')} />
+                                <Image resizeMode='cover' style={IconStyles.Blight} source={require('../Assets/Icons/BlightIcon.png')} />
                                 {' per player on the Blight Card.'}
                             </Text>
                             <Text style={Styles.sectionText}>

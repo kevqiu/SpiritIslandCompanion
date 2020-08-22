@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Text, View, Picker, TextInput, findNodeHandle } from 'react-native';
+import { Text, View, TextInput, findNodeHandle } from 'react-native';
+import { Picker } from '@react-native-community/picker';
 import Button from 'react-native-flat-button';
 import SwitchSelector from 'react-native-switch-selector';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -155,7 +156,6 @@ class ScoringScreen extends Component {
                         <View style={Styles.selectorContainer}>
                             <SwitchSelector
                                 style={Styles.slider}
-
                                 height={35}
                                 textColor='gray'
                                 options={[
@@ -178,7 +178,7 @@ class ScoringScreen extends Component {
                                     { label: 'Y', value: true },
                                     { label: 'N', value: false }
                                 ]}
-                                initial={false}
+                                initial={0}
                                 buttonColor={Colors.darkBrown}
                                 onPress={value => this.setState({ expansion: value })}
                             />

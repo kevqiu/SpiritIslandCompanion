@@ -60,6 +60,11 @@
 		71D71A3B96674945ABADEA37 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E831D4BA1DC446B9C4A69A9 /* AntDesign.ttf */; };
 		29C9A09E633A4BC487F6EFB8 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35BE1AEB20B940F090DEC4C5 /* Fontisto.ttf */; };
 		9561D931271647968F4A3578 /* libRNCSafeAreaContext.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8DADE136224BE7ACAC8BD7 /* libRNCSafeAreaContext.a */; };
+		B9BE4219A7E24FCDB8546B7E /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C14967C388774A618CE30CE0 /* libRNGestureHandler.a */; };
+		B7E5935849694F1091A31479 /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6731A6EE84434C339F943920 /* libRNGestureHandler-tvOS.a */; };
+		81A60DA24EC64AB6822E286D /* libRNReanimated.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAEC57DA330431EA18B90EB /* libRNReanimated.a */; };
+		15843D06055840BE8162FE9A /* libRNReanimated-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E504ED5D904DD1929C6FFB /* libRNReanimated-tvOS.a */; };
+		2049D5167C11405EA1A54749 /* libRNCPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAD06A8DD3E40CBA648A8DE /* libRNCPicker.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -392,6 +397,14 @@
 		35BE1AEB20B940F090DEC4C5 /* Fontisto.ttf */ = {isa = PBXFileReference; name = "Fontisto.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		FDBE032C395040849114F36B /* SafeAreaView.xcodeproj */ = {isa = PBXFileReference; name = "SafeAreaView.xcodeproj"; path = "../node_modules/react-native-safe-area-context/ios/SafeAreaView.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		6D8DADE136224BE7ACAC8BD7 /* libRNCSafeAreaContext.a */ = {isa = PBXFileReference; name = "libRNCSafeAreaContext.a"; path = "libRNCSafeAreaContext.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		4C223154798244E0B1D286BE /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; name = "RNGestureHandler.xcodeproj"; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		C14967C388774A618CE30CE0 /* libRNGestureHandler.a */ = {isa = PBXFileReference; name = "libRNGestureHandler.a"; path = "libRNGestureHandler.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		6731A6EE84434C339F943920 /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; name = "libRNGestureHandler-tvOS.a"; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		5CB3AC5B7AF04BF89842C184 /* RNReanimated.xcodeproj */ = {isa = PBXFileReference; name = "RNReanimated.xcodeproj"; path = "../node_modules/react-native-reanimated/ios/RNReanimated.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		3DAEC57DA330431EA18B90EB /* libRNReanimated.a */ = {isa = PBXFileReference; name = "libRNReanimated.a"; path = "libRNReanimated.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		C8E504ED5D904DD1929C6FFB /* libRNReanimated-tvOS.a */ = {isa = PBXFileReference; name = "libRNReanimated-tvOS.a"; path = "libRNReanimated-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		6A00C3A60C7048CEA4339A61 /* RNCPicker.xcodeproj */ = {isa = PBXFileReference; name = "RNCPicker.xcodeproj"; path = "../node_modules/@react-native-community/picker/ios/RNCPicker.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		9FAD06A8DD3E40CBA648A8DE /* libRNCPicker.a */ = {isa = PBXFileReference; name = "libRNCPicker.a"; path = "libRNCPicker.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -425,6 +438,9 @@
 				3CE714FE51E04147ADC1B1B5 /* libBVLinearGradient.a in Frameworks */,
 				90E330D19938453693B8D796 /* libRNCAsyncStorage.a in Frameworks */,
 				9561D931271647968F4A3578 /* libRNCSafeAreaContext.a in Frameworks */,
+				B9BE4219A7E24FCDB8546B7E /* libRNGestureHandler.a in Frameworks */,
+				81A60DA24EC64AB6822E286D /* libRNReanimated.a in Frameworks */,
+				2049D5167C11405EA1A54749 /* libRNCPicker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +456,8 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
+				B7E5935849694F1091A31479 /* libRNGestureHandler-tvOS.a in Frameworks */,
+				15843D06055840BE8162FE9A /* libRNReanimated-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +634,9 @@
 				49011686147043EB8FA751A6 /* BVLinearGradient.xcodeproj */,
 				4A89A8C92C6D4A6C91E309DC /* RNCAsyncStorage.xcodeproj */,
 				FDBE032C395040849114F36B /* SafeAreaView.xcodeproj */,
+				4C223154798244E0B1D286BE /* RNGestureHandler.xcodeproj */,
+				5CB3AC5B7AF04BF89842C184 /* RNReanimated.xcodeproj */,
+				6A00C3A60C7048CEA4339A61 /* RNCPicker.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1286,6 +1307,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1293,6 +1319,9 @@
 					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
 					"$(SRCROOT)\..\node_modules\@react-native-community\async-storage\ios/**",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
 					"$(SRCROOT)/..",
 				);
 			};
@@ -1315,6 +1344,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1322,6 +1356,9 @@
 					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
 					"$(SRCROOT)\..\node_modules\@react-native-community\async-storage\ios/**",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
 					"$(SRCROOT)/..",
 				);
 			};
@@ -1349,6 +1386,9 @@
 					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
 					"$(SRCROOT)\..\node_modules\@react-native-community\async-storage\ios/**",
 					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
 				);
 			};
 			name = Debug;
@@ -1373,6 +1413,9 @@
 					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
 					"$(SRCROOT)\..\node_modules\@react-native-community\async-storage\ios/**",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
 					"$(SRCROOT)/..",
 				);
 			};
@@ -1404,6 +1447,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1411,6 +1459,9 @@
 					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
 					"$(SRCROOT)\..\node_modules\@react-native-community\async-storage\ios/**",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
 					"$(SRCROOT)/..",
 				);
 			};
@@ -1442,6 +1493,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1449,6 +1505,9 @@
 					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
 					"$(SRCROOT)\..\node_modules\@react-native-community\async-storage\ios/**",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
 					"$(SRCROOT)/..",
 				);
 			};
@@ -1479,6 +1538,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1486,6 +1550,9 @@
 					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
 					"$(SRCROOT)\..\node_modules\@react-native-community\async-storage\ios/**",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
 					"$(SRCROOT)/..",
 				);
 			};
@@ -1516,6 +1583,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1523,6 +1595,9 @@
 					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
 					"$(SRCROOT)\..\node_modules\@react-native-community\async-storage\ios/**",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/..",
 					"$(SRCROOT)/..",
 				);
 			};

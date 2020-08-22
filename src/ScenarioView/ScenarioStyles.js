@@ -18,6 +18,7 @@ const ScenarioStyles = StyleSheet.create({
         flex: 1,
     },
     sectionText: {
+        flex: 1,
         fontSize: 16,
         fontFamily: 'ReemKufi',
         color: 'black'

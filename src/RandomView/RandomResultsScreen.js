@@ -16,11 +16,8 @@ class RandomResultsScreen extends Component {
     }
 
     render() {
-        const { navigation } = this.props;
-        let players = navigation.getParam('players', 1);
-        let spirits = navigation.getParam('spirits', []);
-        let adversaries = navigation.getParam('adversaries', []);
-        let scenarios = navigation.getParam('scenarios', []);
+        const { route, navigation } = this.props;
+        let { players, spirits, adversaries, scenarios } = route.params
 
         const selectedSpirits = this.selectN(spirits, players);
         const selectedAdversary = adversaries[Math.floor(Math.random() * adversaries.length)];

@@ -1,9 +1,14 @@
 import React from 'react';
-import { View } from 'react-native';
-
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import { createDrawerNavigator, createBottomTabNavigator, DrawerItems, StackNavigator } from 'react-navigation';
-import StackViewStyleInterpolator from 'react-navigation-stack/dist/views/StackView/StackViewStyleInterpolator';
+import 'react-native-gesture-handler';
+import { NavigationContainer, StackActions } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {
+    createDrawerNavigator,
+    DrawerContentScrollView,
+    DrawerItemList
+} from '@react-navigation/drawer';
 
 import Colors from './constants/colors';
 import DrawerHeader from './common/DrawerHeader';
@@ -39,229 +44,195 @@ import RandomSetupScreen from './RandomView/RandomSetupScreen';
 import RandomResultsScreen from './RandomView/RandomResultsScreen';
 import ContactScreen from './ContactView/ContactScreen';
 
-const ScenarioView = StackNavigator(
-    {
-        Scenarios: {
-            screen: ScenarioScreen,
-            navigationOptions: {
-                header: null
-            }
-        },
-        Blitz: { screen: BlitzScreen },
-        Dahan: { screen: DahanScreen },
-        Guard: { screen: GuardScreen },
-        Powers: { screen: PowersScreen },
-        Flame: { screen: FlameScreen },
-        Terror: { screen: TerrorScreen },
-        Wave: { screen: WaveScreen },
-        Shores: { screen: ShoresScreen },
-        Diversity: { screen: DiversityScreen },
-        Despicable: { screen: DespicableScreen },
-        Elemental: { screen: ElementalScreen },
-        GreatRiver: { screen: GreatRiverScreen },
-        Varied: { screen: VariedScreen },
-    },
-    {
-        navigationOptions: {
-            headerStyle: {
-                backgroundColor: Colors.darkYellow,
-            },
-            header: null
-        },
-        transitionConfig: () => ({
-            screenInterpolator: sceneProps => {
-                return StackViewStyleInterpolator.forHorizontal(sceneProps);
-            }
-        }),
-        initialRouteName: 'Scenarios'
-    }
-);
+const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
-const AdversaryView = StackNavigator(
-    {
-        Adversaries: {
-            screen: AdversaryScreen,
-            navigationOptions: {
-                header: null
-            }
+const ElementsTabs = () => (
+    <Tab.Navigator tabBarOptions={{
+        labelStyle: {
+            fontFamily: 'ReemKufi',
         },
-        Brandenburg: { screen: BrandenburgScreen },
-        England: { screen: EnglandScreen },
-        France: { screen: FranceScreen },
-        Sweden: { screen: SwedenScreen },
-        Hapsburg: { screen: HapsburgScreen },
-        Russia: { screen: RussiaScreen },
-        Scotland: { screen: ScotlandScreen },
-    },
-    {
-        navigationOptions: {
-            headerStyle: {
-                backgroundColor: Colors.darkYellow,
-            },
-            header: null
-
+        style: {
+            backgroundColor: Colors.darkYellow
         },
-        transitionConfig: () => ({
-            screenInterpolator: sceneProps => {
-                return StackViewStyleInterpolator.forHorizontal(sceneProps);
-            }
-        }),
-        initialRouteName: 'Adversaries'
-    }
-);
-
-const ElementsView = createBottomTabNavigator(
-    {
-        ElementsOne: {
-            screen: ElementsScreen,
-            navigationOptions: {
+        activeTintColor: Colors.darkBrown,
+        inactiveTintColor: 'gray',
+        showIcon: true
+    }}>
+        <Tab.Screen
+            name="ElementsOne"
+            component={ElementsScreen}
+            options={{
                 title: 'Spirit 1',
-                tabBarIcon: ({ tintColor }) => (
-                    <FontAwesome5 name='fire' size={20} color={tintColor} />
+                tabBarIcon: ({ color }) => (
+                    <FontAwesome5 name='fire' size={20} color={color} />
                 )
-            }
-        },
-        ElementsTwo: {
-            screen: ElementsScreen,
-            navigationOptions: {
+            }}
+        />
+        <Tab.Screen
+            name="ElementsTwo"
+            component={ElementsScreen}
+            options={{
                 title: 'Spirit 2',
-                tabBarIcon: ({ tintColor }) => (
-                    <FontAwesome5 name='tint' size={20} color={tintColor} />
+                tabBarIcon: ({ color }) => (
+                    <FontAwesome5 name='tint' size={20} color={color} />
                 )
-            }
-        },
-        ElementsThree: {
-            screen: ElementsScreen,
-            navigationOptions: {
+            }}
+        />
+        <Tab.Screen
+            name="ElementsThree"
+            component={ElementsScreen}
+            options={{
                 title: 'Spirit 3',
-                tabBarIcon: ({ tintColor }) => (
-                    <FontAwesome5 name='sun' size={22} color={tintColor} solid />
+                tabBarIcon: ({ color }) => (
+                    <FontAwesome5 name='sun' size={20} color={color} />
                 )
-            }
-        },
-        ElementsFour: {
-            screen: ElementsScreen,
-            navigationOptions: {
+            }}
+        />
+        <Tab.Screen
+            name="ElementsFour"
+            component={ElementsScreen}
+            options={{
                 title: 'Spirit 4',
-                tabBarIcon: ({ tintColor }) => (
-                    <FontAwesome5 name='moon' size={20} color={tintColor} solid />
+                tabBarIcon: ({ color }) => (
+                    <FontAwesome5 name='moon' size={20} color={color} />
                 )
-            }
-        },
-    },
-    {
-        tabBarOptions: {
-            labelStyle: {
-                fontFamily: 'ReemKufi',
-            },
-            style: {
-                backgroundColor: Colors.darkYellow
-            },
-            activeTintColor: Colors.darkBrown,
-            inactiveTintColor: 'gray',
-            showIcon: true
-        }
-    }
+            }}
+        />
+    </Tab.Navigator>
 );
 
-const RandomView = StackNavigator(
-    {
-        RandomSetup: { screen: RandomSetupScreen },
-        RandomResults: { screen: RandomResultsScreen }
-    },
-    {
-        navigationOptions: {
-            headerStyle: {
-                backgroundColor: Colors.darkYellow,
-            },
-            header: null
-        },
-        transitionConfig: () => ({
-            screenInterpolator: sceneProps => {
-                return StackViewStyleInterpolator.forHorizontal(sceneProps);
-            }
-        }),
-        initialRouteName: 'RandomSetup'
-    }
+const AdversaryStack = () => (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Adversaries" component={AdversaryScreen} />
+        <Stack.Screen name="Brandenburg" component={BrandenburgScreen} />
+        <Stack.Screen name="England" component={EnglandScreen} />
+        <Stack.Screen name="France" component={FranceScreen} />
+        <Stack.Screen name="Sweden" component={SwedenScreen} />
+        <Stack.Screen name="Hapsburg" component={HapsburgScreen} />
+        <Stack.Screen name="Russia" component={RussiaScreen} />
+        <Stack.Screen name="Scotland" component={ScotlandScreen} />
+    </Stack.Navigator>
 );
 
-export default createDrawerNavigator(
-    {
-        Elements: {
-            screen: ElementsView,
-            navigationOptions: {
-                title: 'Element Tracker',
-                drawerIcon: ({ tintColor }) => (
-                    <FontAwesome5 name='fire' size={22} color={tintColor} style={{ marginLeft: 1 }} />
-                )
-            }
-        },
-        Scoring: {
-            screen: ScoringScreen,
-            navigationOptions: {
-                drawerIcon: ({ tintColor }) => (
-                    <FontAwesome5 name='trophy' size={22} color={tintColor} />
-                )
-            }
-        },
-        Scenarios: {
-            screen: ScenarioView,
-            navigationOptions: {
-                drawerIcon: ({ tintColor }) => (
-                    <FontAwesome5 name='book' size={22} color={tintColor} />
-                )
-            }
-        },
-        Adversaries: {
-            screen: AdversaryView,
-            navigationOptions: {
-                drawerIcon: ({ tintColor }) => (
-                    <FontAwesome5 name='fort-awesome' size={22} color={tintColor} />
-                )
-            }
-        },
-        Random: {
-            screen: RandomView,
-            navigationOptions: {
-                title: 'Random Game Generator',
-                drawerIcon: ({ tintColor }) => (
-                    <FontAwesome5 name='random' size={22} color={tintColor} />
-                )
-            }
-        },
-        Faq: {
-            screen: FaqScreen,
-            navigationOptions: {
-                title: 'FAQ',
-                drawerIcon: ({ tintColor }) => (
-                    <FontAwesome5 name='question-circle' size={22} color={tintColor} />
-                )
-            }
-        },
-        Contact: {
-            screen: ContactScreen,
-            navigationOptions: {
-                title: 'Contact Me!',
-                drawerIcon: ({ tintColor }) => (
-                    <FontAwesome5 name='envelope' size={22} color={tintColor} />
-                )
-            }
-        }
-    },
-    {
-        contentOptions: {
-            labelStyle: {
-                fontFamily: 'ReemKufi',
-            },
-            activeTintColor: Colors.darkBrown,
-            inactiveTintColor: 'gray',
-        },
-        contentComponent: (navigation) => (
-            <View>
+const ScenarioStack = () => (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Scenarios" component={ScenarioScreen} />
+        <Stack.Screen name="Blitz" component={BlitzScreen} />
+        <Stack.Screen name="Dahan" component={DahanScreen} />
+        <Stack.Screen name="Guard" component={GuardScreen} />
+        <Stack.Screen name="Powers" component={PowersScreen} />
+        <Stack.Screen name="Flame" component={FlameScreen} />
+        <Stack.Screen name="Terror" component={TerrorScreen} />
+        <Stack.Screen name="Wave" component={WaveScreen} />
+        <Stack.Screen name="Shores" component={ShoresScreen} />
+        <Stack.Screen name="Diversity" component={DiversityScreen} />
+        <Stack.Screen name="Despicable" component={DespicableScreen} />
+        <Stack.Screen name="Elemental" component={ElementalScreen} />
+        <Stack.Screen name="GreatRiver" component={GreatRiverScreen} />
+        <Stack.Screen name="Varied" component={VariedScreen} />
+    </Stack.Navigator>
+);
+
+const RandomStack = () => (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Setup" component={RandomSetupScreen} />
+        <Stack.Screen name="RandomResults" component={RandomResultsScreen} />
+    </Stack.Navigator>
+);
+
+const AppDrawer = () => (
+    <Drawer.Navigator
+        initialRouteName="Setup"
+        drawerContent={(props) => (
+            <DrawerContentScrollView {...props}>
                 <DrawerHeader />
-                <DrawerItems {...navigation} />
-            </View>
-        ),
-        initialRouteName: 'Elements'
-    }
+                <DrawerItemList {...props} />
+            </DrawerContentScrollView>
+        )}
+        drawerContentOptions={{
+            labelStyle: {
+                fontFamily: 'ReemKufi',
+            },
+            activeTintColor: Colors.darkBrown,
+            inactiveTintColor: 'gray',
+        }}
+    >
+        <Drawer.Screen
+            name="Elements"
+            component={ElementsTabs}
+            options={{
+                title: 'Element Tracker',
+                drawerIcon: ({ color }) => (
+                    <FontAwesome5 name='fire' size={22} color={color} style={{ marginLeft: 1 }} />
+                )
+            }}
+        />
+        <Drawer.Screen
+            name="Scoring"
+            component={ScoringScreen}
+            options={{
+                drawerIcon: ({ color }) => (
+                    <FontAwesome5 name='trophy' size={22} color={color} style={{ marginRight: -6 }} />
+                )
+            }}
+        />
+        <Drawer.Screen
+            name="Scenarios"
+            component={ScenarioStack}
+            options={{
+                drawerIcon: ({ color }) => (
+                    <FontAwesome5 name='book' size={22} color={color} />
+                )
+            }}
+        />
+        <Drawer.Screen
+            name="Adversaries"
+            component={AdversaryStack}
+            options={{
+                drawerIcon: ({ color }) => (
+                    <FontAwesome5 name='fort-awesome' size={22} color={color} />
+                )
+            }}
+        />
+        <Drawer.Screen
+            name="RandomStack"
+            component={RandomStack}
+            options={{
+                title: 'Random Game Generator',
+                drawerIcon: ({ color }) => (
+                    <FontAwesome5 name='random' size={22} color={color} />
+                )
+            }}
+        />
+        <Drawer.Screen
+            name="Contact"
+            component={ContactScreen}
+            options={{
+                title: 'Contact me!',
+                drawerIcon: ({ color }) => (
+                    <FontAwesome5 name='envelope' size={22} color={color} />
+                )
+            }}
+        />
+        <Drawer.Screen
+            name="FAQ"
+            component={FaqScreen}
+            options={{
+                title: 'FAQ',
+                drawerIcon: ({ color }) => (
+                    <FontAwesome5 name='question-circle' size={22} color={color} />
+                )
+            }}
+        />
+    </Drawer.Navigator>
 );
+
+const App = () => (
+    <NavigationContainer>
+        <AppDrawer />
+    </NavigationContainer>
+);
+
+export default App;
