@@ -12,7 +12,7 @@ const Scenarios = [
             name: 'Blitz',
             screen: 'Blitz',
             difficulty: 0,
-            image: require('../Assets//blitzIcon.png'),
+            image: require('../Assets/blitzIcon.png'),
         }
     },
     {
@@ -21,7 +21,7 @@ const Scenarios = [
             name: 'Dahan Insurrection',
             screen: 'Dahan',
             difficulty: 4,
-            image: require('../Assets//dahan.png'),
+            image: require('../Assets/dahan.png'),
         }
     },
     {
@@ -30,7 +30,7 @@ const Scenarios = [
             name: 'Guard the Isle\'s Heart',
             screen: 'Guard',
             difficulty: 0,
-            image: require('../Assets//guard.png'),
+            image: require('../Assets/guard.png'),
         }
     },
     {
@@ -39,7 +39,7 @@ const Scenarios = [
             name: 'Rituals of Terror',
             screen: 'Terror',
             difficulty: 3,
-            image: require('../Assets//terror.png'),
+            image: require('../Assets/terror.png'),
         }
     },
     {
@@ -48,7 +48,7 @@ const Scenarios = [
             name: 'Powers Long Forgotten',
             screen: 'Powers',
             difficulty: 1,
-            image: require('../Assets//powers.png'),
+            image: require('../Assets/powers.png'),
             expansion: 'BranchAndClaw'
         }
     },
@@ -58,7 +58,7 @@ const Scenarios = [
             name: 'Rituals of the Destroying Flame',
             screen: 'Flame',
             difficulty: 3,
-            image: require('../Assets//flame.png'),
+            image: require('../Assets/flame.png'),
             expansion: 'BranchAndClaw'
         }
     },
@@ -68,7 +68,7 @@ const Scenarios = [
             name: 'Second Wave',
             screen: 'Wave',
             difficulty: '±1',
-            image: require('../Assets//second.png'),
+            image: require('../Assets/second.png'),
             expansion: 'BranchAndClaw'
         }
     },
@@ -78,7 +78,7 @@ const Scenarios = [
             name: 'Ward the Shores',
             screen: 'Shores',
             difficulty: 2,
-            image: require('../Assets//ward.png'),
+            image: require('../Assets/ward.png'),
             expansion: 'BranchAndClaw'
         }
     },

@@ -9,9 +9,8 @@ const ScenarioScreenStyles = StyleSheet.create({
         backgroundColor: Colors.lightYellow
     },
     imageStyle: {
-        width: 85,
-        height: 140,
-        marginTop: -20
+        width: 80,
+        height: 80,
     }
 });
 

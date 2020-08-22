@@ -71,7 +71,7 @@ class ScotlandScreen extends Component {
                                 <Image resizeMode='cover' style={IconStyles.Escalation} source={require('../Assets/Icons/Escalation.png')} />
                             </Text>
                             <Text style={Styles.sectionText}>
-                                <Text style={Styles.sectionTextBold}>{'Ports Sprawl Outward:: '}</Text>
+                                <Text style={Styles.sectionTextBold}>{'Ports Sprawl Outward: '}</Text>
                                 {'On the single board with the most Coastal '}
                                 <Image resizeMode='cover' style={IconStyles.Town} source={require('../Assets/Icons/TownIcon.png')} />
                                 {' / '}
