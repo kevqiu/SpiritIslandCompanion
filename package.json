@@ -19,7 +19,7 @@
     "@react-navigation/stack": "^5.9.0",
     "babel-polyfill": "^6.26.0",
     "react": "16.13.1",
-    "react-native": "0.63.2",
+    "react-native": "0.64.1",
     "react-native-check-box": "^2.1.7",
     "react-native-collapsible": "^1.5.3",
     "react-native-elements": "^0.19.1",
